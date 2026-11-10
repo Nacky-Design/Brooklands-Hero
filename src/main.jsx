@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import './style.css';
 
+const INITIAL_ROTATION = -1.65;
 const MODEL = `${import.meta.env.BASE_URL}assets/model.glb`;
 function Car({ angle, report }) {
   const gltf = useLoader(GLTFLoader, MODEL);
@@ -41,7 +42,7 @@ function Car({ angle, report }) {
       }
     }
   });
-  return <group ref={pivot} rotation={[0, -1.35, 0]}><primitive object={prepared}/></group>;
+  return <group ref={pivot} rotation={[0, INITIAL_ROTATION, 0]}><primitive object={prepared}/></group>;
 }
 function Room() {
   const concrete = useMemo(() => {
@@ -58,12 +59,11 @@ function Room() {
     <hemisphereLight args={['#e9f0f4', '#5d5b53', 1.2]}/>
     <directionalLight position={[-5,8,5]} intensity={2.4} castShadow shadow-mapSize={[1024,1024]} shadow-camera-left={-9} shadow-camera-right={9} shadow-camera-top={8} shadow-camera-bottom={-8} shadow-bias={-0.0004} shadow-radius={8}/>
     <directionalLight position={[5,4,-3]} intensity={1.2} color="#e4eaf0"/>
-    <mesh rotation={[-Math.PI/2,0,0]} position={[0,-0.06,0]} receiveShadow><planeGeometry args={[100,100]}/><meshStandardMaterial color="#666963" map={concrete} roughness={0.68}/></mesh>
+    <mesh rotation={[-Math.PI/2,0,0]} position={[0,-0.005,0]} receiveShadow><planeGeometry args={[100,100]}/><meshStandardMaterial color="#666963" map={concrete} roughness={0.68}/></mesh>
     <mesh position={[0,4,-6]} receiveShadow><boxGeometry args={[34,9,.4]}/><meshStandardMaterial color="#989b96" map={concrete} roughness={1}/></mesh>
     <mesh position={[8,4,-1]}><boxGeometry args={[.5,9,11]}/><meshStandardMaterial color="#565954" roughness={1}/></mesh>
     <mesh position={[0,8,-1]} rotation={[0,0,-.12]}><boxGeometry args={[30,.3,9]}/><meshStandardMaterial color="#555852" roughness={1}/></mesh>
-    <mesh position={[0,-.025,0]} receiveShadow><cylinderGeometry args={[4.15,4.15,.06,96]}/><meshStandardMaterial color="#666963" roughness={.72}/></mesh>
-    <mesh rotation={[-Math.PI/2,0,0]} position={[0,.008,0]}><ringGeometry args={[4.03,4.045,128]}/><meshBasicMaterial color="#c0c1b9"/></mesh>
+    <mesh rotation={[-Math.PI/2,0,0]} position={[0,-.003,0]}><ringGeometry args={[3.54,3.55,128]}/><meshBasicMaterial color="#c0c1b9" transparent opacity={.65} depthWrite={false}/></mesh>
   </>;
 }
 function Camera() {
@@ -71,12 +71,12 @@ function Camera() {
   useEffect(() => {
     const ratio=size.width/size.height;
     const mobile=size.width<900;
-    camera.position.set(5.6,2.7,7.2);
-    camera.fov = mobile ? 43 : 34;
+    camera.position.set(5.6,mobile ? 2.7 : 1.25,7.2);
+    camera.fov = mobile ? 43 : 30;
     if(mobile) camera.position.multiplyScalar(Math.max(1.15, 1.28 / ratio));
-    else camera.position.multiplyScalar(Math.max(1.12, 1.85 / ratio));
+    else camera.position.multiplyScalar(Math.max(1, 1.8 / ratio));
     camera.lookAt(0,.65,0);
-    if(!mobile) camera.setViewOffset(size.width,size.height,-size.width*.10,-size.height*.09,size.width,size.height);
+    if(!mobile) camera.setViewOffset(size.width,size.height,-size.width*.035,-size.height*.12,size.width,size.height);
     else camera.clearViewOffset();
     camera.updateProjectionMatrix();
     invalidate();
@@ -108,7 +108,7 @@ function RendererLifecycle({ report }) {
   return null;
 }
 function App(){
-  const angle=useRef(-1.35);
+  const angle=useRef(INITIAL_ROTATION);
   const gesture=useRef(null);
   const wake=useRef(()=>{});
   const [status,setStatus]=useState(()=>hasWebGL()?'loading':'unavailable');

@@ -1,0 +1,6 @@
+import {chromium} from '@playwright/test';
+import {readFile} from 'node:fs/promises';
+const sources=[['Утверждённый референс','references/hero-approved.png'],['Было','artifacts/composition-01/before-1920x1080.png'],['Проход 01 — камера и основание','artifacts/composition-01/after-1920x1080.png']];
+const columns=await Promise.all(sources.map(async([title,path])=>`<section><h2>${title}</h2><img src="data:image/png;base64,${(await readFile(path)).toString('base64')}"/></section>`));
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
+try{const page=await browser.newPage({viewport:{width:1920,height:432},deviceScaleFactor:1});await page.setContent(`<html lang="ru"><head><style>*{box-sizing:border-box}body{margin:0;background:#171917;color:#eee;font-family:Arial,sans-serif}main{display:grid;grid-template-columns:repeat(3,640px)}h2{font-size:20px;font-weight:400;margin:0;padding:24px;height:72px}img{display:block;width:640px;height:360px;object-fit:contain}</style></head><body><main>${columns.join('')}</main></body></html>`);await page.evaluate(()=>Promise.all([...document.images].map(i=>i.decode())));await page.screenshot({path:'artifacts/composition-01/comparison.png'});}finally{await browser.close();}

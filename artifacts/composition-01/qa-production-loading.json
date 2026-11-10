@@ -1,0 +1,27 @@
+[
+  {
+    "check": "Early GLB request reused by GLTFLoader",
+    "status": "PASS",
+    "readyMs": 2144.4000000003725,
+    "resources": [
+      {
+        "url": "http://127.0.0.1:4180/Brooklands-Hero/assets/model.glb",
+        "startMs": 41.30000000074506,
+        "durationMs": 32.19999999925494,
+        "bytes": 1378192,
+        "initiator": "link"
+      },
+      {
+        "url": "http://127.0.0.1:4180/Brooklands-Hero/assets/index-a2U2Jjo0.js",
+        "startMs": 42.30000000074506,
+        "durationMs": 29.300000000745058,
+        "bytes": 1163521,
+        "initiator": "script"
+      }
+    ]
+  },
+  {
+    "check": "Demand rendering wakes on buttons and drag; no errors",
+    "status": "PASS"
+  }
+]
