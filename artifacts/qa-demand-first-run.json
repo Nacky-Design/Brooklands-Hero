@@ -1,0 +1,70 @@
+[
+  {
+    "viewport": "320x812",
+    "status": "PASS",
+    "checks": [
+      "GLB",
+      "no overflow",
+      "H1 visible",
+      "full 360 via buttons",
+      "mouse both directions",
+      "keyboard",
+      "model bounds at 8 angles",
+      "fixed camera",
+      "no reference image request",
+      "no console errors"
+    ]
+  },
+  {
+    "viewport": "430x932",
+    "status": "PASS",
+    "checks": [
+      "GLB",
+      "no overflow",
+      "H1 visible",
+      "full 360 via buttons",
+      "mouse both directions",
+      "keyboard",
+      "model bounds at 8 angles",
+      "fixed camera",
+      "no reference image request",
+      "no console errors"
+    ]
+  },
+  {
+    "viewport": "1440x900",
+    "status": "PASS",
+    "checks": [
+      "GLB",
+      "no overflow",
+      "H1 visible",
+      "full 360 via buttons",
+      "mouse both directions",
+      "keyboard",
+      "model bounds at 8 angles",
+      "fixed camera",
+      "no reference image request",
+      "no console errors"
+    ]
+  },
+  {
+    "viewport": "1536x864",
+    "status": "PASS",
+    "checks": [
+      "GLB",
+      "no overflow",
+      "H1 visible",
+      "full 360 via buttons",
+      "mouse both directions",
+      "keyboard",
+      "model bounds at 8 angles",
+      "fixed camera",
+      "no reference image request",
+      "no console errors"
+    ]
+  },
+  {
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: keyboard\n    at file:///workspace/Brooklands-Hero/scripts/qa.mjs:36:3"
+  }
+]

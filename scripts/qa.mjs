@@ -6,7 +6,7 @@ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'
 await mkdir('artifacts',{recursive:true});
 const results=[];
 try{
- for(const [width,height] of [[320,812],[430,932],[1440,900],[1536,864],[1920,1080],[2048,1152]]){
+ for(const [width,height] of [[320,812],[430,932],[1440,900],[1536,864],[1920,1080],[2048,1152]].filter(([w])=>!process.env.QA_WIDTHS||process.env.QA_WIDTHS.split(',').map(Number).includes(w))){
   const page=await browser.newPage({viewport:{width,height}});
   const errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});page.on('request',r=>requests.push(r.url()));
   await page.goto(base);await page.waitForSelector('.stage[data-status="ready"]');await page.waitForTimeout(1200);
@@ -28,11 +28,11 @@ try{
   assert.equal(await page.locator('.stage').getAttribute('data-camera'),camera,'camera moved');
   const stage=await page.locator('.stage').boundingBox();
   const x=stage.x+stage.width*.4,y=stage.y+stage.height*.6;
-  await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(x+180,y,{steps:10});await page.mouse.up();await page.waitForTimeout(650);
+  await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(x+180,y,{steps:10});await page.mouse.up();await page.waitForFunction(target=>Math.abs(Number(document.querySelector('.stage').dataset.angle)-target)<.02,full+2.16,{timeout:15000});
   const dragged=Number(await page.locator('.stage').getAttribute('data-angle'));assert(dragged-full>2,'mouse drag');
-  await page.mouse.move(x+180,y);await page.mouse.down();await page.mouse.move(x,y,{steps:10});await page.mouse.up();await page.waitForTimeout(650);
+  await page.mouse.move(x+180,y);await page.mouse.down();await page.mouse.move(x,y,{steps:10});await page.mouse.up();await page.waitForFunction(target=>Math.abs(Number(document.querySelector('.stage').dataset.angle)-target)<.02,full,{timeout:15000});
   assert(Math.abs(Number(await page.locator('.stage').getAttribute('data-angle'))-full)<.05,'reverse drag');
-  await page.getByRole('button',{name:'Повернуть влево'}).focus();await page.keyboard.press('Enter');await page.waitForTimeout(650);
+  await page.getByRole('button',{name:'Повернуть влево'}).focus();await page.keyboard.press('Enter');await page.waitForFunction(target=>Math.abs(Number(document.querySelector('.stage').dataset.angle)-target)<.02,full-Math.PI/4,{timeout:15000});
   assert(Number(await page.locator('.stage').getAttribute('data-angle'))<full-.7,'keyboard');
   assert.deepEqual(errors,[]);
   results.push({viewport:`${width}x${height}`,status:'PASS',checks:['GLB','no overflow','H1 visible','full 360 via buttons','mouse both directions','keyboard','model bounds at 8 angles','fixed camera','no reference image request','no console errors']});
@@ -45,7 +45,7 @@ try{
  const cdp=await page.context().newCDPSession(page);const tx=rect.x+80,ty=rect.y+rect.height/2;
  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:tx,y:ty}]});
  for(let i=1;i<=10;i++)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:tx+i*20,y:ty}]});
- await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await page.waitForTimeout(700);
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await page.waitForFunction(target=>Math.abs(Number(document.querySelector('.stage').dataset.angle)-target)<.02,before+2.4,{timeout:15000});
  assert(Number(await page.locator('.stage').getAttribute('data-angle'))>before+2,'touch drag');
  await page.evaluate(()=>scrollTo(0,0));await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:30,y:360}]});
  for(let i=1;i<=8;i++)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:30,y:360-i*30}]});
@@ -54,4 +54,4 @@ try{
  const fallback=await browser.newPage();await fallback.addInitScript(()=>{HTMLCanvasElement.prototype.getContext=function(){return null;};});await fallback.goto(base);await fallback.waitForSelector('.stage[data-status="unavailable"]');await fallback.screenshot({path:'artifacts/fallback.png'});results.push({check:'WebGL fallback',status:'PASS'});await fallback.close();
  const reduced=await browser.newPage({reducedMotion:'reduce'});await reduced.goto(base);await reduced.waitForSelector('.stage[data-status="ready"]');await reduced.waitForTimeout(300);const a=await reduced.locator('.stage').getAttribute('data-angle');await reduced.waitForTimeout(600);assert.equal(await reduced.locator('.stage').getAttribute('data-angle'),a);results.push({check:'reduced motion, no auto rotation',status:'PASS'});await reduced.close();
 }catch(e){results.push({status:'FAIL',error:e.stack});process.exitCode=1;}
-finally{await writeFile('artifacts/qa-results.json',JSON.stringify(results,null,2));console.log(JSON.stringify(results,null,2));await browser.close();}
+finally{await writeFile(process.env.QA_RESULTS_PATH||'artifacts/qa-results.json',JSON.stringify(results,null,2));console.log(JSON.stringify(results,null,2));await browser.close();}

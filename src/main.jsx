@@ -9,7 +9,7 @@ const MODEL = `${import.meta.env.BASE_URL}assets/model.glb`;
 function Car({ angle, report }) {
   const gltf = useLoader(GLTFLoader, MODEL);
   const pivot = useRef();
-  const { camera } = useThree();
+  const { camera, invalidate } = useThree();
   const prepared = useMemo(() => {
     const scene = gltf.scene.clone(true);
     const box = new THREE.Box3().setFromObject(scene);
@@ -25,11 +25,13 @@ function Car({ angle, report }) {
   useFrame((_, dt) => {
     if (!pivot.current) return;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    pivot.current.rotation.y = reduced ? angle.current : THREE.MathUtils.damp(pivot.current.rotation.y, angle.current, 12, dt);
+    pivot.current.rotation.y = reduced ? angle.current : THREE.MathUtils.damp(pivot.current.rotation.y, angle.current, 12, Math.min(dt, .1));
+    if (Math.abs(pivot.current.rotation.y - angle.current) > .0001) invalidate();
     const el = document.querySelector('.stage');
     if (el) {
       el.dataset.angle = pivot.current.rotation.y.toFixed(4);
       if(import.meta.env.DEV){
+        el.dataset.frames = String(Number(el.dataset.frames || 0) + 1);
         pivot.current.updateWorldMatrix(true,true);
         const box=new THREE.Box3().setFromObject(pivot.current);
         const points=[];
@@ -65,7 +67,7 @@ function Room() {
   </>;
 }
 function Camera() {
-  const { camera, size } = useThree();
+  const { camera, size, invalidate } = useThree();
   useEffect(() => {
     const ratio=size.width/size.height;
     const mobile=size.width<900;
@@ -77,7 +79,8 @@ function Camera() {
     if(!mobile) camera.setViewOffset(size.width,size.height,-size.width*.10,-size.height*.09,size.width,size.height);
     else camera.clearViewOffset();
     camera.updateProjectionMatrix();
-  },[camera,size]);
+    invalidate();
+  },[camera,size,invalidate]);
   return null;
 }
 class SceneBoundary extends React.Component {
@@ -86,26 +89,45 @@ class SceneBoundary extends React.Component {
   componentDidCatch(){this.props.fail();}
   render(){return this.state.error ? null : this.props.children;}
 }
-function hasWebGL(){try{const c=document.createElement('canvas');return !!(c.getContext('webgl2') || c.getContext('webgl'));}catch{return false;}}
+function hasWebGL(){
+  try {
+    // Three.js requires WebGL 2. Release the probe immediately.
+    const context=document.createElement('canvas').getContext('webgl2');
+    if(!context) return false;
+    context.getExtension('WEBGL_lose_context')?.loseContext();
+    return true;
+  } catch { return false; }
+}
+function RendererLifecycle({ report }) {
+  const { gl } = useThree();
+  useEffect(() => {
+    const lost=e=>{e.preventDefault();report('unavailable');};
+    gl.domElement.addEventListener('webglcontextlost',lost);
+    return ()=>gl.domElement.removeEventListener('webglcontextlost',lost);
+  },[gl,report]);
+  return null;
+}
 function App(){
   const angle=useRef(-1.35);
   const gesture=useRef(null);
-  const [status,setStatus]=useState(hasWebGL()?'loading':'unavailable');
+  const wake=useRef(()=>{});
+  const [status,setStatus]=useState(()=>hasWebGL()?'loading':'unavailable');
   const [message,setMessage]=useState('');
   const demo=()=>setMessage('Демонстрационный прототип — форма заявки не подключена.');
   function down(e){if(status!=='ready'||e.target.closest('button'))return;gesture.current={x:e.clientX,y:e.clientY,angle:angle.current}; e.currentTarget.setPointerCapture(e.pointerId);}
-  function move(e){if(!gesture.current)return;const dx=e.clientX-gesture.current.x,dy=e.clientY-gesture.current.y;if(e.pointerType==='touch'&&Math.abs(dy)>Math.abs(dx)&&Math.abs(dx)<8){gesture.current=null;return;}angle.current=gesture.current.angle+dx*.012;}
+  function move(e){if(!gesture.current)return;const dx=e.clientX-gesture.current.x,dy=e.clientY-gesture.current.y;if(e.pointerType==='touch'&&Math.abs(dy)>Math.abs(dx)&&Math.abs(dx)<8){gesture.current=null;return;}angle.current=gesture.current.angle+dx*.012;wake.current();}
   function end(){gesture.current=null;}
+  function rotate(delta){angle.current+=delta;wake.current();}
   return <main className="hero">
     <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><strong>BROOKLANDS</strong><span>DETAILING</span></a><nav aria-label="Основная навигация">{['Услуги','Наши работы','О компании','Контакты'].map(t=><button key={t} onClick={demo}>{t}</button>)}</nav><button className="booking" onClick={demo}>Записаться</button></header>
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>Детейлинг, защита и персонализация<br className="desktop-break"/> автомобилей премиального класса.</p><button className="cta" onClick={demo}>Обсудить проект <span aria-hidden="true">→</span></button></section>
     <section className="stage" aria-label="Интерактивная 3D-модель Porsche" data-status={status} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
-      {status!=='unavailable' && <SceneBoundary fail={()=>setStatus('unavailable')}><Canvas shadows dpr={[1,1.5]} gl={{antialias:true,powerPreference:'high-performance'}} onCreated={({gl})=>{gl.shadowMap.type=THREE.PCFShadowMap;gl.toneMapping=THREE.ACESFilmicToneMapping;gl.toneMappingExposure=1;gl.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();setStatus('unavailable');},{once:true});}} fallback={<p>WebGL недоступен. Интерактивная модель не отображается.</p>}><Camera/><Room/><Suspense fallback={null}><Car angle={angle} report={setStatus}/></Suspense></Canvas></SceneBoundary>}
+      {status!=='unavailable' && <SceneBoundary fail={()=>setStatus('unavailable')}><Canvas frameloop="demand" shadows dpr={[1,1.5]} gl={{antialias:true,powerPreference:'high-performance'}} onCreated={({gl,invalidate})=>{wake.current=invalidate;gl.shadowMap.type=THREE.PCFShadowMap;gl.toneMapping=THREE.ACESFilmicToneMapping;gl.toneMappingExposure=1;}} fallback={<p>WebGL недоступен. Интерактивная модель не отображается.</p>}><RendererLifecycle report={setStatus}/><Camera/><Room/><Suspense fallback={null}><Car angle={angle} report={setStatus}/></Suspense></Canvas></SceneBoundary>}
       {status==='loading'&&<p className="status" role="status">Загрузка 3D-модели…</p>}
-      {status==='unavailable'&&<div className="fallback" role="status"><span>PORSCHE / 3D</span><p>Интерактивная модель недоступна.<br/>Нужен браузер с поддержкой WebGL и доступ к файлу модели.</p></div>}
+      {status==='unavailable'&&<div className="fallback" role="status"><span>PORSCHE / 3D</span><p>Интерактивная модель недоступна.<br/>Нужен браузер с поддержкой WebGL 2 и доступ к файлу модели.</p></div>}
     </section>
     <aside className="presets" aria-label="Визуальный макет пресетов"><div className="preset original"><i/><span>Original</span></div><div className="preset satin"><i/><span>Satin</span></div><div className="preset bespoke"><i/><span>Bespoke</span></div><p>Предпросмотр интерфейса — смена материалов не подключена</p></aside>
-    <div className="rotation"><div className="rotation-buttons"><button disabled={status!=='ready'} aria-label="Повернуть влево" onClick={()=>angle.current-=Math.PI/4}>←</button><span className="line"/><span>360°</span><span className="line"/><button disabled={status!=='ready'} aria-label="Повернуть вправо" onClick={()=>angle.current+=Math.PI/4}>→</button></div><p>Перетащите автомобиль для вращения</p></div>
+    <div className="rotation"><div className="rotation-buttons"><button disabled={status!=='ready'} aria-label="Повернуть влево" onClick={()=>rotate(-Math.PI/4)}>←</button><span className="line"/><span>360°</span><span className="line"/><button disabled={status!=='ready'} aria-label="Повернуть вправо" onClick={()=>rotate(Math.PI/4)}>→</button></div><p>Перетащите автомобиль для вращения</p></div>
     {message&&<div className="demo-message" role="status">{message}<button aria-label="Закрыть сообщение" onClick={()=>setMessage('')}>×</button></div>}
   </main>;
 }

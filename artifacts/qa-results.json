@@ -13,7 +13,8 @@
       "fixed camera",
       "no reference image request",
       "no console errors"
-    ]
+    ],
+    "sourceRun": "qa-demand-first-run.json"
   },
   {
     "viewport": "430x932",
@@ -29,7 +30,8 @@
       "fixed camera",
       "no reference image request",
       "no console errors"
-    ]
+    ],
+    "sourceRun": "qa-demand-first-run.json"
   },
   {
     "viewport": "1440x900",
@@ -45,7 +47,8 @@
       "fixed camera",
       "no reference image request",
       "no console errors"
-    ]
+    ],
+    "sourceRun": "qa-demand-first-run.json"
   },
   {
     "viewport": "1536x864",
@@ -61,7 +64,8 @@
       "fixed camera",
       "no reference image request",
       "no console errors"
-    ]
+    ],
+    "sourceRun": "qa-demand-first-run.json"
   },
   {
     "viewport": "1920x1080",
@@ -77,7 +81,8 @@
       "fixed camera",
       "no reference image request",
       "no console errors"
-    ]
+    ],
+    "sourceRun": "qa-demand-rerun.json"
   },
   {
     "viewport": "2048x1152",
@@ -93,18 +98,22 @@
       "fixed camera",
       "no reference image request",
       "no console errors"
-    ]
+    ],
+    "sourceRun": "qa-demand-rerun.json"
   },
   {
     "check": "touch drag and outside-stage vertical scrolling",
-    "status": "PASS"
+    "status": "PASS",
+    "sourceRun": "qa-demand-rerun.json"
   },
   {
     "check": "WebGL fallback",
-    "status": "PASS"
+    "status": "PASS",
+    "sourceRun": "qa-demand-rerun.json"
   },
   {
     "check": "reduced motion, no auto rotation",
-    "status": "PASS"
+    "status": "PASS",
+    "sourceRun": "qa-demand-rerun.json"
   }
 ]

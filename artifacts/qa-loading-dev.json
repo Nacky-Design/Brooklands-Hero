@@ -1,0 +1,28 @@
+[
+  {
+    "check": "Early GLB request reused by GLTFLoader",
+    "status": "PASS",
+    "readyMs": 5181.4000000003725,
+    "resources": [
+      {
+        "url": "http://127.0.0.1:5173/assets/model.glb",
+        "startMs": 68,
+        "durationMs": 292.59999999962747,
+        "bytes": 1378192,
+        "initiator": "link"
+      }
+    ]
+  },
+  {
+    "check": "Idle scene has no animation frames",
+    "status": "PASS"
+  },
+  {
+    "check": "UI rerenders create no extra WebGL probes",
+    "status": "PASS"
+  },
+  {
+    "check": "Demand rendering wakes on buttons and drag; no errors",
+    "status": "PASS"
+  }
+]
