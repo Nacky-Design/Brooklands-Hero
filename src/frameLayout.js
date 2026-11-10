@@ -1,4 +1,4 @@
-import calibration from './frameCalibration.json';
+import calibration from './sequenceManifest.json';
 
 const PLATE_RATIO = 1672 / 941;
 export function getFrameStyle(index) {

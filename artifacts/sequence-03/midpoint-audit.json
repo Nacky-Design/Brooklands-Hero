@@ -1,0 +1,41 @@
+{
+  "source": "references/sequence-03/midpoint-01b.png",
+  "sourceSha256": "79f97e6e7aac4376eb403e5e61b404aa823a0930b0fd87ff0f1a54375db8edd8",
+  "webp": "public/assets/turntable-v2/midpoint-01b.webp",
+  "bytes": 224834,
+  "width": 1672,
+  "height": 941,
+  "hasAlpha": true,
+  "tyreTop": 486,
+  "groundY": 795,
+  "uncertaintyPixels": 6,
+  "solid": {
+    "left": 49,
+    "right": 1651,
+    "top": 211,
+    "bottom": 795
+  },
+  "visible": {
+    "left": 48,
+    "right": 1652,
+    "top": 210,
+    "bottom": 799
+  },
+  "scale": 1.2135922330097086,
+  "dx": -0.12084533376689732,
+  "dy": -0.16982553160756475,
+  "correctedSolid": {
+    "left": -0.0852795326798903,
+    "right": 1.0775044130626654,
+    "top": 0.10229770023627005,
+    "bottom": 0.8554729011689692
+  },
+  "correctedVisible": {
+    "left": -0.08600536535513535,
+    "right": 1.0782302457379105,
+    "top": 0.10100801667302911,
+    "bottom": 0.8606316354219328
+  },
+  "anglesCalibrated": false,
+  "review": "Yaw appears between 01 and 02; spoiler support, highlights and wheel details drift. Candidate for review, not accepted production animation."
+}

@@ -1,0 +1,207 @@
+{
+  "anchorX": 0.49611244019138756,
+  "anchorY": 0.8554729011689692,
+  "maxVisibleRadius": 0.6167663399485661,
+  "mobileCanvasWidthRatio": 0.762038992009834,
+  "frames": [
+    {
+      "index": 0,
+      "scale": 1,
+      "dx": 0,
+      "dy": 0,
+      "id": "00",
+      "file": "assets/turntable-v1/frame-00.webp"
+    },
+    {
+      "index": 1,
+      "scale": 1.053370786516854,
+      "dx": -0.03782236302810693,
+      "dy": -0.052373759686682786,
+      "id": "01",
+      "file": "assets/turntable-v1/frame-01.webp"
+    },
+    {
+      "id": "01b",
+      "file": "assets/turntable-v2/midpoint-01b.webp",
+      "scale": 1.2135922330097086,
+      "dx": -0.12084533376689732,
+      "dy": -0.16982553160756475
+    },
+    {
+      "index": 2,
+      "scale": 1.25,
+      "dx": -0.13711616543398641,
+      "dy": -0.16206163655685435,
+      "id": "02",
+      "file": "assets/turntable-v1/frame-02.webp"
+    },
+    {
+      "index": 3,
+      "scale": 1.2668918918918919,
+      "dx": -0.1396079974814738,
+      "dy": -0.17042680299853497,
+      "id": "03",
+      "file": "assets/turntable-v1/frame-03.webp"
+    },
+    {
+      "index": 4,
+      "scale": 1.1295180722891567,
+      "dx": -0.07371624618788175,
+      "dy": -0.10719818700946182,
+      "id": "04",
+      "file": "assets/turntable-v1/frame-04.webp"
+    },
+    {
+      "index": 5,
+      "scale": 1.0714285714285714,
+      "dx": -0.04344898581528078,
+      "dy": -0.0736298770305146,
+      "id": "05",
+      "file": "assets/turntable-v1/frame-05.webp"
+    },
+    {
+      "index": 6,
+      "scale": 0.9920634920634921,
+      "dx": -0.008231028694271614,
+      "dy": -0.006915979285798568,
+      "id": "06",
+      "file": "assets/turntable-v1/frame-06.webp"
+    },
+    {
+      "index": 7,
+      "scale": 0.9124087591240876,
+      "dx": 0.03608588150674136,
+      "dy": 0.055539610757309066,
+      "id": "07",
+      "file": "assets/turntable-v1/frame-07.webp"
+    },
+    {
+      "index": 8,
+      "scale": 0.9057971014492754,
+      "dx": 0.04158865543304896,
+      "dy": 0.05941104899197591,
+      "id": "08",
+      "file": "assets/turntable-v1/frame-08.webp"
+    },
+    {
+      "index": 9,
+      "scale": 0.934117186730383,
+      "dx": 0.020389085369391213,
+      "dy": 0.04047799117359785,
+      "id": "09",
+      "file": "assets/turntable-v1/frame-09.webp"
+    },
+    {
+      "index": 10,
+      "scale": 0.9124087591240876,
+      "dx": 0.04700639328560535,
+      "dy": 0.05263076242853937,
+      "id": "10",
+      "file": "assets/turntable-v1/frame-10.webp"
+    },
+    {
+      "index": 11,
+      "scale": 0.946969696969697,
+      "dx": 0.03282834248179611,
+      "dy": 0.024232763340095942,
+      "id": "11",
+      "file": "assets/turntable-v1/frame-11.webp"
+    },
+    {
+      "index": 12,
+      "scale": 0.9894459102902374,
+      "dx": 0.005830445146314811,
+      "dy": -0.009897964047678398,
+      "id": "12",
+      "file": "assets/turntable-v1/frame-12.webp"
+    },
+    {
+      "index": 13,
+      "scale": 1.0053619302949062,
+      "dx": -0.007771830677543612,
+      "dy": -0.02381813882328132,
+      "id": "13",
+      "file": "assets/turntable-v1/frame-13.webp"
+    },
+    {
+      "index": 14,
+      "scale": 1.179245283018868,
+      "dx": -0.09280448900026139,
+      "dy": -0.12702263749924803,
+      "id": "14",
+      "file": "assets/turntable-v1/frame-14.webp"
+    },
+    {
+      "index": 15,
+      "scale": 1.2254901960784315,
+      "dx": -0.11846612612442664,
+      "dy": -0.13950532391490067,
+      "id": "15",
+      "file": "assets/turntable-v1/frame-15.webp"
+    },
+    {
+      "index": 16,
+      "scale": 1.1867088607594938,
+      "dx": -0.09901743731696411,
+      "dy": -0.13576319294044847,
+      "id": "16",
+      "file": "assets/turntable-v1/frame-16.webp"
+    },
+    {
+      "index": 17,
+      "scale": 1.1295180722891567,
+      "dx": -0.06797064258856533,
+      "dy": -0.10719818700946182,
+      "id": "17",
+      "file": "assets/turntable-v1/frame-17.webp"
+    },
+    {
+      "index": 18,
+      "scale": 0.9868421052631579,
+      "dx": -0.009415292965562205,
+      "dy": 0.006012640527993773,
+      "id": "18",
+      "file": "assets/turntable-v1/frame-18.webp"
+    },
+    {
+      "index": 19,
+      "scale": 0.946969696969697,
+      "dx": 0.02744461290596595,
+      "dy": 0.01618201139986475,
+      "id": "19",
+      "file": "assets/turntable-v1/frame-19.webp"
+    },
+    {
+      "index": 20,
+      "scale": 0.9398496240601504,
+      "dx": 0.03068720745064879,
+      "dy": 0.015501026743266255,
+      "id": "20",
+      "file": "assets/turntable-v1/frame-20.webp"
+    },
+    {
+      "index": 21,
+      "scale": 1.008923407419648,
+      "dx": -0.007745479312919024,
+      "dy": -0.017283372624435134,
+      "id": "21",
+      "file": "assets/turntable-v1/frame-21.webp"
+    },
+    {
+      "index": 22,
+      "scale": 0.9615384615384616,
+      "dx": 0.016781776839180196,
+      "dy": -0.0008174609662389143,
+      "id": "22",
+      "file": "assets/turntable-v1/frame-22.webp"
+    },
+    {
+      "index": 23,
+      "scale": 0.9689922480620154,
+      "dx": 0.006107383571158309,
+      "dy": 0.0038718500028833702,
+      "id": "23",
+      "file": "assets/turntable-v1/frame-23.webp"
+    }
+  ]
+}

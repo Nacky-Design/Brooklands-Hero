@@ -1,7 +1,9 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { FRAME_COUNT, useFrameSequence, wrapFrame } from './useFrameSequence.js';
 import { getFrameStyle, getSequenceLayout } from './frameLayout.js';
+import { ColorGrade } from './ColorGrade.jsx';
+import manifest from './sequenceManifest.json';
 import './style.css';
 
 const BACKGROUND = `${import.meta.env.BASE_URL}assets/atelier-background.webp`;
@@ -22,12 +24,20 @@ function useCarLayout(stage) {
   return getSequenceLayout(size.width, size.height);
 }
 
-function App() {
+function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null }) {
   const stage = useRef(null);
   const target = useRef(0);
   const gesture = useRef(null);
   const sequence = useFrameSequence();
   const carLayout = useCarLayout(stage);
+  useEffect(() => {
+    if (!reviewRequest) return;
+    target.current = wrapFrame(reviewRequest.index);
+    sequence.select(target.current);
+  }, [reviewRequest, sequence.select]);
+  useEffect(() => {
+    if (sequence.frame) onDisplayedFrame?.(sequence.frame.index);
+  }, [sequence.frame?.index, onDisplayedFrame]);
   const [message, setMessage] = useState('');
   const demo = () => setMessage('Демонстрационный прототип — форма заявки не подключена.');
   const choose = index => { target.current = wrapFrame(index); sequence.select(target.current); };
@@ -52,10 +62,10 @@ function App() {
     if (event.key === 'Home') choose(0); else rotate(event.key === 'ArrowRight' ? 1 : -1);
   }
   const status = sequence.frame ? 'ready' : sequence.error ? 'unavailable' : 'loading';
-  return <main className="hero">
+  return <main className="hero"><ColorGrade/>
     <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><strong>BROOKLANDS</strong><span>DETAILING</span></a><nav aria-label="Основная навигация">{['Услуги','Наши работы','О компании','Контакты'].map(text=><button key={text} onClick={demo}>{text}</button>)}</nav><button className="booking" onClick={demo}>Записаться</button></header>
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>Детейлинг, защита и персонализация<br className="desktop-break"/> автомобилей премиального класса.</p><button className="cta" onClick={demo}>Обсудить проект <span aria-hidden="true">→</span></button></section>
-    <section ref={stage} className="stage" aria-label="Покадровый обзор Porsche на 360 градусов" tabIndex={0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
+    <section ref={stage} className="stage" data-grade={gradeMode} data-frame-id={sequence.frame ? manifest.frames[sequence.frame.index].id : ''} aria-label="Покадровый обзор Porsche на 360 градусов" tabIndex={0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
       <img className="stage-background" src={BACKGROUND} alt="" fetchPriority="high" decoding="async"/>
       {sequence.frame && <div className="sequence" style={carLayout}><img className="sequence-image" style={getFrameStyle(sequence.frame.index)} src={sequence.frame.url} alt="Porsche 911 Turbo S" draggable="false"/></div>}
       {!sequence.frame && !sequence.error && <p className="status" role="status">Загрузка автомобиля…</p>}
@@ -67,4 +77,25 @@ function App() {
     {message && <div className="demo-message" role="status">{message}<button aria-label="Закрыть сообщение" onClick={()=>setMessage('')}>×</button></div>}
   </main>;
 }
-createRoot(document.getElementById('root')).render(<App/>);
+function ReviewPage() {
+  const [grade, setGrade] = useState('both');
+  const [request, setRequest] = useState(null);
+  const [displayed, setDisplayed] = useState(0);
+  const [loop, setLoop] = useState(false);
+  useEffect(() => {
+    if (!loop) return;
+    const frames = [1, 2, 3, 2]; let step = 0;
+    setRequest({ index: frames[step] });
+    const timer = setInterval(() => { step = (step + 1) % frames.length; setRequest({ index: frames[step] }); }, 1200);
+    return () => clearInterval(timer);
+  }, [loop]);
+  const show = index => { setLoop(false); setRequest({ index }); };
+  return <><div className="review-tools">
+    <h1>BROOKLANDS · цвет и промежуточный ракурс</h1>
+    <p>Рабочее сравнение. 01b — новая генерация между прежними 01 и 02; детали и равномерность поворота требуют оценки.</p>
+    <div role="group" aria-label="Цветокоррекция">{[['none','Исходный'],['background','Только фон'],['both','Фон + автомобиль']].map(([value,label])=><button key={value} aria-pressed={grade===value} onClick={()=>setGrade(value)}>{label}</button>)}</div>
+    <div role="group" aria-label="Опорные ракурсы">{[[0,'Старт 00'],[1,'Ракурс 01'],[2,'Новый 01b'],[3,'Боковой 02'],[10,'Задний 09']].map(([index,label])=><button key={index} onClick={()=>show(index)}>{label}</button>)}<button aria-pressed={loop} onClick={()=>setLoop(value=>!value)}>{loop?'Остановить переход':'Повторять 01 → 01b → 02'}</button></div>
+    <p aria-live="polite">На экране: {manifest.frames[displayed].id}. <a href="./">Открыть HERO</a></p>
+  </div><App gradeMode={grade} reviewRequest={request} onDisplayedFrame={setDisplayed}/></>;
+}
+createRoot(document.getElementById('root')).render(document.documentElement.dataset.review ? <ReviewPage/> : <App/>);

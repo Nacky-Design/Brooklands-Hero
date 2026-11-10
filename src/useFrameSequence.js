@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import manifest from './sequenceManifest.json';
 
-export const FRAME_COUNT = 24;
-export const frameURL = index => `${import.meta.env.BASE_URL}assets/turntable-v1/frame-${String(index).padStart(2, '0')}.webp`;
+export const FRAME_COUNT = manifest.frames.length;
+export const frameURL = index => `${import.meta.env.BASE_URL}${manifest.frames[index].file}`;
 export const wrapFrame = index => ((index % FRAME_COUNT) + FRAME_COUNT) % FRAME_COUNT;
 
 export function useFrameSequence() {

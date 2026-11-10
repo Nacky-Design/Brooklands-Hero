@@ -1,0 +1,15 @@
+{
+  "original24PngHashesMatch": true,
+  "labelCore": {
+    "textCore": 1279,
+    "textChanged": 0
+  },
+  "backgroundGradeApplied": {
+    "meanAbsoluteChannelDifference": 0.8682666666666666,
+    "changedChannels": 25172
+  },
+  "carGradeApplied": {
+    "meanAbsoluteChannelDifference": 6.114711111111111,
+    "changedChannels": 22292
+  }
+}
