@@ -1,0 +1,10 @@
+[
+  {
+    "check": "Wall, ceiling and aperture pixels identical after car rotates 90 degrees; camera fixed",
+    "status": "PASS"
+  },
+  {
+    "check": "No continuous architecture or contact-shadow rendering at rest",
+    "status": "PASS"
+  }
+]

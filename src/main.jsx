@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import './style.css';
 import { ContactShadow } from './ContactShadow.jsx';
+import { Architecture } from './Architecture.jsx';
 
 const INITIAL_ROTATION = -1.65;
 const MODEL = `${import.meta.env.BASE_URL}assets/model.glb`;
@@ -43,28 +44,6 @@ function Car({ angle, report, pivot }) {
     }
   }, -2);
   return <group ref={pivot} rotation={[0, INITIAL_ROTATION, 0]}><primitive object={prepared}/></group>;
-}
-function Room() {
-  const concrete = useMemo(() => {
-    const c = document.createElement('canvas'); c.width=256; c.height=256;
-    const ctx=c.getContext('2d'); const pixels=ctx.createImageData(256,256);
-    let seed=37;
-    for(let i=0;i<pixels.data.length;i+=4){seed=(seed*1664525+1013904223)>>>0;const n=144+(seed%9);pixels.data[i]=n;pixels.data[i+1]=n;pixels.data[i+2]=n-3;pixels.data[i+3]=255;}
-    ctx.putImageData(pixels,0,0); const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(8,4);t.colorSpace=THREE.SRGBColorSpace;return t;
-  }, []);
-  useEffect(()=>()=>concrete.dispose(),[concrete]);
-  return <>
-    <color attach="background" args={['#464844']}/>
-    <ambientLight intensity={.45}/>
-    <hemisphereLight args={['#e9f0f4', '#5d5b53', 1.2]}/>
-    <directionalLight position={[-5,8,5]} intensity={2.4} castShadow shadow-mapSize={[1024,1024]} shadow-camera-left={-9} shadow-camera-right={9} shadow-camera-top={8} shadow-camera-bottom={-8} shadow-bias={-0.0004} shadow-radius={8}/>
-    <directionalLight position={[5,4,-3]} intensity={1.2} color="#e4eaf0"/>
-    <mesh rotation={[-Math.PI/2,0,0]} position={[0,-0.005,0]}><planeGeometry args={[100,100]}/><meshStandardMaterial color="#666963" map={concrete} roughness={0.68}/></mesh>
-    <mesh position={[0,4,-6]} receiveShadow><boxGeometry args={[34,9,.4]}/><meshStandardMaterial color="#989b96" map={concrete} roughness={1}/></mesh>
-    <mesh position={[8,4,-1]}><boxGeometry args={[.5,9,11]}/><meshStandardMaterial color="#565954" roughness={1}/></mesh>
-    <mesh position={[0,8,-1]} rotation={[0,0,-.12]}><boxGeometry args={[30,.3,9]}/><meshStandardMaterial color="#555852" roughness={1}/></mesh>
-    <mesh rotation={[-Math.PI/2,0,0]} position={[0,-.003,0]}><ringGeometry args={[3.54,3.55,128]}/><meshBasicMaterial color="#c0c1b9" transparent opacity={.65} depthWrite={false}/></mesh>
-  </>;
 }
 function Camera() {
   const { camera, size, invalidate } = useThree();
@@ -123,7 +102,7 @@ function App(){
     <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><strong>BROOKLANDS</strong><span>DETAILING</span></a><nav aria-label="Основная навигация">{['Услуги','Наши работы','О компании','Контакты'].map(t=><button key={t} onClick={demo}>{t}</button>)}</nav><button className="booking" onClick={demo}>Записаться</button></header>
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>Детейлинг, защита и персонализация<br className="desktop-break"/> автомобилей премиального класса.</p><button className="cta" onClick={demo}>Обсудить проект <span aria-hidden="true">→</span></button></section>
     <section className="stage" aria-label="Интерактивная 3D-модель Porsche" data-status={status} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
-      {status!=='unavailable' && <SceneBoundary fail={()=>setStatus('unavailable')}><Canvas frameloop="demand" shadows dpr={[1,1.5]} gl={{antialias:true,powerPreference:'high-performance'}} onCreated={({gl,invalidate})=>{wake.current=invalidate;gl.shadowMap.type=THREE.PCFShadowMap;gl.toneMapping=THREE.ACESFilmicToneMapping;gl.toneMappingExposure=1;}} fallback={<p>WebGL недоступен. Интерактивная модель не отображается.</p>}><RendererLifecycle report={setStatus}/><Camera/><Room/><ContactShadow carRoot={carRoot}/><Suspense fallback={null}><Car pivot={carRoot} angle={angle} report={setStatus}/></Suspense></Canvas></SceneBoundary>}
+      {status!=='unavailable' && <SceneBoundary fail={()=>setStatus('unavailable')}><Canvas frameloop="demand" shadows dpr={[1,1.5]} gl={{antialias:true,powerPreference:'high-performance'}} onCreated={({gl,invalidate})=>{wake.current=invalidate;gl.shadowMap.type=THREE.PCFShadowMap;gl.toneMapping=THREE.ACESFilmicToneMapping;gl.toneMappingExposure=1;}} fallback={<p>WebGL недоступен. Интерактивная модель не отображается.</p>}><RendererLifecycle report={setStatus}/><Camera/><Architecture/><ContactShadow carRoot={carRoot}/><Suspense fallback={null}><Car pivot={carRoot} angle={angle} report={setStatus}/></Suspense></Canvas></SceneBoundary>}
       {status==='loading'&&<p className="status" role="status">Загрузка 3D-модели…</p>}
       {status==='unavailable'&&<div className="fallback" role="status"><span>PORSCHE / 3D</span><p>Интерактивная модель недоступна.<br/>Нужен браузер с поддержкой WebGL 2 и доступ к файлу модели.</p></div>}
     </section>

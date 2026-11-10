@@ -34,6 +34,8 @@ npm run preview -- --port 4173
 
 - `src/main.jsx` — интерфейс, загрузчик GLB, сцена, взаимодействие и fallback.
 - `src/style.css` — адаптивная композиция.
+- `src/Architecture.jsx` — неподвижная архитектура, потолочный вырез и локальные фактуры бетона.
+- `src/ContactShadow.jsx` — контактная тень от геометрии автомобиля.
 - `public/assets/model.glb` — исходный GLB, байты сохранены.
 - `references/hero-approved.png` — исходный референс, не используется приложением.
 - `scripts/qa.mjs` — воспроизводимый браузерный smoke/interaction тест.
