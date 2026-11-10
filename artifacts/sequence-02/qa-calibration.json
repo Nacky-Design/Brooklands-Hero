@@ -1,0 +1,54 @@
+{
+  "url": "http://127.0.0.1:4201/Brooklands-Hero/",
+  "results": [
+    {
+      "viewport": "320x812",
+      "all24Visible": true,
+      "uniformScale": true,
+      "groundStable": true,
+      "maxOverMinSilhouetteHeight": 1.059762770289086
+    },
+    {
+      "viewport": "430x932",
+      "all24Visible": true,
+      "uniformScale": true,
+      "groundStable": true,
+      "maxOverMinSilhouetteHeight": 1.059762770289086
+    },
+    {
+      "viewport": "900x760",
+      "all24Visible": true,
+      "uniformScale": true,
+      "groundStable": true,
+      "maxOverMinSilhouetteHeight": 1.0597627702890862
+    },
+    {
+      "viewport": "1440x900",
+      "all24Visible": true,
+      "uniformScale": true,
+      "groundStable": true,
+      "maxOverMinSilhouetteHeight": 1.059762770289086
+    },
+    {
+      "viewport": "1536x864",
+      "all24Visible": true,
+      "uniformScale": true,
+      "groundStable": true,
+      "maxOverMinSilhouetteHeight": 1.0597627702890862
+    },
+    {
+      "viewport": "1920x1080",
+      "all24Visible": true,
+      "uniformScale": true,
+      "groundStable": true,
+      "maxOverMinSilhouetteHeight": 1.0597627702890862
+    },
+    {
+      "viewport": "2048x1152",
+      "all24Visible": true,
+      "uniformScale": true,
+      "groundStable": true,
+      "maxOverMinSilhouetteHeight": 1.059762770289086
+    }
+  ]
+}

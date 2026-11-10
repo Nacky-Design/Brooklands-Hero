@@ -1,0 +1,1054 @@
+{
+  "method": "Manual visual landmarks in native source pixels. Near visible tyre vertical extent; body silhouette centre for horizontal registration. Approximate compositing calibration, not camera or geometric reconstruction.",
+  "uncertaintyPixels": 6,
+  "tyreDiameterAnchor": 375,
+  "opaqueSilhouetteHeight": {
+    "before": {
+      "min": 550,
+      "max": 755,
+      "maxOverMin": 1.3727272727272728
+    },
+    "after": {
+      "min": 669.5710455764075,
+      "max": 709.5864661654135,
+      "maxOverMin": 1.059762770289086
+    }
+  },
+  "mobileCanvasWidthRatio": 0.762038992009834,
+  "frames": [
+    {
+      "index": 0,
+      "file": "frame-00.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 228014,
+      "targetDegrees": 0,
+      "view": "front three-quarter",
+      "tyreTop": 430,
+      "groundY": 805,
+      "solid": {
+        "left": 64,
+        "top": 129,
+        "right": 1595,
+        "bottom": 806,
+        "width": 1531,
+        "height": 677
+      },
+      "visible": {
+        "left": 63,
+        "top": 128,
+        "right": 1597,
+        "bottom": 815,
+        "width": 1534,
+        "height": 687
+      },
+      "diameter": 375,
+      "scale": 1,
+      "dx": 0,
+      "dy": 0,
+      "correctedSolid": {
+        "left": 0.03827751196172249,
+        "right": 0.9539473684210527,
+        "top": 0.13708820403825717,
+        "bottom": 0.8565356004250797
+      },
+      "correctedVisible": {
+        "left": 0.037679425837320576,
+        "right": 0.9551435406698564,
+        "top": 0.13602550478214664,
+        "bottom": 0.8660998937300743
+      }
+    },
+    {
+      "index": 1,
+      "file": "frame-01.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 255708,
+      "targetDegrees": 15,
+      "view": "front toward side",
+      "tyreTop": 455,
+      "groundY": 811,
+      "solid": {
+        "left": 54,
+        "top": 162,
+        "right": 1640,
+        "bottom": 812,
+        "width": 1586,
+        "height": 650
+      },
+      "visible": {
+        "left": 53,
+        "top": 161,
+        "right": 1641,
+        "bottom": 819,
+        "width": 1588,
+        "height": 658
+      },
+      "diameter": 356,
+      "scale": 1.053370786516854,
+      "dx": -0.03782236302810693,
+      "dy": -0.052373759686682786,
+      "correctedSolid": {
+        "left": -0.0037816553848333753,
+        "right": 0.9960065357676084,
+        "top": 0.12897168921419963,
+        "bottom": 0.8565923175202093
+      },
+      "correctedVisible": {
+        "left": -0.004412038859708811,
+        "right": 0.996636919242484,
+        "top": 0.1278522728629596,
+        "bottom": 0.8644282319788894
+      }
+    },
+    {
+      "index": 2,
+      "file": "frame-02.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 208596,
+      "targetDegrees": 30,
+      "view": "side",
+      "tyreTop": 466,
+      "groundY": 766,
+      "solid": {
+        "left": 39,
+        "top": 215,
+        "right": 1654,
+        "bottom": 767,
+        "width": 1615,
+        "height": 552
+      },
+      "visible": {
+        "left": 37,
+        "top": 213,
+        "right": 1656,
+        "bottom": 775,
+        "width": 1619,
+        "height": 562
+      },
+      "diameter": 300,
+      "scale": 1.25,
+      "dx": -0.13711616543398641,
+      "dy": -0.16206163655685435,
+      "correctedSolid": {
+        "left": -0.10794201821675123,
+        "right": 1.1001668985995265,
+        "top": 0.12353878852284805,
+        "bottom": 0.8568012752391074
+      },
+      "correctedVisible": {
+        "left": -0.1094381283304556,
+        "right": 1.1016630087132309,
+        "top": 0.12088204038257178,
+        "bottom": 0.8674282678002125
+      }
+    },
+    {
+      "index": 3,
+      "file": "frame-03.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 219544,
+      "targetDegrees": 45,
+      "view": "near duplicate side",
+      "tyreTop": 466,
+      "groundY": 762,
+      "solid": {
+        "left": 27,
+        "top": 213,
+        "right": 1650,
+        "bottom": 763,
+        "width": 1623,
+        "height": 550
+      },
+      "visible": {
+        "left": 25,
+        "top": 212,
+        "right": 1651,
+        "bottom": 771,
+        "width": 1626,
+        "height": 559
+      },
+      "diameter": 296,
+      "scale": 1.2668918918918919,
+      "dx": -0.1396079974814738,
+      "dy": -0.17042680299853497,
+      "correctedSolid": {
+        "left": -0.11913757193923497,
+        "right": 1.1113624523220103,
+        "top": 0.11634043714277531,
+        "bottom": 0.8568192262400554
+      },
+      "correctedVisible": {
+        "left": -0.12065389975717858,
+        "right": 1.1121206162309818,
+        "top": 0.11499411207168936,
+        "bottom": 0.8675898268087432
+      }
+    },
+    {
+      "index": 4,
+      "file": "frame-04.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 254312,
+      "targetDegrees": 60,
+      "view": "side toward rear",
+      "tyreTop": 470,
+      "groundY": 802,
+      "solid": {
+        "left": 48,
+        "top": 208,
+        "right": 1638,
+        "bottom": 803,
+        "width": 1590,
+        "height": 595
+      },
+      "visible": {
+        "left": 47,
+        "top": 206,
+        "right": 1639,
+        "bottom": 807,
+        "width": 1592,
+        "height": 601
+      },
+      "diameter": 332,
+      "scale": 1.1295180722891567,
+      "dx": -0.07371624618788175,
+      "dy": -0.10719818700946182,
+      "correctedSolid": {
+        "left": -0.041270484685859296,
+        "right": 1.0334953650686345,
+        "top": 0.14247212014903404,
+        "bottom": 0.8566732391841544
+      },
+      "correctedVisible": {
+        "left": -0.041946438050484765,
+        "right": 1.03417131843326,
+        "top": 0.14007144411866387,
+        "bottom": 0.8614745912448946
+      }
+    },
+    {
+      "index": 5,
+      "file": "frame-05.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 228184,
+      "targetDegrees": 75,
+      "view": "rear three-quarter",
+      "tyreTop": 466,
+      "groundY": 816,
+      "solid": {
+        "left": 57,
+        "top": 164,
+        "right": 1626,
+        "bottom": 817,
+        "width": 1569,
+        "height": 653
+      },
+      "visible": {
+        "left": 55,
+        "top": 162,
+        "right": 1628,
+        "bottom": 827,
+        "width": 1573,
+        "height": 665
+      },
+      "diameter": 350,
+      "scale": 1.0714285714285714,
+      "dx": -0.04344898581528078,
+      "dy": -0.0736298770305146,
+      "correctedSolid": {
+        "left": -0.006901153037645491,
+        "right": 0.9991260334204207,
+        "top": 0.11310156368604832,
+        "bottom": 0.8566115075148019
+      },
+      "correctedVisible": {
+        "left": -0.008183533135106384,
+        "right": 1.0004084135178815,
+        "top": 0.11082435099438293,
+        "bottom": 0.8679975709731289
+      }
+    },
+    {
+      "index": 6,
+      "file": "frame-06.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 232368,
+      "targetDegrees": 90,
+      "view": "rear three-quarter",
+      "tyreTop": 440,
+      "groundY": 818,
+      "solid": {
+        "left": 64,
+        "top": 131,
+        "right": 1635,
+        "bottom": 819,
+        "width": 1571,
+        "height": 688
+      },
+      "visible": {
+        "left": 62,
+        "top": 130,
+        "right": 1636,
+        "bottom": 837,
+        "width": 1574,
+        "height": 707
+      },
+      "diameter": 378,
+      "scale": 0.9920634920634921,
+      "dx": -0.008231028694271614,
+      "dy": -0.006915979285798568,
+      "correctedSolid": {
+        "left": 0.02976541863790283,
+        "right": 0.9624594617448723,
+        "top": 0.1311927534031679,
+        "bottom": 0.8565271663039995
+      },
+      "correctedVisible": {
+        "left": 0.028578029658772375,
+        "right": 0.9630531562344377,
+        "top": 0.13013848826813765,
+        "bottom": 0.8755039387345446
+      }
+    },
+    {
+      "index": 7,
+      "file": "frame-07.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 195234,
+      "targetDegrees": 105,
+      "view": "almost rear",
+      "tyreTop": 414,
+      "groundY": 825,
+      "solid": {
+        "left": 225,
+        "top": 83,
+        "right": 1460,
+        "bottom": 826,
+        "width": 1235,
+        "height": 743
+      },
+      "visible": {
+        "left": 223,
+        "top": 82,
+        "right": 1461,
+        "bottom": 843,
+        "width": 1238,
+        "height": 761
+      },
+      "diameter": 411,
+      "scale": 0.9124087591240876,
+      "dx": 0.03608588150674136,
+      "dy": 0.055539610757309066,
+      "correctedSolid": {
+        "left": 0.1589416390189614,
+        "right": 0.8332832413638138,
+        "top": 0.13601774785327003,
+        "bottom": 0.8564425172785592
+      },
+      "correctedVisible": {
+        "left": 0.157849587841075,
+        "right": 0.8338292669527569,
+        "top": 0.13504813174368013,
+        "bottom": 0.8729259911415873
+      }
+    },
+    {
+      "index": 8,
+      "file": "frame-08.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 194542,
+      "targetDegrees": 120,
+      "view": "near duplicate almost rear",
+      "tyreTop": 413,
+      "groundY": 827,
+      "solid": {
+        "left": 250,
+        "top": 81,
+        "right": 1428,
+        "bottom": 828,
+        "width": 1178,
+        "height": 747
+      },
+      "visible": {
+        "left": 216,
+        "top": 79,
+        "right": 1448,
+        "bottom": 845,
+        "width": 1232,
+        "height": 766
+      },
+      "diameter": 414,
+      "scale": 0.9057971014492754,
+      "dx": 0.04158865543304896,
+      "dy": 0.05941104899197591,
+      "correctedSolid": {
+        "left": 0.17702482490812005,
+        "right": 0.815200055474655,
+        "top": 0.13738083136964999,
+        "bottom": 0.8564354910748665
+      },
+      "correctedVisible": {
+        "left": 0.1586055058595104,
+        "right": 0.8260349490326606,
+        "top": 0.13545565155785555,
+        "bottom": 0.872799519475119
+      }
+    },
+    {
+      "index": 9,
+      "file": "frame-09.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 173786,
+      "targetDegrees": 135,
+      "view": "rear",
+      "tyreTop": null,
+      "groundY": 821,
+      "fallback": "adjacent calibrated roof-to-ground height interpolation; tyres occluded",
+      "solid": {
+        "left": 332,
+        "top": 94,
+        "right": 1370,
+        "bottom": 822,
+        "width": 1038,
+        "height": 728
+      },
+      "visible": {
+        "left": 301,
+        "top": 92,
+        "right": 1382,
+        "bottom": 831,
+        "width": 1081,
+        "height": 739
+      },
+      "diameter": null,
+      "scale": 0.934117186730383,
+      "dx": 0.020389085369391213,
+      "dy": 0.04047799117359785,
+      "correctedSolid": {
+        "left": 0.20598268560546973,
+        "right": 0.7862421947773055,
+        "top": 0.1337904412826903,
+        "bottom": 0.8564655868084277
+      },
+      "correctedVisible": {
+        "left": 0.18865316269185997,
+        "right": 0.792950397195477,
+        "top": 0.13180507000377345,
+        "bottom": 0.8653997575635535
+      }
+    },
+    {
+      "index": 10,
+      "file": "frame-10.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 190764,
+      "targetDegrees": 150,
+      "view": "rear toward opposite side",
+      "tyreTop": 417,
+      "groundY": 828,
+      "solid": {
+        "left": 217,
+        "top": 80,
+        "right": 1428,
+        "bottom": 829,
+        "width": 1211,
+        "height": 749
+      },
+      "visible": {
+        "left": 201,
+        "top": 78,
+        "right": 1443,
+        "bottom": 841,
+        "width": 1242,
+        "height": 763
+      },
+      "diameter": 411,
+      "scale": 0.9124087591240876,
+      "dx": 0.04700639328560535,
+      "dy": 0.05263076242853937,
+      "correctedSolid": {
+        "left": 0.16549394608627982,
+        "right": 0.8267309342964952,
+        "top": 0.13020005119573066,
+        "bottom": 0.8564425172785591
+      },
+      "correctedVisible": {
+        "left": 0.1567575366631886,
+        "right": 0.8349213181306432,
+        "top": 0.1282608189765509,
+        "bottom": 0.8680779105936378
+      }
+    },
+    {
+      "index": 11,
+      "file": "frame-11.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 208420,
+      "targetDegrees": 165,
+      "view": "rear three-quarter opposite",
+      "tyreTop": 430,
+      "groundY": 826,
+      "solid": {
+        "left": 98,
+        "top": 115,
+        "right": 1537,
+        "bottom": 827,
+        "width": 1439,
+        "height": 712
+      },
+      "visible": {
+        "left": 96,
+        "top": 113,
+        "right": 1555,
+        "bottom": 832,
+        "width": 1459,
+        "height": 719
+      },
+      "diameter": 396,
+      "scale": 0.946969696969697,
+      "dx": 0.03282834248179611,
+      "dy": 0.024232763340095942,
+      "correctedSolid": {
+        "left": 0.08836576336930677,
+        "right": 0.9038591170134683,
+        "top": 0.13996232248091972,
+        "bottom": 0.8564792451614981
+      },
+      "correctedVisible": {
+        "left": 0.08723234661650042,
+        "right": 0.9140598677887254,
+        "top": 0.1379496344958619,
+        "bottom": 0.8615109651241426
+      }
+    },
+    {
+      "index": 12,
+      "file": "frame-12.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 222972,
+      "targetDegrees": 180,
+      "view": "rear three-quarter opposite",
+      "tyreTop": 444,
+      "groundY": 823,
+      "solid": {
+        "left": 45,
+        "top": 129,
+        "right": 1611,
+        "bottom": 824,
+        "width": 1566,
+        "height": 695
+      },
+      "visible": {
+        "left": 43,
+        "top": 127,
+        "right": 1613,
+        "bottom": 833,
+        "width": 1570,
+        "height": 706
+      },
+      "diameter": 379,
+      "scale": 0.9894459102902374,
+      "dx": 0.005830445146314811,
+      "dy": -0.009897964047678398,
+      "correctedSolid": {
+        "left": 0.032476205746590506,
+        "right": 0.9597486746361846,
+        "top": 0.12574339878700877,
+        "bottom": 0.8565243846017963
+      },
+      "correctedVisible": {
+        "left": 0.03129194971991159,
+        "right": 0.9609329306628636,
+        "top": 0.12364043192135471,
+        "bottom": 0.8659877354972395
+      }
+    },
+    {
+      "index": 13,
+      "file": "frame-13.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 235330,
+      "targetDegrees": 195,
+      "view": "near duplicate rear three-quarter",
+      "tyreTop": 450,
+      "groundY": 823,
+      "solid": {
+        "left": 67,
+        "top": 158,
+        "right": 1608,
+        "bottom": 824,
+        "width": 1541,
+        "height": 666
+      },
+      "visible": {
+        "left": 66,
+        "top": 156,
+        "right": 1609,
+        "bottom": 828,
+        "width": 1543,
+        "height": 672
+      },
+      "diameter": 373,
+      "scale": 1.0053619302949062,
+      "dx": -0.007771830677543612,
+      "dy": -0.02381813882328132,
+      "correctedSolid": {
+        "left": 0.03253891099197088,
+        "right": 0.9596859693908042,
+        "top": 0.14498864649722365,
+        "bottom": 0.8565412985444155
+      },
+      "correctedVisible": {
+        "left": 0.031937258131231855,
+        "right": 0.9602876222515432,
+        "top": 0.14285185174633117,
+        "bottom": 0.8608148880462004
+      }
+    },
+    {
+      "index": 14,
+      "file": "frame-14.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 224558,
+      "targetDegrees": 210,
+      "view": "side toward rear opposite",
+      "tyreTop": 466,
+      "groundY": 784,
+      "solid": {
+        "left": 29,
+        "top": 209,
+        "right": 1640,
+        "bottom": 787,
+        "width": 1611,
+        "height": 578
+      },
+      "visible": {
+        "left": 27,
+        "top": 207,
+        "right": 1642,
+        "bottom": 795,
+        "width": 1615,
+        "height": 588
+      },
+      "diameter": 318,
+      "scale": 1.179245283018868,
+      "dx": -0.09280448900026139,
+      "dy": -0.12702263749924803,
+      "correctedSolid": {
+        "left": -0.07233883178449409,
+        "right": 1.0645637121672693,
+        "top": 0.13489262727327422,
+        "bottom": 0.8592324504240774
+      },
+      "correctedVisible": {
+        "left": -0.07375025642006425,
+        "right": 1.0659751368028392,
+        "top": 0.13238626110320223,
+        "bottom": 0.8692579151043652
+      }
+    },
+    {
+      "index": 15,
+      "file": "frame-15.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 210720,
+      "targetDegrees": 225,
+      "view": "side opposite",
+      "tyreTop": 458,
+      "groundY": 764,
+      "solid": {
+        "left": 25,
+        "top": 212,
+        "right": 1651,
+        "bottom": 765,
+        "width": 1626,
+        "height": 553
+      },
+      "visible": {
+        "left": 24,
+        "top": 211,
+        "right": 1653,
+        "bottom": 768,
+        "width": 1629,
+        "height": 557
+      },
+      "diameter": 306,
+      "scale": 1.2254901960784315,
+      "dx": -0.11846612612442664,
+      "dy": -0.13950532391490067,
+      "correctedSolid": {
+        "left": -0.10013144335844174,
+        "right": 1.0923563237412168,
+        "top": 0.13658811027067586,
+        "bottom": 0.8567752286887126
+      },
+      "correctedVisible": {
+        "left": -0.10086483066908113,
+        "right": 1.0938230983624957,
+        "top": 0.13528578275093256,
+        "bottom": 0.8606822112479424
+      }
+    },
+    {
+      "index": 16,
+      "file": "frame-16.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 215982,
+      "targetDegrees": 240,
+      "view": "side toward front opposite",
+      "tyreTop": 470,
+      "groundY": 786,
+      "solid": {
+        "left": 34,
+        "top": 202,
+        "right": 1642,
+        "bottom": 787,
+        "width": 1608,
+        "height": 585
+      },
+      "visible": {
+        "left": 32,
+        "top": 200,
+        "right": 1644,
+        "bottom": 790,
+        "width": 1612,
+        "height": 590
+      },
+      "diameter": 316,
+      "scale": 1.1867088607594938,
+      "dx": -0.09901743731696411,
+      "dy": -0.13576319294044847,
+      "correctedSolid": {
+        "left": -0.0748713563679379,
+        "right": 1.0670962367507133,
+        "top": 0.11898196101642478,
+        "bottom": 0.8567340157925182
+      },
+      "correctedVisible": {
+        "left": -0.0762917140708218,
+        "right": 1.068516594453597,
+        "top": 0.11645973176932706,
+        "bottom": 0.8605173596631648
+      }
+    },
+    {
+      "index": 17,
+      "file": "frame-17.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 268338,
+      "targetDegrees": 255,
+      "view": "front three-quarter opposite",
+      "tyreTop": 470,
+      "groundY": 802,
+      "solid": {
+        "left": 54,
+        "top": 188,
+        "right": 1615,
+        "bottom": 806,
+        "width": 1561,
+        "height": 618
+      },
+      "visible": {
+        "left": 52,
+        "top": 182,
+        "right": 1616,
+        "bottom": 817,
+        "width": 1564,
+        "height": 635
+      },
+      "diameter": 332,
+      "scale": 1.1295180722891567,
+      "dx": -0.06797064258856533,
+      "dy": -0.10719818700946182,
+      "correctedSolid": {
+        "left": -0.03146916089879007,
+        "right": 1.0236940412815652,
+        "top": 0.11846535984533252,
+        "bottom": 0.8602742532297096
+      },
+      "correctedVisible": {
+        "left": -0.03282106762804101,
+        "right": 1.0243699946461906,
+        "top": 0.11126333175422204,
+        "bottom": 0.8734779713967453
+      }
+    },
+    {
+      "index": 18,
+      "file": "frame-18.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 230462,
+      "targetDegrees": 270,
+      "view": "front three-quarter opposite",
+      "tyreTop": 430,
+      "groundY": 810,
+      "solid": {
+        "left": 83,
+        "top": 125,
+        "right": 1629,
+        "bottom": 811,
+        "width": 1546,
+        "height": 686
+      },
+      "visible": {
+        "left": 74,
+        "top": 123,
+        "right": 1631,
+        "bottom": 818,
+        "width": 1557,
+        "height": 695
+      },
+      "diameter": 380,
+      "scale": 0.9868421052631579,
+      "dx": -0.009415292965562205,
+      "dy": 0.006012640527993773,
+      "correctedSolid": {
+        "left": 0.039601998917646715,
+        "right": 0.9526228814651285,
+        "top": 0.13710218692320603,
+        "bottom": 0.8565216175401308
+      },
+      "correctedVisible": {
+        "left": 0.034286870882118035,
+        "right": 0.9538040210285793,
+        "top": 0.13500475418088265,
+        "bottom": 0.8638626321382628
+      }
+    },
+    {
+      "index": 19,
+      "file": "frame-19.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 208504,
+      "targetDegrees": 285,
+      "view": "front approaching head-on",
+      "tyreTop": 438,
+      "groundY": 834,
+      "solid": {
+        "left": 159,
+        "top": 102,
+        "right": 1495,
+        "bottom": 835,
+        "width": 1336,
+        "height": 733
+      },
+      "visible": {
+        "left": 144,
+        "top": 100,
+        "right": 1504,
+        "bottom": 848,
+        "width": 1360,
+        "height": 748
+      },
+      "diameter": 396,
+      "scale": 0.946969696969697,
+      "dx": 0.02744461290596595,
+      "dy": 0.01618201139986475,
+      "correctedSolid": {
+        "left": 0.11755124475406997,
+        "right": 0.874673635628705,
+        "top": 0.11882909863781278,
+        "bottom": 0.8564792451614981
+      },
+      "correctedVisible": {
+        "left": 0.10905061910802243,
+        "right": 0.8797740110163337,
+        "top": 0.11681641065275497,
+        "bottom": 0.8695617170643739
+      }
+    },
+    {
+      "index": 20,
+      "file": "frame-20.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 173944,
+      "targetDegrees": 300,
+      "view": "almost front",
+      "tyreTop": 442,
+      "groundY": 841,
+      "solid": {
+        "left": 270,
+        "top": 87,
+        "right": 1385,
+        "bottom": 842,
+        "width": 1115,
+        "height": 755
+      },
+      "visible": {
+        "left": 247,
+        "top": 86,
+        "right": 1414,
+        "bottom": 856,
+        "width": 1167,
+        "height": 770
+      },
+      "diameter": 399,
+      "scale": 0.9398496240601504,
+      "dx": 0.03068720745064879,
+      "dy": 0.015501026743266255,
+      "correctedSolid": {
+        "left": 0.18254800846575386,
+        "right": 0.8096768719170212,
+        "top": 0.10239466892523552,
+        "bottom": 0.8564716786653137
+      },
+      "correctedVisible": {
+        "left": 0.1696117180089116,
+        "right": 0.8259878468408658,
+        "top": 0.10139589142889105,
+        "bottom": 0.8704545636141363
+      }
+    },
+    {
+      "index": 21,
+      "file": "frame-21.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 154284,
+      "targetDegrees": 315,
+      "view": "front",
+      "tyreTop": null,
+      "groundY": 814,
+      "fallback": "adjacent calibrated roof-to-ground height interpolation; tyres occluded",
+      "solid": {
+        "left": 343,
+        "top": 114,
+        "right": 1326,
+        "bottom": 815,
+        "width": 983,
+        "height": 701
+      },
+      "visible": {
+        "left": 331,
+        "top": 112,
+        "right": 1341,
+        "bottom": 830,
+        "width": 1010,
+        "height": 718
+      },
+      "diameter": null,
+      "scale": 1.008923407419648,
+      "dx": -0.007745479312919024,
+      "dy": -0.017283372624435134,
+      "correctedSolid": {
+        "left": 0.19935250317956407,
+        "right": 0.792872377203211,
+        "top": 0.10494539299282298,
+        "bottom": 0.8565450833235065
+      },
+      "correctedVisible": {
+        "left": 0.19210709271335477,
+        "right": 0.8019291402859727,
+        "top": 0.10280102868374827,
+        "bottom": 0.8726278156415669
+      }
+    },
+    {
+      "index": 22,
+      "file": "frame-22.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 202816,
+      "targetDegrees": 330,
+      "view": "front toward start",
+      "tyreTop": 448,
+      "groundY": 838,
+      "solid": {
+        "left": 213,
+        "top": 106,
+        "right": 1453,
+        "bottom": 839,
+        "width": 1240,
+        "height": 733
+      },
+      "visible": {
+        "left": 208,
+        "top": 104,
+        "right": 1491,
+        "bottom": 857,
+        "width": 1283,
+        "height": 753
+      },
+      "diameter": 390,
+      "scale": 0.9615384615384616,
+      "dx": 0.016781776839180196,
+      "dy": -0.0008174609662389143,
+      "correctedSolid": {
+        "left": 0.13934772076957658,
+        "right": 0.8528771596131985,
+        "top": 0.10749611706041032,
+        "bottom": 0.8564947273767677
+      },
+      "correctedVisible": {
+        "left": 0.1364705859355297,
+        "right": 0.8747433843519548,
+        "top": 0.10545246464481317,
+        "bottom": 0.8748875991171421
+      }
+    },
+    {
+      "index": 23,
+      "file": "frame-23.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 229768,
+      "targetDegrees": 345,
+      "view": "front three-quarter before start",
+      "tyreTop": 440,
+      "groundY": 827,
+      "solid": {
+        "left": 136,
+        "top": 121,
+        "right": 1554,
+        "bottom": 828,
+        "width": 1418,
+        "height": 707
+      },
+      "visible": {
+        "left": 134,
+        "top": 120,
+        "right": 1570,
+        "bottom": 840,
+        "width": 1436,
+        "height": 720
+      },
+      "diameter": 387,
+      "scale": 0.9689922480620154,
+      "dx": 0.006107383571158309,
+      "dy": 0.0038718500028833702,
+      "correctedSolid": {
+        "left": 0.08497210274317153,
+        "right": 0.9072527776396035,
+        "top": 0.12847127828715954,
+        "bottom": 0.8565026485101616
+      },
+      "correctedVisible": {
+        "left": 0.08381232746123016,
+        "right": 0.9165309798951347,
+        "top": 0.12744153094596716,
+        "bottom": 0.86885961660447
+      }
+    }
+  ]
+}

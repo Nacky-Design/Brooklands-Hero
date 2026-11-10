@@ -1,7 +1,7 @@
 import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-const out='artifacts/sequence-01'; await fs.mkdir(out,{recursive:true});
+const out=process.env.QA_RESULTS_DIR||'artifacts/sequence-01'; await fs.mkdir(out,{recursive:true});
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 const url=process.env.QA_URL||'http://127.0.0.1:5173/';
 const results=[];

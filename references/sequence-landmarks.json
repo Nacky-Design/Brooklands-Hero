@@ -1,0 +1,30 @@
+{
+  "method": "Manual visual landmarks in native source pixels. Near visible tyre vertical extent; body silhouette centre for horizontal registration. Approximate compositing calibration, not camera or geometric reconstruction.",
+  "uncertaintyPixels": 6,
+  "frames": [
+    {"index":0,"view":"front three-quarter","tyreTop":430,"groundY":805},
+    {"index":1,"view":"front toward side","tyreTop":455,"groundY":811},
+    {"index":2,"view":"side","tyreTop":466,"groundY":766},
+    {"index":3,"view":"near duplicate side","tyreTop":466,"groundY":762},
+    {"index":4,"view":"side toward rear","tyreTop":470,"groundY":802},
+    {"index":5,"view":"rear three-quarter","tyreTop":466,"groundY":816},
+    {"index":6,"view":"rear three-quarter","tyreTop":440,"groundY":818},
+    {"index":7,"view":"almost rear","tyreTop":414,"groundY":825},
+    {"index":8,"view":"near duplicate almost rear","tyreTop":413,"groundY":827},
+    {"index":9,"view":"rear","tyreTop":null,"groundY":821,"fallback":"adjacent calibrated roof-to-ground height interpolation; tyres occluded"},
+    {"index":10,"view":"rear toward opposite side","tyreTop":417,"groundY":828},
+    {"index":11,"view":"rear three-quarter opposite","tyreTop":430,"groundY":826},
+    {"index":12,"view":"rear three-quarter opposite","tyreTop":444,"groundY":823},
+    {"index":13,"view":"near duplicate rear three-quarter","tyreTop":450,"groundY":823},
+    {"index":14,"view":"side toward rear opposite","tyreTop":466,"groundY":784},
+    {"index":15,"view":"side opposite","tyreTop":458,"groundY":764},
+    {"index":16,"view":"side toward front opposite","tyreTop":470,"groundY":786},
+    {"index":17,"view":"front three-quarter opposite","tyreTop":470,"groundY":802},
+    {"index":18,"view":"front three-quarter opposite","tyreTop":430,"groundY":810},
+    {"index":19,"view":"front approaching head-on","tyreTop":438,"groundY":834},
+    {"index":20,"view":"almost front","tyreTop":442,"groundY":841},
+    {"index":21,"view":"front","tyreTop":null,"groundY":814,"fallback":"adjacent calibrated roof-to-ground height interpolation; tyres occluded"},
+    {"index":22,"view":"front toward start","tyreTop":448,"groundY":838},
+    {"index":23,"view":"front three-quarter before start","tyreTop":440,"groundY":827}
+  ]
+}

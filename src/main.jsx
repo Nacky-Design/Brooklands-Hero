@@ -1,10 +1,10 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { FRAME_COUNT, useFrameSequence, wrapFrame } from './useFrameSequence.js';
+import { getFrameStyle, getSequenceLayout } from './frameLayout.js';
 import './style.css';
 
 const BACKGROUND = `${import.meta.env.BASE_URL}assets/atelier-background.webp`;
-const PLATE_RATIO = 1672 / 941;
 
 function useCarLayout(stage) {
   const [size, setSize] = useState({ width: 0, height: 0 });
@@ -19,16 +19,7 @@ function useCarLayout(stage) {
     observer.observe(element);
     return () => observer.disconnect();
   }, [stage]);
-  const { width, height } = size;
-  if (width < 900) {
-    const carWidth = width * .96, carHeight = carWidth / PLATE_RATIO;
-    return { width: carWidth, height: carHeight, left: (width - carWidth) / 2, top: height * .92 - carHeight };
-  }
-  // Apply the same cover transform as the background to reference-space coordinates.
-  const coverWidth = Math.max(width, height * PLATE_RATIO);
-  const coverHeight = coverWidth / PLATE_RATIO;
-  const carWidth = coverWidth * .62;
-  return { width: carWidth, height: carWidth / PLATE_RATIO, left: (width - coverWidth) / 2 + coverWidth * .51 - carWidth / 2, top: (height - coverHeight) / 2 + coverHeight * .295 };
+  return getSequenceLayout(size.width, size.height);
 }
 
 function App() {
@@ -66,7 +57,7 @@ function App() {
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>Детейлинг, защита и персонализация<br className="desktop-break"/> автомобилей премиального класса.</p><button className="cta" onClick={demo}>Обсудить проект <span aria-hidden="true">→</span></button></section>
     <section ref={stage} className="stage" aria-label="Покадровый обзор Porsche на 360 градусов" tabIndex={0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
       <img className="stage-background" src={BACKGROUND} alt="" fetchPriority="high" decoding="async"/>
-      {sequence.frame && <div className="sequence" style={carLayout}><img className="sequence-image" src={sequence.frame.url} alt="Porsche 911 Turbo S" draggable="false"/></div>}
+      {sequence.frame && <div className="sequence" style={carLayout}><img className="sequence-image" style={getFrameStyle(sequence.frame.index)} src={sequence.frame.url} alt="Porsche 911 Turbo S" draggable="false"/></div>}
       {!sequence.frame && !sequence.error && <p className="status" role="status">Загрузка автомобиля…</p>}
       {sequence.frame && sequence.buffering && <p className="frame-loading" role="status">Загрузка ракурса…</p>}
       {sequence.error && <div className={sequence.frame ? 'frame-warning' : 'fallback'} role="status"><p>{sequence.frame ? 'Этот ракурс пока недоступен.' : 'Не удалось загрузить автомобиль.'}</p><button onClick={sequence.retry}>Повторить загрузку</button></div>}

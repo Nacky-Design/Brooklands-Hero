@@ -1,0 +1,72 @@
+{
+  "url": "http://127.0.0.1:4201/Brooklands-Hero/",
+  "results": [
+    {
+      "viewport": "320x812",
+      "pass": true,
+      "all24Frames": true,
+      "wrap": true,
+      "keyboard": true,
+      "mouse": true,
+      "noGLB": true
+    },
+    {
+      "viewport": "430x932",
+      "pass": true,
+      "all24Frames": true,
+      "wrap": true,
+      "keyboard": true,
+      "mouse": true,
+      "noGLB": true
+    },
+    {
+      "viewport": "1440x900",
+      "pass": true,
+      "all24Frames": true,
+      "wrap": true,
+      "keyboard": true,
+      "mouse": true,
+      "noGLB": true
+    },
+    {
+      "viewport": "1536x864",
+      "pass": true,
+      "all24Frames": true,
+      "wrap": true,
+      "keyboard": true,
+      "mouse": true,
+      "noGLB": true
+    },
+    {
+      "viewport": "1920x1080",
+      "pass": true,
+      "all24Frames": true,
+      "wrap": true,
+      "keyboard": true,
+      "mouse": true,
+      "noGLB": true
+    },
+    {
+      "viewport": "2048x1152",
+      "pass": true,
+      "all24Frames": true,
+      "wrap": true,
+      "keyboard": true,
+      "mouse": true,
+      "noGLB": true
+    },
+    {
+      "firstFrameIndependent": true,
+      "retainsFrameWhileLoading": true
+    },
+    {
+      "initialFailureAndRetry": true
+    },
+    {
+      "missingAngleRetainsFrameAndRetries": true
+    },
+    {
+      "touchDrag": true
+    }
+  ]
+}
