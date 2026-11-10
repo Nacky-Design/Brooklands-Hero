@@ -5,10 +5,11 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import './style.css';
 import { ContactShadow } from './ContactShadow.jsx';
-import { Architecture } from './Architecture.jsx';
+import { StudioLighting } from './StudioLighting.jsx';
 
 const INITIAL_ROTATION = -1.65;
 const MODEL = `${import.meta.env.BASE_URL}assets/model.glb`;
+const BACKGROUND = `${import.meta.env.BASE_URL}assets/atelier-background.webp`;
 function Car({ angle, report, pivot }) {
   const gltf = useLoader(GLTFLoader, MODEL);
   const { camera, invalidate } = useThree();
@@ -50,13 +51,13 @@ function Camera() {
   useEffect(() => {
     const ratio=size.width/size.height;
     const mobile=size.width<900;
-    camera.position.set(5.6,mobile ? 2.7 : 1.25,7.2);
+    camera.position.set(5.6,1.25,7.2);
     camera.fov = mobile ? 43 : 30;
     if(mobile) camera.position.multiplyScalar(Math.max(1.15, 1.28 / ratio));
     else camera.position.multiplyScalar(Math.max(1, 1.8 / ratio));
     camera.lookAt(0,.65,0);
     if(!mobile) camera.setViewOffset(size.width,size.height,-size.width*.035,-size.height*.12,size.width,size.height);
-    else camera.clearViewOffset();
+    else camera.setViewOffset(size.width,size.height,0,-size.height*.23,size.width,size.height);
     camera.updateProjectionMatrix();
     invalidate();
   },[camera,size,invalidate]);
@@ -102,7 +103,8 @@ function App(){
     <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><strong>BROOKLANDS</strong><span>DETAILING</span></a><nav aria-label="Основная навигация">{['Услуги','Наши работы','О компании','Контакты'].map(t=><button key={t} onClick={demo}>{t}</button>)}</nav><button className="booking" onClick={demo}>Записаться</button></header>
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>Детейлинг, защита и персонализация<br className="desktop-break"/> автомобилей премиального класса.</p><button className="cta" onClick={demo}>Обсудить проект <span aria-hidden="true">→</span></button></section>
     <section className="stage" aria-label="Интерактивная 3D-модель Porsche" data-status={status} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
-      {status!=='unavailable' && <SceneBoundary fail={()=>setStatus('unavailable')}><Canvas frameloop="demand" shadows dpr={[1,1.5]} gl={{antialias:true,powerPreference:'high-performance'}} onCreated={({gl,invalidate})=>{wake.current=invalidate;gl.shadowMap.type=THREE.PCFShadowMap;gl.toneMapping=THREE.ACESFilmicToneMapping;gl.toneMappingExposure=1;}} fallback={<p>WebGL недоступен. Интерактивная модель не отображается.</p>}><RendererLifecycle report={setStatus}/><Camera/><Architecture/><ContactShadow carRoot={carRoot}/><Suspense fallback={null}><Car pivot={carRoot} angle={angle} report={setStatus}/></Suspense></Canvas></SceneBoundary>}
+      <img className="stage-background" src={BACKGROUND} alt="" fetchPriority="high" decoding="async"/>
+      {status!=='unavailable' && <SceneBoundary fail={()=>setStatus('unavailable')}><Canvas style={{position:'absolute',inset:0}} frameloop="demand" shadows dpr={[1,1.5]} gl={{alpha:true,antialias:true,powerPreference:'high-performance'}} onCreated={({gl,invalidate})=>{wake.current=invalidate;gl.setClearColor(0x000000,0);gl.shadowMap.type=THREE.PCFShadowMap;gl.toneMapping=THREE.ACESFilmicToneMapping;gl.toneMappingExposure=1;}} fallback={<p>WebGL недоступен. Интерактивная модель не отображается.</p>}><RendererLifecycle report={setStatus}/><Camera/><StudioLighting/><ContactShadow carRoot={carRoot}/><Suspense fallback={null}><Car pivot={carRoot} angle={angle} report={setStatus}/></Suspense></Canvas></SceneBoundary>}
       {status==='loading'&&<p className="status" role="status">Загрузка 3D-модели…</p>}
       {status==='unavailable'&&<div className="fallback" role="status"><span>PORSCHE / 3D</span><p>Интерактивная модель недоступна.<br/>Нужен браузер с поддержкой WebGL 2 и доступ к файлу модели.</p></div>}
     </section>

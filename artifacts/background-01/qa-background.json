@@ -1,0 +1,27 @@
+[
+  {
+    "check": "Clean plate preloaded once; transparent WebGL compositing",
+    "status": "PASS",
+    "width": 1672,
+    "height": 941,
+    "alpha": true,
+    "resources": [
+      {
+        "initiator": "link",
+        "bytes": 91440
+      }
+    ]
+  },
+  {
+    "check": "Background visible through canvas; model rendered separately",
+    "status": "PASS"
+  },
+  {
+    "check": "Only GLB rotates; background pixels and camera fixed; no console errors",
+    "status": "PASS"
+  },
+  {
+    "check": "Clean background and readable fallback remain without WebGL; no fake car",
+    "status": "PASS"
+  }
+]

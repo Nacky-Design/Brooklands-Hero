@@ -25,4 +25,4 @@ try {
  await page.getByRole('button',{name:'Повернуть вправо'}).click();await page.waitForFunction(a=>Number(document.querySelector('.stage').dataset.angle)>a+.7,before,{timeout:15000});
  await page.mouse.move(650,650);await page.mouse.down();await page.mouse.move(850,650,{steps:6});await page.mouse.up();await page.waitForFunction(a=>Number(document.querySelector('.stage').dataset.angle)>a+2,before,{timeout:15000});
  assert.deepEqual(errors,[]);results.push({check:'Demand rendering wakes on buttons and drag; no errors',status:'PASS'});
-} catch(e){results.push({status:'FAIL',error:e.stack});process.exitCode=1;}finally{console.log(JSON.stringify(results,null,2));await writeFile(process.env.QA_LOADING_DEV?'artifacts/qa-loading-dev.json':'artifacts/qa-loading-production.json',JSON.stringify(results,null,2));await browser.close();}
+} catch(e){results.push({status:'FAIL',error:e.stack});process.exitCode=1;}finally{console.log(JSON.stringify(results,null,2));await writeFile(process.env.QA_RESULTS_PATH || (process.env.QA_LOADING_DEV?'artifacts/qa-loading-dev.json':'artifacts/qa-loading-production.json'),JSON.stringify(results,null,2));await browser.close();}

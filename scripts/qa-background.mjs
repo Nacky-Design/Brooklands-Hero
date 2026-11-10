@@ -1,0 +1,33 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',headless:true,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const results=[];
+try {
+ const page=await browser.newPage({viewport:{width:1920,height:1080}});const errors=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+ await page.goto('http://127.0.0.1:5173');await page.waitForSelector('.stage[data-status="ready"]');await page.waitForFunction(()=>document.querySelector('.stage-background')?.naturalWidth>0);await page.waitForTimeout(800);
+ const info=await page.evaluate(()=>({width:document.querySelector('.stage-background').naturalWidth,height:document.querySelector('.stage-background').naturalHeight,alpha:document.querySelector('.stage canvas').getContext('webgl2').getContextAttributes().alpha,resources:performance.getEntriesByType('resource').filter(x=>x.name.endsWith('atelier-background.webp')).map(x=>({initiator:x.initiatorType,bytes:x.transferSize}))}));
+ assert.equal(info.width,1672);assert.equal(info.height,941);assert.equal(info.alpha,true);assert.equal(info.resources.length,1);assert.equal(info.resources[0].initiator,'link');
+ results.push({check:'Clean plate preloaded once; transparent WebGL compositing',status:'PASS',...info});
+ const backgroundClip={x:800,y:100,width:120,height:60}, carClip={x:900,y:520,width:160,height:160};
+ const bgBefore=await page.screenshot({clip:backgroundClip});const carBefore=await page.screenshot({clip:carClip});
+ await page.locator('.stage canvas').evaluate(el=>el.style.visibility='hidden');
+ assert(bgBefore.equals(await page.screenshot({clip:backgroundClip})),'WebGL obscures background outside car');
+ assert(!carBefore.equals(await page.screenshot({clip:carClip})),'No rendered GLB over plate');
+ await page.locator('.stage canvas').evaluate(el=>el.style.visibility='');
+ results.push({check:'Background visible through canvas; model rendered separately',status:'PASS'});
+ const hideUI=await page.addStyleTag({content:'header,.intro,.presets,.rotation,.demo-message{visibility:hidden!important}'});
+ await page.screenshot({path:'artifacts/background-01/composite-no-ui-1920x1080.png'});await hideUI.evaluate(el=>el.remove());
+ const initial=Number(await page.locator('.stage').getAttribute('data-angle'));
+ const camera=await page.locator('.stage').getAttribute('data-camera');
+ for(let i=0;i<2;i++)await page.getByRole('button',{name:'Повернуть вправо'}).click();
+ await page.waitForFunction(target=>Math.abs(Number(document.querySelector('.stage').dataset.angle)-target)<.0002,initial+Math.PI/2,{timeout:15000});
+ assert(bgBefore.equals(await page.screenshot({clip:backgroundClip})),'Plate moved with car');
+ assert(!carBefore.equals(await page.screenshot({clip:carClip})),'Car pixels do not change on rotation');
+ assert.equal(await page.locator('.stage').getAttribute('data-camera'),camera);
+ await page.screenshot({path:'artifacts/background-01/rotated-1920x1080.png'});
+ assert.deepEqual(errors,[]);results.push({check:'Only GLB rotates; background pixels and camera fixed; no console errors',status:'PASS'});
+ await page.close();
+ const fallback=await browser.newPage({viewport:{width:1920,height:1080}});await fallback.addInitScript(()=>{HTMLCanvasElement.prototype.getContext=function(){return null;};});await fallback.goto('http://127.0.0.1:5173');await fallback.waitForSelector('.stage[data-status="unavailable"]');await fallback.waitForFunction(()=>document.querySelector('.stage-background')?.naturalWidth>0);assert(await fallback.locator('.fallback').isVisible());assert.equal(await fallback.locator('.stage canvas').count(),0);await fallback.screenshot({path:'artifacts/background-01/fallback.png'});await fallback.close();results.push({check:'Clean background and readable fallback remain without WebGL; no fake car',status:'PASS'});
+}catch(e){results.push({status:'FAIL',error:e.stack});process.exitCode=1;}finally{console.log(JSON.stringify(results,null,2));await writeFile('artifacts/background-01/qa-background.json',JSON.stringify(results,null,2));await browser.close();}
