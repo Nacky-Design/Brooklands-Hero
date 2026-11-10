@@ -1,116 +1,79 @@
-import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { FRAME_COUNT, useFrameSequence, wrapFrame } from './useFrameSequence.js';
 import './style.css';
-import { ContactShadow } from './ContactShadow.jsx';
-import { StudioLighting } from './StudioLighting.jsx';
 
-const INITIAL_ROTATION = -1.65;
-const MODEL = `${import.meta.env.BASE_URL}assets/model.glb`;
 const BACKGROUND = `${import.meta.env.BASE_URL}assets/atelier-background.webp`;
-function Car({ angle, report, pivot }) {
-  const gltf = useLoader(GLTFLoader, MODEL);
-  const { camera, invalidate } = useThree();
-  const prepared = useMemo(() => {
-    const scene = gltf.scene.clone(true);
-    const box = new THREE.Box3().setFromObject(scene);
-    const size = box.getSize(new THREE.Vector3());
-    const center = box.getCenter(new THREE.Vector3());
-    const scale = 5.7 / Math.max(size.x, size.z);
-    scene.position.set(-center.x * scale, -box.min.y * scale, -center.z * scale);
-    scene.scale.multiplyScalar(scale);
-    scene.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.layers.enable(1); } });
-    return scene;
-  }, [gltf]);
-  useEffect(() => { report('ready'); }, [report]);
-  useFrame((_, dt) => {
-    if (!pivot.current) return;
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    pivot.current.rotation.y = reduced ? angle.current : THREE.MathUtils.damp(pivot.current.rotation.y, angle.current, 12, Math.min(dt, .1));
-    if (Math.abs(pivot.current.rotation.y - angle.current) > .0001) invalidate();
-    const el = document.querySelector('.stage');
-    if (el) {
-      el.dataset.angle = pivot.current.rotation.y.toFixed(4);
-      if(import.meta.env.DEV){
-        el.dataset.frames = String(Number(el.dataset.frames || 0) + 1);
-        pivot.current.updateWorldMatrix(true,true);
-        const box=new THREE.Box3().setFromObject(pivot.current);
-        const points=[];
-        for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])points.push(new THREE.Vector3(x,y,z).project(camera));
-        el.dataset.bounds=JSON.stringify({minX:Math.min(...points.map(p=>p.x)),maxX:Math.max(...points.map(p=>p.x)),minY:Math.min(...points.map(p=>p.y)),maxY:Math.max(...points.map(p=>p.y))});
-        el.dataset.camera=JSON.stringify({position:camera.position.toArray(),quaternion:camera.quaternion.toArray()});
-      }
-    }
-  }, -2);
-  return <group ref={pivot} rotation={[0, INITIAL_ROTATION, 0]}><primitive object={prepared}/></group>;
+const PLATE_RATIO = 1672 / 941;
+
+function useCarLayout(stage) {
+  const [size, setSize] = useState({ width: 0, height: 0 });
+  useLayoutEffect(() => {
+    const element = stage.current;
+    const measure = () => setSize(previous => {
+      const next = { width: element.clientWidth, height: element.clientHeight };
+      return previous.width === next.width && previous.height === next.height ? previous : next;
+    });
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [stage]);
+  const { width, height } = size;
+  if (width < 900) {
+    const carWidth = width * .96, carHeight = carWidth / PLATE_RATIO;
+    return { width: carWidth, height: carHeight, left: (width - carWidth) / 2, top: height * .92 - carHeight };
+  }
+  // Apply the same cover transform as the background to reference-space coordinates.
+  const coverWidth = Math.max(width, height * PLATE_RATIO);
+  const coverHeight = coverWidth / PLATE_RATIO;
+  const carWidth = coverWidth * .62;
+  return { width: carWidth, height: carWidth / PLATE_RATIO, left: (width - coverWidth) / 2 + coverWidth * .51 - carWidth / 2, top: (height - coverHeight) / 2 + coverHeight * .295 };
 }
-function Camera() {
-  const { camera, size, invalidate } = useThree();
-  useEffect(() => {
-    const ratio=size.width/size.height;
-    const mobile=size.width<900;
-    camera.position.set(5.6,1.25,7.2);
-    camera.fov = mobile ? 43 : 30;
-    if(mobile) camera.position.multiplyScalar(Math.max(1.15, 1.28 / ratio));
-    else camera.position.multiplyScalar(Math.max(1, 1.8 / ratio));
-    camera.lookAt(0,.65,0);
-    if(!mobile) camera.setViewOffset(size.width,size.height,-size.width*.035,-size.height*.12,size.width,size.height);
-    else camera.setViewOffset(size.width,size.height,0,-size.height*.23,size.width,size.height);
-    camera.updateProjectionMatrix();
-    invalidate();
-  },[camera,size,invalidate]);
-  return null;
-}
-class SceneBoundary extends React.Component {
-  state={error:false};
-  static getDerivedStateFromError(){return {error:true};}
-  componentDidCatch(){this.props.fail();}
-  render(){return this.state.error ? null : this.props.children;}
-}
-function hasWebGL(){
-  try {
-    // Three.js requires WebGL 2. Release the probe immediately.
-    const context=document.createElement('canvas').getContext('webgl2');
-    if(!context) return false;
-    context.getExtension('WEBGL_lose_context')?.loseContext();
-    return true;
-  } catch { return false; }
-}
-function RendererLifecycle({ report }) {
-  const { gl } = useThree();
-  useEffect(() => {
-    const lost=e=>{e.preventDefault();report('unavailable');};
-    gl.domElement.addEventListener('webglcontextlost',lost);
-    return ()=>gl.domElement.removeEventListener('webglcontextlost',lost);
-  },[gl,report]);
-  return null;
-}
-function App(){
-  const angle=useRef(INITIAL_ROTATION);
-  const gesture=useRef(null);
-  const carRoot=useRef(null);
-  const wake=useRef(()=>{});
-  const [status,setStatus]=useState(()=>hasWebGL()?'loading':'unavailable');
-  const [message,setMessage]=useState('');
-  const demo=()=>setMessage('Демонстрационный прототип — форма заявки не подключена.');
-  function down(e){if(status!=='ready'||e.target.closest('button'))return;gesture.current={x:e.clientX,y:e.clientY,angle:angle.current}; e.currentTarget.setPointerCapture(e.pointerId);}
-  function move(e){if(!gesture.current)return;const dx=e.clientX-gesture.current.x,dy=e.clientY-gesture.current.y;if(e.pointerType==='touch'&&Math.abs(dy)>Math.abs(dx)&&Math.abs(dx)<8){gesture.current=null;return;}angle.current=gesture.current.angle+dx*.012;wake.current();}
-  function end(){gesture.current=null;}
-  function rotate(delta){angle.current+=delta;wake.current();}
+
+function App() {
+  const stage = useRef(null);
+  const target = useRef(0);
+  const gesture = useRef(null);
+  const sequence = useFrameSequence();
+  const carLayout = useCarLayout(stage);
+  const [message, setMessage] = useState('');
+  const demo = () => setMessage('Демонстрационный прототип — форма заявки не подключена.');
+  const choose = index => { target.current = wrapFrame(index); sequence.select(target.current); };
+  const rotate = delta => choose(target.current + delta);
+  function down(event) {
+    if (!sequence.frame || (event.pointerType === 'mouse' && event.button !== 0) || event.target.closest('button')) return;
+    gesture.current = { x: event.clientX, y: event.clientY, frame: target.current, step: Math.max(12, Math.min(24, event.currentTarget.clientWidth / FRAME_COUNT)) };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }
+  function move(event) {
+    const drag = gesture.current;
+    if (!drag) return;
+    const dx = event.clientX - drag.x, dy = event.clientY - drag.y;
+    if (event.pointerType === 'touch' && Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 8) { gesture.current = null; return; }
+    const index = wrapFrame(drag.frame - Math.round(dx / drag.step));
+    if (index !== target.current) choose(index);
+  }
+  const end = () => { gesture.current = null; };
+  function key(event) {
+    if (!sequence.frame || !['ArrowLeft', 'ArrowRight', 'Home'].includes(event.key)) return;
+    event.preventDefault();
+    if (event.key === 'Home') choose(0); else rotate(event.key === 'ArrowRight' ? 1 : -1);
+  }
+  const status = sequence.frame ? 'ready' : sequence.error ? 'unavailable' : 'loading';
   return <main className="hero">
-    <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><strong>BROOKLANDS</strong><span>DETAILING</span></a><nav aria-label="Основная навигация">{['Услуги','Наши работы','О компании','Контакты'].map(t=><button key={t} onClick={demo}>{t}</button>)}</nav><button className="booking" onClick={demo}>Записаться</button></header>
+    <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><strong>BROOKLANDS</strong><span>DETAILING</span></a><nav aria-label="Основная навигация">{['Услуги','Наши работы','О компании','Контакты'].map(text=><button key={text} onClick={demo}>{text}</button>)}</nav><button className="booking" onClick={demo}>Записаться</button></header>
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>Детейлинг, защита и персонализация<br className="desktop-break"/> автомобилей премиального класса.</p><button className="cta" onClick={demo}>Обсудить проект <span aria-hidden="true">→</span></button></section>
-    <section className="stage" aria-label="Интерактивная 3D-модель Porsche" data-status={status} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
+    <section ref={stage} className="stage" aria-label="Покадровый обзор Porsche на 360 градусов" tabIndex={0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
       <img className="stage-background" src={BACKGROUND} alt="" fetchPriority="high" decoding="async"/>
-      {status!=='unavailable' && <SceneBoundary fail={()=>setStatus('unavailable')}><Canvas style={{position:'absolute',inset:0}} frameloop="demand" shadows dpr={[1,1.5]} gl={{alpha:true,antialias:true,powerPreference:'high-performance'}} onCreated={({gl,invalidate})=>{wake.current=invalidate;gl.setClearColor(0x000000,0);gl.shadowMap.type=THREE.PCFShadowMap;gl.toneMapping=THREE.ACESFilmicToneMapping;gl.toneMappingExposure=1;}} fallback={<p>WebGL недоступен. Интерактивная модель не отображается.</p>}><RendererLifecycle report={setStatus}/><Camera/><StudioLighting/><ContactShadow carRoot={carRoot}/><Suspense fallback={null}><Car pivot={carRoot} angle={angle} report={setStatus}/></Suspense></Canvas></SceneBoundary>}
-      {status==='loading'&&<p className="status" role="status">Загрузка 3D-модели…</p>}
-      {status==='unavailable'&&<div className="fallback" role="status"><span>PORSCHE / 3D</span><p>Интерактивная модель недоступна.<br/>Нужен браузер с поддержкой WebGL 2 и доступ к файлу модели.</p></div>}
+      {sequence.frame && <div className="sequence" style={carLayout}><img className="sequence-image" src={sequence.frame.url} alt="Porsche 911 Turbo S" draggable="false"/></div>}
+      {!sequence.frame && !sequence.error && <p className="status" role="status">Загрузка автомобиля…</p>}
+      {sequence.frame && sequence.buffering && <p className="frame-loading" role="status">Загрузка ракурса…</p>}
+      {sequence.error && <div className={sequence.frame ? 'frame-warning' : 'fallback'} role="status"><p>{sequence.frame ? 'Этот ракурс пока недоступен.' : 'Не удалось загрузить автомобиль.'}</p><button onClick={sequence.retry}>Повторить загрузку</button></div>}
     </section>
     <aside className="presets" aria-label="Визуальный макет пресетов"><div className="preset original"><i/><span>Original</span></div><div className="preset satin"><i/><span>Satin</span></div><div className="preset bespoke"><i/><span>Bespoke</span></div><p>Предпросмотр интерфейса — смена материалов не подключена</p></aside>
-    <div className="rotation"><div className="rotation-buttons"><button disabled={status!=='ready'} aria-label="Повернуть влево" onClick={()=>rotate(-Math.PI/4)}>←</button><span className="line"/><span>360°</span><span className="line"/><button disabled={status!=='ready'} aria-label="Повернуть вправо" onClick={()=>rotate(Math.PI/4)}>→</button></div><p>Перетащите автомобиль для вращения</p></div>
-    {message&&<div className="demo-message" role="status">{message}<button aria-label="Закрыть сообщение" onClick={()=>setMessage('')}>×</button></div>}
+    <div className="rotation"><div className="rotation-buttons"><button disabled={!sequence.frame} aria-label="Повернуть влево" onClick={()=>rotate(-1)}>←</button><span className="line"/><span>360°</span><span className="line"/><button disabled={!sequence.frame} aria-label="Повернуть вправо" onClick={()=>rotate(1)}>→</button></div><p>Перетащите автомобиль для вращения</p></div>
+    {message && <div className="demo-message" role="status">{message}<button aria-label="Закрыть сообщение" onClick={()=>setMessage('')}>×</button></div>}
   </main>;
 }
 createRoot(document.getElementById('root')).render(<App/>);
