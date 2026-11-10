@@ -1,0 +1,5 @@
+import {chromium} from '@playwright/test';
+import {readFile} from 'node:fs/promises';
+const images=await Promise.all([['Тень — до','before-1920x1080.png'],['Контактная тень — проход 01','after-1920x1080.png']].map(async([label,path])=>`<section><h2>${label}</h2><img src="data:image/png;base64,${(await readFile('artifacts/shadow-01/'+path)).toString('base64')}"/></section>`));
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
+try{const page=await browser.newPage({viewport:{width:1920,height:612}});await page.setContent(`<html lang="ru"><style>body{margin:0;background:#171917;color:#eee;font-family:Arial,sans-serif}main{display:flex}section{width:960px}h2{font-size:24px;font-weight:400;margin:0;padding:22px;box-sizing:border-box;height:72px}img{display:block;width:960px;height:540px}</style><main>${images.join('')}</main></html>`);await page.evaluate(()=>Promise.all([...document.images].map(i=>i.decode())));await page.screenshot({path:'artifacts/shadow-01/comparison.png'});}finally{await browser.close();}

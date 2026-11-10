@@ -1,0 +1,46 @@
+[
+  {
+    "viewport": "430x932",
+    "status": "PASS",
+    "checks": [
+      "GLB",
+      "no overflow",
+      "H1 visible",
+      "full 360 via buttons",
+      "mouse both directions",
+      "keyboard",
+      "model bounds at 8 angles",
+      "fixed camera",
+      "no reference image request",
+      "no console errors"
+    ]
+  },
+  {
+    "viewport": "1920x1080",
+    "status": "PASS",
+    "checks": [
+      "GLB",
+      "no overflow",
+      "H1 visible",
+      "full 360 via buttons",
+      "mouse both directions",
+      "keyboard",
+      "model bounds at 8 angles",
+      "fixed camera",
+      "no reference image request",
+      "no console errors"
+    ]
+  },
+  {
+    "check": "touch drag and outside-stage vertical scrolling",
+    "status": "PASS"
+  },
+  {
+    "check": "WebGL fallback",
+    "status": "PASS"
+  },
+  {
+    "check": "reduced motion, no auto rotation",
+    "status": "PASS"
+  }
+]

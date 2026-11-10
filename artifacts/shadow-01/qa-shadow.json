@@ -1,0 +1,20 @@
+[
+  {
+    "check": "Contact projection rendered; idle projection cached",
+    "status": "PASS",
+    "updates": 1
+  },
+  {
+    "check": "Shadow follows rotation and stops updating after damping",
+    "status": "PASS",
+    "updates": 11
+  },
+  {
+    "check": "Depth, blur and main shaders have no console errors",
+    "status": "PASS"
+  },
+  {
+    "check": "Context loss shows fallback",
+    "status": "PASS"
+  }
+]
