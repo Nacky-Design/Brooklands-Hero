@@ -1,0 +1,22 @@
+[
+  {
+    "check": "Full revolution by actual mouse drag; identical wall pixels",
+    "status": "PASS",
+    "rotationRadians": 7.199400000000001
+  },
+  {
+    "check": "Frame timing in headless software Chromium (not physical GPU performance)",
+    "status": "MEASURED",
+    "frames": 30,
+    "averageMs": 455.6166666666635,
+    "maxMs": 966.7000000000044
+  },
+  {
+    "check": "Missing GLB shows fallback",
+    "status": "PASS"
+  },
+  {
+    "check": "Production preview renders GLB",
+    "status": "PASS"
+  }
+]
