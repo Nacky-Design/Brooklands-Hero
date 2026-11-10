@@ -1,0 +1,15 @@
+[
+  {
+    "retainsPreviousWhileNewFrameWaits": true,
+    "staleNewFrameCannotOverwriteSelection": true
+  },
+  {
+    "newFrameFailureAndRetry": true
+  },
+  {
+    "firstFrameRetryResumesAll25": true
+  },
+  {
+    "mobileReview": true
+  }
+]

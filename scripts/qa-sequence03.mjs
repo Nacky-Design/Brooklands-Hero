@@ -1,9 +1,10 @@
 import { chromium } from '@playwright/test';import fs from 'node:fs/promises';import assert from 'node:assert/strict';
 const manifest=JSON.parse(await fs.readFile('src/sequenceManifest.json'));
 const prior=JSON.parse(await fs.readFile('artifacts/sequence-02/audit.json'));
-const mid=JSON.parse(await fs.readFile('artifacts/sequence-03/midpoint-audit.json'));
+const iteration=process.env.QA_ITERATION||'sequence-03';
+const mid=JSON.parse(await fs.readFile(`artifacts/${iteration}/midpoint-audit.json`));
 const frameData=manifest.frames.map(f=>f.id==='01b'?mid:prior.frames[Number(f.id)]);
-const out='artifacts/sequence-03';const url=process.env.QA_URL||'http://127.0.0.1:4203/Brooklands-Hero/';
+const out=`artifacts/${iteration}`;const url=process.env.QA_URL||'http://127.0.0.1:4203/Brooklands-Hero/';
 const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});const results=[];
 const wait=(p,i)=>p.waitForFunction(i=>document.querySelector('.stage').dataset.frame===String(i),i);
 try{

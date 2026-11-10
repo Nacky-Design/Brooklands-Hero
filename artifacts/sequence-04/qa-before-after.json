@@ -1,0 +1,19 @@
+{
+  "url": "http://127.0.0.1:4204/Brooklands-Hero/",
+  "results": [
+    {
+      "width": 430,
+      "oldAndRefinedImagesDecoded": true,
+      "versionSwitchWhileLooping": true,
+      "threeFrameLoopBothWays": true,
+      "noErrors": true
+    },
+    {
+      "width": 1920,
+      "oldAndRefinedImagesDecoded": true,
+      "versionSwitchWhileLooping": true,
+      "threeFrameLoopBothWays": true,
+      "noErrors": true
+    }
+  ]
+}

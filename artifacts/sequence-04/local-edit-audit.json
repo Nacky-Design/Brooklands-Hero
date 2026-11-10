@@ -1,0 +1,7 @@
+{
+  "outsideRequestedRegions": {
+    "opaqueSilhouetteIoU": 0.9777617403577233,
+    "meanAbsoluteRGBDifference": 13.869000228312837
+  },
+  "note": "Image generation can change pixels outside the requested local edit. This measures registration, not vehicle identity."
+}

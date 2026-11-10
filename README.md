@@ -2,6 +2,16 @@
 
 [Опубликованный HERO](https://nacky-design.github.io/Brooklands-Hero/).
 
+Текущая доработка **Sequence 04**: у 01b исправлены опора спойлера и завышенный контур крыши. На [странице сравнения](https://nacky-design.github.io/Brooklands-Hero/review.html) доступны версии «до / после» отдельно и в повторе перехода. Число кадров — 25; старый 01b и исходные кадры сохранены. [Отчёт о доработке и ограничениях](references/sequence-04/REVIEW_RU.md).
+
+```sh
+QA_ITERATION=sequence-04 QA_URL=http://127.0.0.1:4204/Brooklands-Hero/ node scripts/qa-sequence03.mjs
+QA_ITERATION=sequence-04 QA_URL=http://127.0.0.1:4204/Brooklands-Hero/ node scripts/qa-sequence03-network.mjs
+QA_URL=http://127.0.0.1:4204/Brooklands-Hero/ node scripts/qa-refined-review.mjs
+```
+
+Текущие результаты и скриншоты: `artifacts/sequence-04/`. Ниже сохранена история предыдущих итераций.
+
 Текущий тест Sequence 03: **25 кадров** (исходные 24 + кандидат 01b между 01 и 02), общий обратимый цветкор фона и автомобиля. [Сравнение цвета и тест перехода](https://nacky-design.github.io/Brooklands-Hero/review.html). На странице сравнения есть три варианта обработки, старт / бок / задний вид и повторение 01 → 01b → 02 → 01b. В основном HERO автоповторения нет.
 
 Текущие исходники порядка и масштаба — `src/sequenceManifest.json`; фильтры — `src/ColorGrade.jsx`. [Цветовой ориентир](references/sequence-03/COLOR_REFERENCE.md), [происхождение кандидата и ограничения](references/sequence-03/GENERATION.md). Кандидат не подтверждает точный промежуточный угол и сохраняет дрейф деталей, особенно спойлера. Исходные файлы серии и фона не изменены. Все дальнейшие упоминания 24 кадров и Sequence 02 описывают основание этой версии.

@@ -1,8 +1,10 @@
 import calibration from './sequenceManifest.json';
+import previousMidpoint from './legacyMidpoint.json';
 
 const PLATE_RATIO = 1672 / 941;
-export function getFrameStyle(index) {
-  const { scale, dx, dy } = calibration.frames[index];
+export function getFrameStyle(index, legacy = false) {
+  const frame = calibration.frames[index];
+  const { scale, dx, dy } = legacy && frame.id === '01b' ? previousMidpoint : frame;
   return { transformOrigin: '0 0', transform: `translate(${dx * 100}%, ${dy * 100}%) scale(${scale})` };
 }
 

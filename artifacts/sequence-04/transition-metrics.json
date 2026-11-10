@@ -1,0 +1,24 @@
+{
+  "ids": [
+    "01",
+    "01b",
+    "02"
+  ],
+  "normalizedSilhouetteHeight": {
+    "before": [
+      684.6910112359551,
+      708.7378640776699,
+      690
+    ],
+    "after": [
+      684.6910112359551,
+      689.3203883495145,
+      690
+    ]
+  },
+  "rangePercent": {
+    "before": 3.512073686830952,
+    "after": 0.7753846153846
+  },
+  "note": "Screen-height registration metric only. It does not prove exact angles or immutable geometry."
+}

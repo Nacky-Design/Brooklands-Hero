@@ -1,0 +1,41 @@
+{
+  "source": "references/sequence-04/midpoint-01b-refined.png",
+  "sourceSha256": "23770e01e703c692f09c1874b66c4b54453e1bfa49a6bbc4a173779c2a1f3401",
+  "webp": "public/assets/turntable-v3/midpoint-01b.webp",
+  "bytes": 200818,
+  "width": 1672,
+  "height": 941,
+  "hasAlpha": true,
+  "tyreTop": 486,
+  "groundY": 795,
+  "uncertaintyPixels": 6,
+  "solid": {
+    "left": 48,
+    "right": 1651,
+    "top": 228,
+    "bottom": 796
+  },
+  "visible": {
+    "left": 46,
+    "right": 1653,
+    "top": 226,
+    "bottom": 800
+  },
+  "scale": 1.2135922330097086,
+  "dx": -0.12048241742927479,
+  "dy": -0.16982553160756475,
+  "correctedSolid": {
+    "left": -0.08564244901751282,
+    "right": 1.0778673294002878,
+    "top": 0.12422232081136575,
+    "bottom": 0.85676258473221
+  },
+  "correctedVisible": {
+    "left": -0.0870941143680029,
+    "right": 1.079318994750778,
+    "top": 0.12164295368488387,
+    "bottom": 0.8619213189851738
+  },
+  "anglesCalibrated": false,
+  "review": "Local spoiler and canopy refinement of existing 01b. Same intermediate yaw, compact spoiler support and reduced canopy height. Generation can still change fine details outside requested edit regions; angular spacing is not calibrated."
+}
