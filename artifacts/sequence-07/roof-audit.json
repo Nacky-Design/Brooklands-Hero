@@ -1,0 +1,234 @@
+{
+  "method": "Local image_gen canopy edit; retain previous tyre scale, horizontal registration and ground. Alpha bounds measured before/after; landmarks manually verified.",
+  "frames": [
+    {
+      "index": 3,
+      "scale": 1.2668918918918919,
+      "dx": -0.1396079974814738,
+      "dy": -0.17177312806962108,
+      "id": "03",
+      "file": "assets/turntable-v6/frame-03.webp",
+      "source": "references/sequence-07/roof-03.png",
+      "sourceWidth": 1672,
+      "lowerCutoff": 385,
+      "transparentRightPadding": 0,
+      "lowerBodySilhouetteIoU": 0.9933566761496858,
+      "lowerBodyMeanAbsoluteRGB": 8.739315331476499,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": 466,
+      "groundY": 763,
+      "solid": {
+        "left": 26,
+        "right": 1652,
+        "top": 228,
+        "bottom": 764
+      },
+      "visible": {
+        "left": 25,
+        "right": 1654,
+        "top": 227,
+        "bottom": 768
+      },
+      "correctedSolid": {
+        "left": -0.1199075254783702,
+        "right": 1.1121296851772615,
+        "top": 0.13518898813797864,
+        "bottom": 0.8568192262400551
+      },
+      "correctedVisible": {
+        "left": -0.12066523594002804,
+        "right": 1.1136451061005772,
+        "top": 0.1338426630668927,
+        "bottom": 0.8622045265243989
+      },
+      "beforeHeight": 695.5236486486486,
+      "afterHeight": 677.7871621621622,
+      "sha256": "cac660574cc6b4a6f1cd17e8858a36996a929323696e40ead82240029df9c1c6",
+      "bytes": 194150
+    },
+    {
+      "id": "03b",
+      "file": "assets/turntable-v6/frame-03b.webp",
+      "scale": 1.2583892617449663,
+      "dx": -0.13571795514315865,
+      "dy": -0.18895006739938225,
+      "source": "references/sequence-07/roof-03b.png",
+      "sourceWidth": 1671,
+      "lowerCutoff": 400,
+      "transparentRightPadding": 1,
+      "lowerBodySilhouetteIoU": 0.9445359192411763,
+      "lowerBodyMeanAbsoluteRGB": 11.500761106880917,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": 483,
+      "groundY": 781,
+      "solid": {
+        "left": 38,
+        "right": 1645,
+        "top": 244,
+        "bottom": 781
+      },
+      "visible": {
+        "left": 36,
+        "right": 1646,
+        "top": 243,
+        "bottom": 783
+      },
+      "correctedSolid": {
+        "left": -0.10711819919440942,
+        "right": 1.1023504273750648,
+        "top": 0.13734852969495548,
+        "bottom": 0.8554729011689692
+      },
+      "correctedVisible": {
+        "left": -0.10862344950750148,
+        "right": 1.1031030525316108,
+        "top": 0.13601124036260165,
+        "bottom": 0.858147479833677
+      },
+      "beforeHeight": 704.6979865771812,
+      "afterHeight": 675.7550335570469,
+      "sha256": "ccfa8f28d7287ed3de55b1dece53eddd6ecfba0e192b7f461d97396ce8e6445f",
+      "bytes": 194010
+    },
+    {
+      "index": 5,
+      "scale": 1.0714285714285714,
+      "dx": -0.04344898581528078,
+      "dy": -0.07476848337634723,
+      "id": "05",
+      "file": "assets/turntable-v6/frame-05.webp",
+      "source": "references/sequence-07/roof-05.png",
+      "sourceWidth": 1672,
+      "lowerCutoff": 365,
+      "transparentRightPadding": 0,
+      "lowerBodySilhouetteIoU": 0.9917032196196125,
+      "lowerBodyMeanAbsoluteRGB": 7.473051618980084,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": 466,
+      "groundY": 817,
+      "solid": {
+        "left": 53,
+        "right": 1628,
+        "top": 186,
+        "bottom": 818
+      },
+      "visible": {
+        "left": 52,
+        "right": 1630,
+        "top": 184,
+        "bottom": 826
+      },
+      "correctedSolid": {
+        "left": -0.009486238036743533,
+        "right": 0.9997840968914861,
+        "top": 0.13701229694853512,
+        "bottom": 0.856611507514802
+      },
+      "correctedVisible": {
+        "left": -0.010127044598602725,
+        "right": 1.0010657100152045,
+        "top": 0.13473508425686972,
+        "bottom": 0.8657203582814637
+      },
+      "beforeHeight": 698.5714285714286,
+      "afterHeight": 676.0714285714286,
+      "sha256": "9689ab79b38956abb25cbdda58a0774f4fddf578fe46b924c609574c0f623ac6",
+      "bytes": 208532
+    },
+    {
+      "index": 16,
+      "scale": 1.1867088607594938,
+      "dx": -0.09901743731696411,
+      "dy": -0.13576319294044847,
+      "id": "16",
+      "file": "assets/turntable-v6/frame-16.webp",
+      "source": "references/sequence-07/roof-16.png",
+      "sourceWidth": 1670,
+      "lowerCutoff": 390,
+      "transparentRightPadding": 2,
+      "lowerBodySilhouetteIoU": 0.9915536154439574,
+      "lowerBodyMeanAbsoluteRGB": 8.934438496517584,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": 470,
+      "groundY": 786,
+      "solid": {
+        "left": 33,
+        "right": 1644,
+        "top": 212,
+        "bottom": 787
+      },
+      "visible": {
+        "left": 31,
+        "right": 1646,
+        "top": 210,
+        "bottom": 790
+      },
+      "correctedSolid": {
+        "left": -0.07559555190723725,
+        "right": 1.0678183085494282,
+        "top": 0.1315931072519136,
+        "bottom": 0.8567340157925182
+      },
+      "correctedVisible": {
+        "left": -0.07701506011388737,
+        "right": 1.0692378167560783,
+        "top": 0.12907087800481581,
+        "bottom": 0.8605173596631648
+      },
+      "beforeHeight": 693.0379746835443,
+      "afterHeight": 681.1708860759494,
+      "sha256": "8e1e971c2763abf0a993f0c0b5c3b641bbefcacb069080d52271a47872e91446",
+      "bytes": 195452
+    },
+    {
+      "index": 17,
+      "scale": 1.1295180722891567,
+      "dx": -0.06797064258856533,
+      "dy": -0.11079920105501717,
+      "id": "17",
+      "file": "assets/turntable-v6/frame-17.webp",
+      "source": "references/sequence-07/roof-17.png",
+      "sourceWidth": 1671,
+      "lowerCutoff": 385,
+      "transparentRightPadding": 1,
+      "lowerBodySilhouetteIoU": 0.980346804148968,
+      "lowerBodyMeanAbsoluteRGB": 17.78768601682665,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": 470,
+      "groundY": 805,
+      "solid": {
+        "left": 50,
+        "right": 1620,
+        "top": 204,
+        "bottom": 809
+      },
+      "visible": {
+        "left": 48,
+        "right": 1622,
+        "top": 202,
+        "bottom": 811
+      },
+      "correctedSolid": {
+        "left": -0.03419318827369821,
+        "right": 1.0264188772131295,
+        "top": 0.13406975404273838,
+        "bottom": 0.8602742532297094
+      },
+      "correctedVisible": {
+        "left": -0.03554428644629289,
+        "right": 1.0277699753857243,
+        "top": 0.1316690780123682,
+        "bottom": 0.8626749292600796
+      },
+      "beforeHeight": 693.5240963855422,
+      "afterHeight": 678.8403614457832,
+      "sha256": "52f2ea08079f51aea92236d487b6f8a979f24075b1ce58da71c55da4fbfac690",
+      "bytes": 187458
+    }
+  ]
+}

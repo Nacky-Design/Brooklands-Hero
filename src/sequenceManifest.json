@@ -39,13 +39,13 @@
       "index": 3,
       "scale": 1.2668918918918919,
       "dx": -0.1396079974814738,
-      "dy": -0.17042680299853497,
+      "dy": -0.17177312806962108,
       "id": "03",
-      "file": "assets/turntable-v1/frame-03.webp"
+      "file": "assets/turntable-v6/frame-03.webp"
     },
     {
       "id": "03b",
-      "file": "assets/turntable-v4/midpoint-03b.webp",
+      "file": "assets/turntable-v6/frame-03b.webp",
       "scale": 1.2583892617449663,
       "dx": -0.13571795514315865,
       "dy": -0.18895006739938225
@@ -62,9 +62,9 @@
       "index": 5,
       "scale": 1.0714285714285714,
       "dx": -0.04344898581528078,
-      "dy": -0.0736298770305146,
+      "dy": -0.07476848337634723,
       "id": "05",
-      "file": "assets/turntable-v1/frame-05.webp"
+      "file": "assets/turntable-v6/frame-05.webp"
     },
     {
       "index": 6,
@@ -159,15 +159,15 @@
       "dx": -0.09901743731696411,
       "dy": -0.13576319294044847,
       "id": "16",
-      "file": "assets/turntable-v1/frame-16.webp"
+      "file": "assets/turntable-v6/frame-16.webp"
     },
     {
       "index": 17,
       "scale": 1.1295180722891567,
       "dx": -0.06797064258856533,
-      "dy": -0.10719818700946182,
+      "dy": -0.11079920105501717,
       "id": "17",
-      "file": "assets/turntable-v1/frame-17.webp"
+      "file": "assets/turntable-v6/frame-17.webp"
     },
     {
       "index": 18,
