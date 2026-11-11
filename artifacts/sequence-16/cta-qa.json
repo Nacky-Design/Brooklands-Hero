@@ -1,0 +1,68 @@
+{
+  "out": [
+    {
+      "width": 320,
+      "height": 56.390625,
+      "label": true,
+      "matchingRadius": true,
+      "hover": true,
+      "keyboard": true,
+      "noShift": true
+    },
+    {
+      "width": 390,
+      "height": 56.390625,
+      "label": true,
+      "matchingRadius": true,
+      "hover": true,
+      "keyboard": true,
+      "noShift": true
+    },
+    {
+      "width": 440,
+      "height": 56.390625,
+      "label": true,
+      "matchingRadius": true,
+      "hover": true,
+      "keyboard": true,
+      "noShift": true
+    },
+    {
+      "width": 768,
+      "height": 56.390625,
+      "label": true,
+      "matchingRadius": true,
+      "hover": true,
+      "keyboard": true,
+      "noShift": true
+    },
+    {
+      "width": 900,
+      "height": 56.390625,
+      "label": true,
+      "matchingRadius": true,
+      "hover": true,
+      "keyboard": true,
+      "noShift": true
+    },
+    {
+      "width": 1440,
+      "height": 56.390625,
+      "label": true,
+      "matchingRadius": true,
+      "hover": true,
+      "keyboard": true,
+      "noShift": true
+    },
+    {
+      "width": 1920,
+      "height": 56.390625,
+      "label": true,
+      "matchingRadius": true,
+      "hover": true,
+      "keyboard": true,
+      "noShift": true
+    }
+  ],
+  "reducedMotion": true
+}
