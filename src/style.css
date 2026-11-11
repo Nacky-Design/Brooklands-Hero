@@ -31,3 +31,8 @@ body{font-family:Manrope,sans-serif}button{transition:background-color .18s,bord
 
 .preset-preview{width:600px;left:58px;top:-95px}.preset-check svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:899px){.preset-preview{width:430px;left:0;top:-65px}}
+
+/* Original client SVG; preserve its proportions at every breakpoint. */
+.brand{width:clamp(190px,18vw,300px);min-height:44px;justify-content:center}.brand-logo{display:block;width:100%;height:auto;aspect-ratio:5283/672;object-fit:contain}
+@media(max-width:899px){.brand{width:clamp(120px,26vw,190px)}}
+@media(max-width:360px){.brand{width:120px}}

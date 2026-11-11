@@ -1,0 +1,44 @@
+[
+  {
+    "width": 320,
+    "loaded": true,
+    "overflow": false,
+    "overlap": false
+  },
+  {
+    "width": 390,
+    "loaded": true,
+    "overflow": false,
+    "overlap": false
+  },
+  {
+    "width": 440,
+    "loaded": true,
+    "overflow": false,
+    "overlap": false
+  },
+  {
+    "width": 768,
+    "loaded": true,
+    "overflow": false,
+    "overlap": false
+  },
+  {
+    "width": 900,
+    "loaded": true,
+    "overflow": false,
+    "overlap": false
+  },
+  {
+    "width": 1440,
+    "loaded": true,
+    "overflow": false,
+    "overlap": false
+  },
+  {
+    "width": 1920,
+    "loaded": true,
+    "overflow": false,
+    "overlap": false
+  }
+]

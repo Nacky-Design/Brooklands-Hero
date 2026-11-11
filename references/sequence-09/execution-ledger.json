@@ -265,10 +265,11 @@
       "artifacts/sequence-09/pitch-audit.json"
     ],
     "status": "TESTED_CANDIDATE",
-    "brand_status": "INCOMPLETE: official logo source file and verified contacts pending",
+    "brand_status": "Original user-provided SVG installed; verified contacts pending",
     "art_review_status": "user review pending; no human approval inferred",
     "contact_source": "https://brooklandsdetailing.ru/",
-    "contact_access": "CONNECT 403; configuration draft save unconfirmed"
+    "contact_access": "CONNECT 403; configuration draft save unconfirmed",
+    "logo_sha256": "16fadd90f62220c78222f3a16c49b5fb53153fe95dc63c24583e72ab666bb213"
   },
   "impeccable": "not_connected",
   "playwriter": "not_connected; Playwright fallback"
