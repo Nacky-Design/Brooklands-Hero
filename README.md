@@ -1,3 +1,5 @@
+> Iteration18: Silver / Carmine / Oak Green now each have33 angles. Switching presets preserves the angle; loading/decode errors retain the previous frame. [Current review](references/sequence-18/REVIEW_RU.md). Validation: `npm run build`, then `node scripts/qa-presets-full.mjs` against the local preview (`QA_URL` optional).
+
 > Preset samples: open `?presets=1` to compare Silver / Carmine / Oak Green on frame00 before recoloring the full turntable. [Review](references/sequence-17/REVIEW_RU.md).
 
 > Iteration 13: regenerated 04b/05/05b against the showroom ground plane; 33-frame sequence and UI preserved. [Current review](references/sequence-13/REVIEW_RU.md).

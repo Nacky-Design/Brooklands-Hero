@@ -1,3 +1,5 @@
+> Iteration18: Silver / Carmine / Oak Green now each have33 angles. Switching presets preserves the angle; loading/decode errors retain the previous frame. [Current review](references/sequence-18/REVIEW_RU.md). Validation: `npm run build`, then `node scripts/qa-presets-full.mjs` against the local preview (`QA_URL` optional).
+
 > Iteration 13: regenerated 04b/05/05b against the showroom ground plane; 33-frame sequence and UI preserved. [Current review](references/sequence-13/REVIEW_RU.md).
 
 > Iteration 09: 33 frames, revised motion and responsive UI. Current evidence and remaining logo/contact blockers: [review](references/sequence-09/REVIEW_RU.md). Presentation: `/` or `/review.html`; technical panel: `/review.html?audit=1`.

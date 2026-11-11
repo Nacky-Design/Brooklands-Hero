@@ -1,0 +1,314 @@
+{
+  "baseline": "9a8d3ee3038a4c214c03fac82d73f700b4f37c91",
+  "mode": "APPROVED_PATTERN_TRANSFER: approved frame00 materials over 33-angle series",
+  "approved_samples": [
+    "references/sequence-17/carmine-00.png",
+    "references/sequence-17/oak-green-00.png"
+  ],
+  "locked": [
+    "all silver source assets",
+    "frame order",
+    "all per-frame transforms",
+    "background",
+    "color grade",
+    "hero layout and copy",
+    "wheel geometry",
+    "tyres",
+    "lights",
+    "red calipers"
+  ],
+  "editable": [
+    "body/mirror/wing/wheel finish in two derived palettes",
+    "preset/frame loader and actual UI switching"
+  ],
+  "sources": [
+    {
+      "index": 0,
+      "scale": 1,
+      "dx": 0,
+      "dy": 0,
+      "id": "00",
+      "file": "assets/turntable-v1/frame-00.webp",
+      "sha256": "4d149a063e7894a851ab380ae895a6bec1cfad84a8bae32dc9e624d12599068c"
+    },
+    {
+      "index": 1,
+      "scale": 1.053370786516854,
+      "dx": -0.03782236302810693,
+      "dy": -0.052373759686682786,
+      "id": "01",
+      "file": "assets/turntable-v1/frame-01.webp",
+      "sha256": "490cbf34b3863c10ccd7d2607c5659006d81ab0ffd51a7de1c292b96de5c866b"
+    },
+    {
+      "id": "01b",
+      "file": "assets/turntable-v3/midpoint-01b.webp",
+      "scale": 1.2135922330097086,
+      "dx": -0.12048241742927479,
+      "dy": -0.16982553160756475,
+      "sha256": "922882ef24165a94e627aa99c9c3dce5e40eb4904bda24795e9bce31208003ab"
+    },
+    {
+      "index": 3,
+      "scale": 1.2668918918918919,
+      "dx": -0.1396079974814738,
+      "dy": -0.17177312806962108,
+      "id": "03",
+      "file": "assets/turntable-v6/frame-03.webp",
+      "sha256": "7a253d26a40ff1fd13461a8f9485a7415ca9ad97c12487d6ca41c18070f70455"
+    },
+    {
+      "index": 2,
+      "scale": 1.25,
+      "dx": -0.13711616543398641,
+      "dy": -0.16471838469713052,
+      "id": "02",
+      "file": "assets/turntable-v7/frame-02.webp",
+      "sha256": "5ee09f00cd45295643a0a11cabdfef860cf87c9621e0239c1de81a07d467342c"
+    },
+    {
+      "id": "03b",
+      "file": "assets/turntable-v6/frame-03b.webp",
+      "scale": 1.2583892617449663,
+      "dx": -0.13571795514315865,
+      "dy": -0.18895006739938225,
+      "sha256": "8c7c95b2a466b87a32d18fd14631cadd09fbbc3835c4ec48ea87f289dc46a218"
+    },
+    {
+      "index": 4,
+      "scale": 1.1295180722891567,
+      "dx": -0.07371624618788175,
+      "dy": -0.10719818700946182,
+      "id": "04",
+      "file": "assets/turntable-v1/frame-04.webp",
+      "sha256": "7288f02bccab4dcf999671c960913ce273e9463a5e26c264d8ab5050525519f8"
+    },
+    {
+      "id": "04b",
+      "file": "assets/turntable-v9/level-04b.webp",
+      "scale": 1.1194029850746268,
+      "dx": -0.06827554809683634,
+      "dy": -0.09619807445239248,
+      "sha256": "23c1aa0912d0482343ac95e02143fe2ce8d79e5eb0498356667a6470a875b5be"
+    },
+    {
+      "index": 5,
+      "scale": 1.1194029850746268,
+      "dx": -0.0666017996143683,
+      "dy": -0.08430218725712546,
+      "id": "05",
+      "file": "assets/turntable-v9/level-05.webp",
+      "sha256": "2bbcd8d468323c1613b82e4b2c5a6c7182561a0e4b95af423aa9ed9da4fc94d4"
+    },
+    {
+      "id": "05b",
+      "file": "assets/turntable-v9/level-05b.webp",
+      "scale": 1.1029411764705883,
+      "dx": -0.059316070925978126,
+      "dy": -0.0822029130461962,
+      "sha256": "9cbd0da5859cf6a998d95c13a89b84020064f26e03e5932a708d331e939cfaf1"
+    },
+    {
+      "index": 6,
+      "scale": 0.9920634920634921,
+      "dx": -0.008231028694271614,
+      "dy": -0.006915979285798568,
+      "id": "06",
+      "file": "assets/turntable-v1/frame-06.webp",
+      "sha256": "6f22c08f1b5761e14cfefe48e001603cb6cad98a72ddf38c2260df2ef3034543"
+    },
+    {
+      "index": 7,
+      "scale": 0.9124087591240876,
+      "dx": 0.03608588150674136,
+      "dy": 0.055539610757309066,
+      "id": "07",
+      "file": "assets/turntable-v1/frame-07.webp",
+      "sha256": "b53f006f72376b0b86d427a7744bcc38eb86af1219a6966912a5501d25c87304"
+    },
+    {
+      "index": 8,
+      "scale": 0.9057971014492754,
+      "dx": 0.04158865543304896,
+      "dy": 0.05941104899197591,
+      "id": "08",
+      "file": "assets/turntable-v1/frame-08.webp",
+      "sha256": "6c261162ea92b26d575b77a265864e67828179f7953203004f5f72f90f959ffd"
+    },
+    {
+      "index": 9,
+      "scale": 0.934117186730383,
+      "dx": 0.020389085369391213,
+      "dy": 0.04047799117359785,
+      "id": "09",
+      "file": "assets/turntable-v1/frame-09.webp",
+      "sha256": "b3b3d70e834df536cfe35dc40cdae7cbd5b3dc437c5dd4907dfde771109aa4ac"
+    },
+    {
+      "index": 10,
+      "scale": 0.9124087591240876,
+      "dx": 0.04700639328560535,
+      "dy": 0.05263076242853937,
+      "id": "10",
+      "file": "assets/turntable-v1/frame-10.webp",
+      "sha256": "c803e6341aa46663699fa08130761d951c100574de0db41914d8ef5f9281716d"
+    },
+    {
+      "id": "10b",
+      "file": "assets/turntable-v4/midpoint-10b.webp",
+      "scale": 0.9493670886075949,
+      "dx": 0.020861092604930076,
+      "dy": 0.028181708120905702,
+      "sha256": "a425cebf4ef216ee55bd662e678daf039290092ed7a0f079ee668f81f1af2b9c"
+    },
+    {
+      "index": 11,
+      "scale": 0.946969696969697,
+      "dx": 0.03282834248179611,
+      "dy": 0.024232763340095942,
+      "id": "11",
+      "file": "assets/turntable-v1/frame-11.webp",
+      "sha256": "64c7cbe13bff0ef6cabd462f637413896c333d7c61aa3cade144b2fce041afe4"
+    },
+    {
+      "id": "11b",
+      "file": "assets/turntable-v7/midpoint-11b.webp",
+      "scale": 0.984251968503937,
+      "dx": 0.005458124552612742,
+      "dy": 0.0019664120093383364,
+      "sha256": "4dac185d3c4e7ab3f10d05f3eae95f66c9629447bf25fdffe8459a6b30d6610c"
+    },
+    {
+      "index": 12,
+      "scale": 0.9894459102902374,
+      "dx": 0.005830445146314811,
+      "dy": -0.009897964047678398,
+      "id": "12",
+      "file": "assets/turntable-v1/frame-12.webp",
+      "sha256": "84d09c6de118013ef1bce7855f3425fc8f2178c61b42ba877b79a277589c90c3"
+    },
+    {
+      "index": 13,
+      "scale": 1.0053619302949062,
+      "dx": -0.007771830677543612,
+      "dy": -0.02381813882328132,
+      "id": "13",
+      "file": "assets/turntable-v1/frame-13.webp",
+      "sha256": "f3fda9968f511051da7c6159502610e3d6e4ce2d25241c8c8e2f5c2aaf699d20"
+    },
+    {
+      "index": 14,
+      "scale": 1.179245283018868,
+      "dx": -0.09280448900026139,
+      "dy": -0.12702263749924803,
+      "id": "14",
+      "file": "assets/turntable-v1/frame-14.webp",
+      "sha256": "68c67d29d3b750da7c62d9ca1c156c82dd86bdaa86e4bf9eac316f89de616f45"
+    },
+    {
+      "index": 15,
+      "scale": 1.2254901960784315,
+      "dx": -0.11846612612442664,
+      "dy": -0.13950532391490067,
+      "id": "15",
+      "file": "assets/turntable-v1/frame-15.webp",
+      "sha256": "89bcb29ea6eef4ea90cc841b5173433258793d3ba92df5d557c40ff44bfd5398"
+    },
+    {
+      "index": 16,
+      "scale": 1.1867088607594938,
+      "dx": -0.09901743731696411,
+      "dy": -0.13576319294044847,
+      "id": "16",
+      "file": "assets/turntable-v6/frame-16.webp",
+      "sha256": "7de04aa66318088c60fec2895366e6913edb2da317ababbf068ac062a63271d8"
+    },
+    {
+      "index": 17,
+      "scale": 1.1295180722891567,
+      "dx": -0.06797064258856533,
+      "dy": -0.11079920105501717,
+      "id": "17",
+      "file": "assets/turntable-v6/frame-17.webp",
+      "sha256": "5815095d5c0e0637612765cc7978ae7d79eb9f722a3d0a73951af38b6048909f"
+    },
+    {
+      "id": "17b",
+      "file": "assets/turntable-v7/midpoint-17b.webp",
+      "scale": 1.1160714285714286,
+      "dx": -0.06292453434723178,
+      "dy": -0.10522620312737208,
+      "sha256": "bfff90168a4a425b1bce8eabeec78b13d946f076702051605de740fa1b05c037"
+    },
+    {
+      "index": 18,
+      "scale": 0.9868421052631579,
+      "dx": -0.009415292965562205,
+      "dy": 0.006012640527993773,
+      "id": "18",
+      "file": "assets/turntable-v1/frame-18.webp",
+      "sha256": "f5fd79cc71a9813d076aad3e2e393c2ccac9cb827df155b2ea3b09593253590c"
+    },
+    {
+      "id": "18b",
+      "file": "assets/turntable-v8/midpoint-18b.webp",
+      "scale": 0.9894459102902374,
+      "dx": -0.0036405928469530613,
+      "dy": -0.010949447480505414,
+      "sha256": "0e2e29a77efbed64d1a470f02ff719d69d2b2afcf785b6ec896439d6ba59a62e"
+    },
+    {
+      "index": 19,
+      "scale": 0.946969696969697,
+      "dx": 0.02744461290596595,
+      "dy": 0.01618201139986475,
+      "id": "19",
+      "file": "assets/turntable-v1/frame-19.webp",
+      "sha256": "4e446372967a1eeffc72aa2ae865b2775069e3e3c9df04dbb3ab68d3fbaad136"
+    },
+    {
+      "index": 20,
+      "scale": 0.9398496240601504,
+      "dx": 0.03068720745064879,
+      "dy": 0.014502249246921783,
+      "id": "20",
+      "file": "assets/turntable-v5/frame-20.webp",
+      "sha256": "9ec379d82b005874596edffa29ecdece04adefaebc8075869a19b721367f0e17"
+    },
+    {
+      "index": 21,
+      "scale": 1.008923407419648,
+      "dx": -0.007745479312919024,
+      "dy": -0.031221740633420647,
+      "id": "21",
+      "file": "assets/turntable-v5/frame-21.webp",
+      "sha256": "87f10ef4f86ded587ee8fb6da68a65e9382b4396fa351ac8ddd4887ec76d8261"
+    },
+    {
+      "id": "21b",
+      "file": "assets/turntable-v5/frame-21b.webp",
+      "scale": 0.9973404255319149,
+      "dx": 0.001617695714140277,
+      "dy": -0.02634137517805868,
+      "sha256": "3f3a791112fb800bb3f1c24c754a46c50f3d71af498962ce2fb1a90d644baf95"
+    },
+    {
+      "index": 22,
+      "scale": 0.9615384615384616,
+      "dx": 0.016781776839180196,
+      "dy": -0.003882939589634593,
+      "id": "22",
+      "file": "assets/turntable-v5/frame-22.webp",
+      "sha256": "1fa0a584419e92a7fce8957832fdad008880fa3f9af882c6149ebd2e1617ed07"
+    },
+    {
+      "index": 23,
+      "scale": 0.9689922480620154,
+      "dx": 0.006107383571158309,
+      "dy": 0.0038718500028833702,
+      "id": "23",
+      "file": "assets/turntable-v1/frame-23.webp",
+      "sha256": "f326d70e1fc74797c374280b1874ad45c36836dae256f046a877230fdc026fc0"
+    }
+  ]
+}

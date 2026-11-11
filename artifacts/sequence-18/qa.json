@@ -1,0 +1,113 @@
+{
+  "results": [
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "preset": "silver",
+      "frames": 33,
+      "verifiedImageHashes": 33,
+      "uniformScale": true,
+      "noClipping": true,
+      "loop": true,
+      "loaded": 33
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "preset": "carmine",
+      "frames": 33,
+      "verifiedImageHashes": 33,
+      "uniformScale": true,
+      "noClipping": true,
+      "loop": true,
+      "loaded": 33
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "preset": "oak-green",
+      "frames": 33,
+      "verifiedImageHashes": 33,
+      "uniformScale": true,
+      "noClipping": true,
+      "loop": true,
+      "loaded": 33
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "preset": "silver",
+      "frames": 33,
+      "verifiedImageHashes": 33,
+      "uniformScale": true,
+      "noClipping": true,
+      "loop": true,
+      "loaded": 33
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "preset": "carmine",
+      "frames": 33,
+      "verifiedImageHashes": 33,
+      "uniformScale": true,
+      "noClipping": true,
+      "loop": true,
+      "loaded": 33
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "preset": "oak-green",
+      "frames": 33,
+      "verifiedImageHashes": 33,
+      "uniformScale": true,
+      "noClipping": true,
+      "loop": true,
+      "loaded": 33
+    },
+    {
+      "scenario": "new-palette",
+      "retainsPreviousUntilReady": true,
+      "lastIntentWins": true
+    },
+    {
+      "scenario": "rotate-while-loading",
+      "retainsPreviousUntilReady": true,
+      "lastIntentWins": true
+    },
+    {
+      "scenario": "cancel-to-silver",
+      "retainsPreviousUntilReady": true,
+      "lastIntentWins": true
+    },
+    {
+      "kind": "503",
+      "retry": true,
+      "retainsPreviousOnFailure": true
+    },
+    {
+      "kind": "invalid-image",
+      "retry": true,
+      "retainsPreviousOnFailure": true
+    },
+    {
+      "initialLoadRetry": true
+    }
+  ],
+  "responsiveWidths": 8,
+  "touch": true,
+  "previewRetained": true
+}

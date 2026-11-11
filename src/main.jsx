@@ -4,6 +4,7 @@ import { FRAME_COUNT, useFrameSequence, wrapFrame } from './useFrameSequence.js'
 import { getFrameStyle, getSequenceLayout } from './frameLayout.js';
 import { ColorGrade } from './ColorGrade.jsx';
 import manifest from './sequenceManifest.json';
+import { PRESETS } from './presets.js';
 import previousMidpoint from './legacyMidpoint.json';
 import previousRoof from './legacyRoofFrames.json';
 import './style.css';
@@ -17,11 +18,6 @@ const ROOF_SWEEPS = {
   rightRoof: ['14','15','16','17','17b','18','17b','17','16','15'],
 };
 
-const PREVIEW_PRESETS = [
-  {name:'Silver',className:'silver',file:'assets/turntable-v1/frame-00.webp'},
-  {name:'Carmine',className:'carmine',file:'assets/presets-preview/carmine-00.webp'},
-  {name:'Oak Green',className:'oak-green',file:'assets/presets-preview/oak-green-00.webp'},
-];
 
 const BACKGROUND = `${import.meta.env.BASE_URL}assets/atelier-background.webp`;
 
@@ -56,18 +52,23 @@ function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null
     if (sequence.frame) onDisplayedFrame?.(sequence.frame.index);
   }, [sequence.frame?.index, onDisplayedFrame]);
   const [message, setMessage] = useState('');
-  const [preset, setPreset] = useState(presetPreview ? 'Silver' : 'Original');
-  const [presetLoading, setPresetLoading] = useState(false);
-  const presetRequest = useRef(0);
-  const options = presetPreview ? PREVIEW_PRESETS : ['Original','Satin','Bespoke'].map(name=>({name,className:name.toLowerCase(),file:'assets/turntable-v1/frame-00.webp'}));
-  const selectedPreset = options.find(option=>option.name===preset);
-  useEffect(()=>{if(presetPreview)for(const option of PREVIEW_PRESETS){const image=new Image();image.src=`${import.meta.env.BASE_URL}${option.file}`;}},[presetPreview]);
-  async function choosePreset(name) {
-    if(!presetPreview){setPreset(name);return;}
-    const request=++presetRequest.current;setPresetLoading(true);
-    try{const image=new Image();image.src=`${import.meta.env.BASE_URL}${PREVIEW_PRESETS.find(option=>option.name===name).file}`;await image.decode();if(request===presetRequest.current){setPreset(name);setMessage('');}}
-    catch{if(request===presetRequest.current)setMessage('Не удалось загрузить пресет. Попробуйте выбрать его ещё раз.');}
-    finally{if(request===presetRequest.current)setPresetLoading(false);}
+  const [samplePreset, setSamplePreset] = useState('silver');
+  const [sampleLoading, setSampleLoading] = useState(false);
+  const sampleRequest = useRef(0);
+  const options = PRESETS.map(option=>({id:option.id,name:option.label,className:option.id,file:option.thumbnail}));
+  const presetId = presetPreview ? samplePreset : (sequence.frame?.preset || 'silver');
+  const selectedPreset = options.find(option=>option.id===presetId);
+  const preset = selectedPreset.name;
+  const presetLoading = presetPreview ? sampleLoading : sequence.buffering && sequence.requestedPreset !== presetId;
+  async function choosePreset(id) {
+    if(!presetPreview){sequence.select(target.current,false,id);return;}
+    const request=++sampleRequest.current;setSampleLoading(true);
+    try{
+      const image=new Image();image.src=`${import.meta.env.BASE_URL}${options.find(option=>option.id===id).file}`;
+      await image.decode();
+      if(request===sampleRequest.current){setSamplePreset(id);setMessage('');}
+    }catch{if(request===sampleRequest.current)setMessage('Не удалось загрузить пресет. Попробуйте выбрать его ещё раз.');}
+    finally{if(request===sampleRequest.current)setSampleLoading(false);}
   }
   const [menuOpen, setMenuOpen] = useState(false);
   const menuToggle = useRef(null);
@@ -97,19 +98,19 @@ function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null
     if (event.key === 'Home') choose(0); else rotate(event.key === 'ArrowRight' ? 1 : -1);
   }
   const status = sequence.frame ? 'ready' : sequence.error ? 'unavailable' : 'loading';
-  return <main className="hero" data-preset-preview={presetPreview} data-preset={preset}><ColorGrade/>
+  return <main className="hero" data-preset-preview={presetPreview} data-preset={presetId}><ColorGrade/>
     <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><img className="brand-logo" src={`${import.meta.env.BASE_URL}assets/brooklands-logo.svg`} width="5283" height="672" alt="Brooklands" /></a><button ref={menuToggle} className="menu-toggle" aria-label={menuOpen?'Закрыть меню':'Открыть меню'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={()=>setMenuOpen(v=>!v)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d={menuOpen?'M6 6l12 12M18 6L6 18':'M4 8h16M4 16h16'}/></svg></button><nav id="main-nav" data-open={menuOpen} aria-label="Основная навигация" onKeyDown={e=>{if(e.key==='Escape'){setMenuOpen(false);menuToggle.current?.focus();}}}>{['Услуги','Наши работы','О компании','Контакты'].map(text=><button key={text} onClick={()=>{setMenuOpen(false);demo();}}>{text}</button>)}</nav><div className="header-contact"><a className="header-phone" href="tel:+74951545265">+7 (495) 154-52-65</a><button className="booking" onClick={demo}>Записаться</button></div></header>
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>С 2014 года защищаем, преображаем и персонализируем автомобили премиального класса.</p><button className="cta" onClick={demo}>Выбрать услугу <svg className="cta-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button></section>
-    <section ref={stage} className="stage" data-roof-version={legacyRoof ? 'previous' : 'refined'} data-midpoint-version={legacyMidpoint ? 'previous' : 'refined'} data-grade={gradeMode} data-frame-id={sequence.frame ? manifest.frames[sequence.frame.index].id : ''} aria-label={presetPreview ? "Предпросмотр отделки Porsche" : "Покадровый обзор Porsche на 360 градусов"} tabIndex={presetPreview ? -1 : 0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
+    <section ref={stage} className="stage" data-roof-version={legacyRoof ? 'previous' : 'refined'} data-midpoint-version={legacyMidpoint ? 'previous' : 'refined'} data-grade={gradeMode} data-frame-id={sequence.frame ? manifest.frames[sequence.frame.index].id : ''} aria-label={presetPreview ? "Предпросмотр отделки Porsche" : "Покадровый обзор Porsche на 360 градусов"} tabIndex={presetPreview ? -1 : 0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-preset={sequence.frame?.preset || "silver"} data-requested-preset={sequence.requestedPreset} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
       <img className="stage-background" src={BACKGROUND} alt="" fetchPriority="high" decoding="async"/>
       <svg className="floor-orbit" style={orbit} viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="500" cy="60" rx="495" ry="56"/></svg>
       <div className="ground-contact" aria-hidden="true" style={{left:groundX,top:groundY,width:carLayout.width*.94,height:carLayout.height*.075}}/>
-      {sequence.frame && <div className="sequence" style={carLayout}><img className="sequence-image" style={getFrameStyle(sequence.frame.index, legacyMidpoint, legacyRoof)} src={presetPreview ? `${import.meta.env.BASE_URL}${selectedPreset.file}` : legacyMidpoint && manifest.frames[sequence.frame.index].id === '01b' ? `${import.meta.env.BASE_URL}${previousMidpoint.file}` : legacyRoof && previousRoof[manifest.frames[sequence.frame.index].id] ? `${import.meta.env.BASE_URL}${previousRoof[manifest.frames[sequence.frame.index].id].file}` : sequence.frame.url} alt={presetPreview ? `Porsche 911 Turbo S — ${preset}` : "Porsche 911 Turbo S"} draggable="false"/></div>}
+      {sequence.frame && <div className="sequence" style={carLayout}><img className="sequence-image" style={getFrameStyle(sequence.frame.index, legacyMidpoint && sequence.frame.preset==='silver', legacyRoof && sequence.frame.preset==='silver')} src={presetPreview ? `${import.meta.env.BASE_URL}${selectedPreset.file}` : legacyMidpoint && sequence.frame.preset==='silver' && manifest.frames[sequence.frame.index].id === '01b' ? `${import.meta.env.BASE_URL}${previousMidpoint.file}` : legacyRoof && sequence.frame.preset==='silver' && previousRoof[manifest.frames[sequence.frame.index].id] ? `${import.meta.env.BASE_URL}${previousRoof[manifest.frames[sequence.frame.index].id].file}` : sequence.frame.url} alt={presetPreview ? `Porsche 911 Turbo S — ${preset}` : "Porsche 911 Turbo S"} draggable="false"/></div>}
       {!sequence.frame && !sequence.error && <p className="status" role="status">Загрузка автомобиля…</p>}
-      {sequence.frame && sequence.buffering && <p className="frame-loading" role="status">Загрузка ракурса…</p>}
-      {sequence.error && <div className={sequence.frame ? 'frame-warning' : 'fallback'} role="status"><p>{sequence.frame ? 'Этот ракурс пока недоступен.' : 'Не удалось загрузить автомобиль.'}</p><button onClick={sequence.retry}>Повторить загрузку</button></div>}
+      {sequence.frame && sequence.buffering && <p className="frame-loading" role="status">{presetLoading ? 'Загрузка пресета…' : 'Загрузка ракурса…'}</p>}
+      {sequence.error && <div className={sequence.frame ? 'frame-warning' : 'fallback'} role="status"><p>{sequence.frame ? (sequence.requestedPreset !== sequence.frame.preset ? 'Не удалось загрузить выбранный пресет.' : 'Этот ракурс пока недоступен.') : 'Не удалось загрузить автомобиль.'}</p><button onClick={sequence.retry}>Повторить загрузку</button></div>}
     </section>
-    <aside className="presets" aria-label="Предпросмотр пресетов" aria-busy={presetLoading}><div className="preset-options" role="group" aria-label="Выбрать пресет">{options.map(({name,className,file})=><button key={name} className={`preset ${className}`} aria-pressed={preset===name} onClick={()=>choosePreset(name)}><img className="preset-preview" src={`${import.meta.env.BASE_URL}${file}`} alt=""/><span className="preset-copy"><i aria-hidden="true"/><span>{name}</span></span><span className="preset-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3 8 3 3 7-7"/></svg></span></button>)}</div></aside>
+    <aside className="presets" aria-label="Предпросмотр пресетов" aria-busy={presetLoading}><div className="preset-options" role="group" aria-label="Выбрать пресет">{options.map(({id,name,className,file})=><button key={id} className={`preset ${className}`} aria-pressed={presetId===id} onClick={()=>choosePreset(id)}><img className="preset-preview" src={`${import.meta.env.BASE_URL}${file}`} alt=""/><span className="preset-copy"><i aria-hidden="true"/><span>{name}</span></span><span className="preset-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3 8 3 3 7-7"/></svg></span></button>)}</div></aside>
     {!presetPreview && <div className="rotation"><div className="rotation-buttons" role="group" aria-label="Управление обзором 360 градусов"><button disabled={presetPreview || !sequence.frame} aria-label="Повернуть влево" onClick={()=>rotate(-1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button><span className="rotation-label" aria-hidden="true">360°</span><button disabled={presetPreview || !sequence.frame} aria-label="Повернуть вправо" onClick={()=>rotate(1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div></div>}
     {message && <div className="demo-message" role="status">{message}<button aria-label="Закрыть сообщение" onClick={()=>setMessage('')}>×</button></div>}
   </main>;

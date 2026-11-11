@@ -1,0 +1,2304 @@
+[
+  {
+    "auditVersion": 2,
+    "id": "00",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-00.webp",
+    "source": "references/sequence-17/carmine-00.png",
+    "sha256": "41e71fa9971e2e3c40509b778597caf5af80d1eccf1fd348d2c9602e7804d0fc",
+    "outputSha256": "3ff08867370b82102d786a7d8fdeaa5b00da3b95214ab85db778de5b3cbed6c7",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 64,
+      "right": 1597,
+      "top": 130,
+      "bottom": 808
+    },
+    "visible": {
+      "left": 62,
+      "right": 1605,
+      "top": 129,
+      "bottom": 812
+    },
+    "opaqueIoU": 0.9921441516346322,
+    "review": "outline_candidate",
+    "bytes": 255770,
+    "filledOutlineIoU": 0.9886561609122585,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 2,
+      "top": 1,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 314
+  },
+  {
+    "auditVersion": 2,
+    "id": "01",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-01.webp",
+    "source": "references/sequence-18/carmine-01.png",
+    "sha256": "d5954d4ccc295865e627848befb26c61a96cf109b5ec79434d1394c882dfd4fe",
+    "outputSha256": "5da1b1ae17ca49852acf6b8a3bdf28ae8de2bf0107267d3bf3cc3d5fae950621",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 54,
+      "right": 1641,
+      "top": 162,
+      "bottom": 813
+    },
+    "visible": {
+      "left": 52,
+      "right": 1642,
+      "top": 160,
+      "bottom": 820
+    },
+    "opaqueIoU": 0.9926315545881607,
+    "review": "outline_candidate",
+    "bytes": 278712,
+    "filledOutlineIoU": 0.9907733498094944,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 1,
+      "top": 0,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 130
+  },
+  {
+    "auditVersion": 2,
+    "id": "01b",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-01b.webp",
+    "source": "references/sequence-18/carmine-01b.png",
+    "sha256": "6413ff66f6b49768dc2029089afa953f21e6b8b2de7ae464da124afa95e83a02",
+    "outputSha256": "80f90ee32813bc4ae8393a65838180a8c448bde3b844237f01e0b2879132de6a",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 49,
+      "right": 1653,
+      "top": 227,
+      "bottom": 797
+    },
+    "visible": {
+      "left": 47,
+      "right": 1655,
+      "top": 225,
+      "bottom": 800
+    },
+    "opaqueIoU": 0.9892758167305791,
+    "review": "outline_candidate",
+    "bytes": 242650,
+    "filledOutlineIoU": 0.9863357758422047,
+    "solidBoundsDelta": {
+      "left": 1,
+      "right": 2,
+      "top": -1,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 280
+  },
+  {
+    "auditVersion": 2,
+    "id": "03",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-03.webp",
+    "source": "references/sequence-18/carmine-03.png",
+    "sha256": "856c44ad2b78336c36b62bfb40a59cffe45f2bc0cac19b0b3243f971e54c8815",
+    "outputSha256": "6652dcaf99ae4b98b1cd61f5beaa2cce513c429ebb05ce2aac948bd18a6e6bd4",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 26,
+      "right": 1653,
+      "top": 229,
+      "bottom": 765
+    },
+    "visible": {
+      "left": 24,
+      "right": 1654,
+      "top": 227,
+      "bottom": 768
+    },
+    "opaqueIoU": 0.9869980197767633,
+    "review": "outline_candidate",
+    "bytes": 232420,
+    "filledOutlineIoU": 0.9888398712292834,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 1,
+      "top": 1,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 929
+  },
+  {
+    "auditVersion": 2,
+    "id": "02",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-02.webp",
+    "source": "references/sequence-18/carmine-02.png",
+    "sha256": "2f79e52f1a2ce3d8a7ebd18f75e94af8fc0cb840b63b8bdd5e0ce28f093a5a49",
+    "outputSha256": "ad99b95e1da1f93a4a59dc14ddddffc8ecae40d9a9b39c6965183096249fc247",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 38,
+      "right": 1656,
+      "top": 228,
+      "bottom": 770
+    },
+    "visible": {
+      "left": 36,
+      "right": 1657,
+      "top": 226,
+      "bottom": 772
+    },
+    "opaqueIoU": 0.9852837081680264,
+    "review": "outline_candidate",
+    "bytes": 229462,
+    "filledOutlineIoU": 0.986233790640857,
+    "solidBoundsDelta": {
+      "left": 1,
+      "right": 1,
+      "top": 0,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 376
+  },
+  {
+    "auditVersion": 2,
+    "id": "03b",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-03b.webp",
+    "source": "references/sequence-18/carmine-03b.png",
+    "sha256": "e453e7972d896ce1cd6a4a8a4165bada0889ca7a0e4b4ae86e10cc40a8bfb363",
+    "outputSha256": "6dd5e275a6771880b2e837c66022dfd29e87575aeb622c8703e50546ca37e529",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 37,
+      "right": 1647,
+      "top": 242,
+      "bottom": 782
+    },
+    "visible": {
+      "left": 36,
+      "right": 1648,
+      "top": 240,
+      "bottom": 784
+    },
+    "opaqueIoU": 0.9634910485933503,
+    "review": "outline_candidate",
+    "bytes": 246790,
+    "filledOutlineIoU": 0.9916208369721717,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": -2,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 17
+  },
+  {
+    "auditVersion": 2,
+    "id": "04",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-04.webp",
+    "source": "references/sequence-18/carmine-04.png",
+    "sha256": "88fd35a13af9f77f694eed358d4dd0133bc13beec6c0e73ab37fe3793f2e04bb",
+    "outputSha256": "a3d67945713e96933114ba7f6549f48b6c2b47b865885534520afab7218de478",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 46,
+      "right": 1639,
+      "top": 206,
+      "bottom": 805
+    },
+    "visible": {
+      "left": 44,
+      "right": 1641,
+      "top": 204,
+      "bottom": 808
+    },
+    "opaqueIoU": 0.9869945006311941,
+    "review": "needs_visual_geometry_review",
+    "bytes": 272980,
+    "filledOutlineIoU": 0.9685196427022809,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 1,
+      "top": -2,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 1862
+  },
+  {
+    "auditVersion": 2,
+    "id": "04b",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-04b.webp",
+    "source": "references/sequence-18/carmine-04b.png",
+    "sha256": "8bcdbda471d35db677a0dbf98610307e137a5619f971a214415b0be1500162fd",
+    "outputSha256": "1834188db221307bcfe7eed679d7d8aec745054fb2598cb3fb0475aa58daf70f",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 48,
+      "right": 1637,
+      "top": 204,
+      "bottom": 801
+    },
+    "visible": {
+      "left": 47,
+      "right": 1638,
+      "top": 202,
+      "bottom": 805
+    },
+    "opaqueIoU": 0.9912432772628447,
+    "review": "needs_visual_geometry_review",
+    "bytes": 255772,
+    "filledOutlineIoU": 0.9526556637532803,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 1,
+      "top": -1,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 455
+  },
+  {
+    "auditVersion": 2,
+    "id": "05",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-05.webp",
+    "source": "references/sequence-18/carmine-05.png",
+    "sha256": "223a4d5c5d37005c43e62cc50f7633b79318a93be92775cb87bd3dcb49b1cf64",
+    "outputSha256": "838e62381659ea32ebdf8d555ccea66cc80adaf1a8a90699e74f859450d1dda8",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 51,
+      "right": 1630,
+      "top": 181,
+      "bottom": 792
+    },
+    "visible": {
+      "left": 49,
+      "right": 1631,
+      "top": 179,
+      "bottom": 795
+    },
+    "opaqueIoU": 0.9866400511064286,
+    "review": "outline_candidate",
+    "bytes": 253670,
+    "filledOutlineIoU": 0.9854864952814839,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 1,
+      "top": -3,
+      "bottom": 3
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 260
+  },
+  {
+    "auditVersion": 2,
+    "id": "05b",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-05b.webp",
+    "source": "references/sequence-18/carmine-05b.png",
+    "sha256": "85673d872b033c8201510e1f4bbeefb1aaae3cfe93defc57ec684e3014d44926",
+    "outputSha256": "e4342dd6f51de8c99d56d35525ab07c57747e115d0d4a2593d0f77ee2a4d8bfa",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 54,
+      "right": 1629,
+      "top": 183,
+      "bottom": 803
+    },
+    "visible": {
+      "left": 52,
+      "right": 1631,
+      "top": 181,
+      "bottom": 806
+    },
+    "opaqueIoU": 0.9861822827506268,
+    "review": "outline_candidate",
+    "bytes": 259194,
+    "filledOutlineIoU": 0.9896880694608211,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 0,
+      "top": -1,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 224
+  },
+  {
+    "auditVersion": 2,
+    "id": "06",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-06.webp",
+    "source": "references/sequence-18/carmine-06.png",
+    "sha256": "67d01f6117f57d156a86c0722ac282b2da3a619a569f6943c9fb79cb946c8282",
+    "outputSha256": "b6367ba24853daf095d9743b7fc70d8f154bc58e1b4d56b6fc9a2ff2061f8dc3",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 63,
+      "right": 1637,
+      "top": 129,
+      "bottom": 821
+    },
+    "visible": {
+      "left": 61,
+      "right": 1638,
+      "top": 128,
+      "bottom": 829
+    },
+    "opaqueIoU": 0.9913389498554419,
+    "review": "outline_candidate",
+    "bytes": 277212,
+    "filledOutlineIoU": 0.991778620676769,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": -2,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 202
+  },
+  {
+    "auditVersion": 2,
+    "id": "08",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-08.webp",
+    "source": "references/sequence-18/carmine-08.png",
+    "sha256": "df531be57d50166f3a4c2670369e4b524a0ce8dea2abae891866baa585e48bbb",
+    "outputSha256": "c462c0f61b8fc18a7a2ed32b0fb4f7c212c94e58762d9490af72937a5a0e9f33",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 246,
+      "right": 1429,
+      "top": 80,
+      "bottom": 830
+    },
+    "visible": {
+      "left": 207,
+      "right": 1448,
+      "top": 78,
+      "bottom": 839
+    },
+    "opaqueIoU": 0.9924011166499391,
+    "review": "outline_candidate",
+    "bytes": 221318,
+    "filledOutlineIoU": 0.9838913914433396,
+    "solidBoundsDelta": {
+      "left": -4,
+      "right": 1,
+      "top": -1,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 4,
+    "outsideLowAlphaPixels": 72
+  },
+  {
+    "auditVersion": 2,
+    "id": "00",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-00.webp",
+    "source": "references/sequence-17/oak-green-00.png",
+    "sha256": "7c1abe6ce630cf64351846482c9065b112dea76cf957b2a21dfcafd7759f5286",
+    "outputSha256": "4e135a3200012497830228a86f3e5d1342cb0992d28d2f17373836f36c077aaa",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 65,
+      "right": 1597,
+      "top": 129,
+      "bottom": 807
+    },
+    "visible": {
+      "left": 63,
+      "right": 1605,
+      "top": 128,
+      "bottom": 813
+    },
+    "opaqueIoU": 0.9935544128531902,
+    "review": "outline_candidate",
+    "bytes": 266172,
+    "filledOutlineIoU": 0.990609307658851,
+    "solidBoundsDelta": {
+      "left": 1,
+      "right": 2,
+      "top": 0,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 225
+  },
+  {
+    "auditVersion": 2,
+    "id": "01",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-01.webp",
+    "source": "references/sequence-18/oak-green-01.png",
+    "sha256": "f98006c027842f5f63ed02586167bb314246b87d60c10726ee036205b526d2e3",
+    "outputSha256": "b6e40f527cacac75aef4f5764454c30e935e6467c52a1a7566959b4b8ffc75bc",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 53,
+      "right": 1642,
+      "top": 159,
+      "bottom": 813
+    },
+    "visible": {
+      "left": 52,
+      "right": 1643,
+      "top": 157,
+      "bottom": 817
+    },
+    "opaqueIoU": 0.9904724937365468,
+    "review": "outline_candidate",
+    "bytes": 287036,
+    "filledOutlineIoU": 0.9866215245716631,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": -3,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 720
+  },
+  {
+    "auditVersion": 2,
+    "id": "01b",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-01b.webp",
+    "source": "references/sequence-18/oak-green-01b.png",
+    "sha256": "065185ae7a5c684f2a8f9ec2a2615f2ff27a349bfd283a288f0b8da9c7d4d431",
+    "outputSha256": "6d6fb7e027b95d6f247af06c9a44862699713509ba3b30545fe6997bb1290892",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 48,
+      "right": 1651,
+      "top": 227,
+      "bottom": 796
+    },
+    "visible": {
+      "left": 47,
+      "right": 1652,
+      "top": 225,
+      "bottom": 799
+    },
+    "opaqueIoU": 0.9690314225748351,
+    "review": "outline_candidate",
+    "bytes": 249478,
+    "filledOutlineIoU": 0.985021843145413,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 0,
+      "top": -1,
+      "bottom": 0
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 1612
+  },
+  {
+    "auditVersion": 2,
+    "id": "03",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-03.webp",
+    "source": "references/sequence-18/oak-green-03.png",
+    "sha256": "235c4c0c8e3d76bd4ca87f92097db2ac892e38626cbbaa5e8e209234f10430fa",
+    "outputSha256": "8b2a4047c71ac7afeaa9486be0241559e533b19f096653f2e0e2e485e511dd5a",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 26,
+      "right": 1652,
+      "top": 227,
+      "bottom": 766
+    },
+    "visible": {
+      "left": 24,
+      "right": 1654,
+      "top": 225,
+      "bottom": 768
+    },
+    "opaqueIoU": 0.9862185141040922,
+    "review": "outline_candidate",
+    "bytes": 240626,
+    "filledOutlineIoU": 0.9850597609561753,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 0,
+      "top": -1,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 449
+  },
+  {
+    "auditVersion": 2,
+    "id": "02",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-02.webp",
+    "source": "references/sequence-18/oak-green-02.png",
+    "sha256": "c78875cd85a8a619138f80c328e0eba7e502261f3520a0063a42b8110559e9cc",
+    "outputSha256": "1db468febe90bd96c120a5098f07242716ec41cf9cf24cd04e42eacf8647e187",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 37,
+      "right": 1655,
+      "top": 228,
+      "bottom": 768
+    },
+    "visible": {
+      "left": 36,
+      "right": 1657,
+      "top": 226,
+      "bottom": 771
+    },
+    "opaqueIoU": 0.9916858519524959,
+    "review": "outline_candidate",
+    "bytes": 243190,
+    "filledOutlineIoU": 0.9831191028072394,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": -1
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 798
+  },
+  {
+    "auditVersion": 2,
+    "id": "03b",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-03b.webp",
+    "source": "references/sequence-18/oak-green-03b.png",
+    "sha256": "636b730f6efeaf3c5301a2c4660d5d10bf42a171d86aef377bf7b50d7996d0eb",
+    "outputSha256": "31a01c3bebb1bc27619fa669fea92a21bc3cca504c7c7f0990a7efb42d20d759",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 36,
+      "right": 1646,
+      "top": 244,
+      "bottom": 782
+    },
+    "visible": {
+      "left": 35,
+      "right": 1648,
+      "top": 242,
+      "bottom": 784
+    },
+    "opaqueIoU": 0.9598870710343903,
+    "review": "outline_candidate",
+    "bytes": 238798,
+    "filledOutlineIoU": 0.9858826851132915,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 1,
+      "top": 0,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 683
+  },
+  {
+    "auditVersion": 2,
+    "id": "04",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-04.webp",
+    "source": "references/sequence-18/oak-green-04.png",
+    "sha256": "9a9bb932d1c43c49a4b15cdacf18c19b6b9314bc936aed6caa2c9d226630368b",
+    "outputSha256": "89452f546c297f23b7f672ae789347f2aa5e92d23325e9be6899208f62ad580d",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 47,
+      "right": 1638,
+      "top": 206,
+      "bottom": 805
+    },
+    "visible": {
+      "left": 45,
+      "right": 1640,
+      "top": 204,
+      "bottom": 809
+    },
+    "opaqueIoU": 0.9408146441188106,
+    "review": "needs_visual_geometry_review",
+    "bytes": 275398,
+    "filledOutlineIoU": 0.966422915494786,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 0,
+      "top": -2,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 11821
+  },
+  {
+    "auditVersion": 2,
+    "id": "04b",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-04b.webp",
+    "source": "references/sequence-18/oak-green-04b.png",
+    "sha256": "e74ea1b21548a4b802805b42fb8182f0c33a50f80a503c6c920bc9d8fc58a90e",
+    "outputSha256": "1a3141162ca0bd61ebd2abe74c90f42ccde35d22b178484c9604c8f88a389bb2",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 48,
+      "right": 1637,
+      "top": 203,
+      "bottom": 802
+    },
+    "visible": {
+      "left": 47,
+      "right": 1638,
+      "top": 201,
+      "bottom": 804
+    },
+    "opaqueIoU": 0.988156476512555,
+    "review": "needs_visual_geometry_review",
+    "bytes": 267790,
+    "filledOutlineIoU": 0.9500811073861793,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 1,
+      "top": -2,
+      "bottom": 3
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 136
+  },
+  {
+    "auditVersion": 2,
+    "id": "05",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-05.webp",
+    "source": "references/sequence-18/oak-green-05.png",
+    "sha256": "fe06f40e71b726cba12830cff5d9a9c29f0879e3b48a257c31976572871fb4c7",
+    "outputSha256": "859647b9dc8b2306d8a7659986bd6ffede56b63694f680f003efb99e73443ef3",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 52,
+      "right": 1631,
+      "top": 182,
+      "bottom": 792
+    },
+    "visible": {
+      "left": 50,
+      "right": 1633,
+      "top": 180,
+      "bottom": 795
+    },
+    "opaqueIoU": 0.9835484669519398,
+    "review": "outline_candidate",
+    "bytes": 262814,
+    "filledOutlineIoU": 0.9830380130243829,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 2,
+      "top": -2,
+      "bottom": 3
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 290
+  },
+  {
+    "auditVersion": 2,
+    "id": "05b",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-05b.webp",
+    "source": "references/sequence-18/oak-green-05b.png",
+    "sha256": "a66b0bacad846e375363b61e629f6f4106f8c051ce16814d20d5b2ae4bd108e1",
+    "outputSha256": "cd2900f59b0dd6d5b27017dc3f616ed3aa6ec1c9693ba4bf4f94a10a0fa5a90e",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 54,
+      "right": 1630,
+      "top": 183,
+      "bottom": 803
+    },
+    "visible": {
+      "left": 52,
+      "right": 1632,
+      "top": 181,
+      "bottom": 806
+    },
+    "opaqueIoU": 0.9561572454303676,
+    "review": "outline_candidate",
+    "bytes": 256190,
+    "filledOutlineIoU": 0.9799639180728006,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 1,
+      "top": -1,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 7217
+  },
+  {
+    "auditVersion": 2,
+    "id": "06",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-06.webp",
+    "source": "references/sequence-18/oak-green-06.png",
+    "sha256": "1ea1b61dba1e58b15787a8a1861d127681b69a9a6eb2b19be1825e3b8a79b31b",
+    "outputSha256": "5e15d1f6d8cb01795f714cc3211bbf6daa619d0b1e0ced695ed830eb1c104912",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 64,
+      "right": 1637,
+      "top": 127,
+      "bottom": 820
+    },
+    "visible": {
+      "left": 62,
+      "right": 1638,
+      "top": 125,
+      "bottom": 827
+    },
+    "opaqueIoU": 0.9906375329134665,
+    "review": "outline_candidate",
+    "bytes": 279766,
+    "filledOutlineIoU": 0.9816222475393609,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 2,
+      "top": -4,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 4,
+    "outsideLowAlphaPixels": 39
+  },
+  {
+    "auditVersion": 2,
+    "id": "07",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-07.webp",
+    "source": "references/sequence-18/oak-green-07.png",
+    "sha256": "53be0da2fff09f17ab8b100ad616b03df67d5e7ab1d66c5099837e612d00fbbb",
+    "outputSha256": "34273c2e7c2472b7bf1e22ecc815d77bbc145da82146ab9bc1d94bccdfd13632",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 224,
+      "right": 1462,
+      "top": 82,
+      "bottom": 829
+    },
+    "visible": {
+      "left": 211,
+      "right": 1464,
+      "top": 81,
+      "bottom": 836
+    },
+    "opaqueIoU": 0.9714073033303636,
+    "review": "outline_candidate",
+    "bytes": 234422,
+    "filledOutlineIoU": 0.9894357694784288,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": -1,
+      "bottom": 3
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 225
+  },
+  {
+    "auditVersion": 2,
+    "id": "07",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-07.webp",
+    "source": "references/sequence-18/carmine-07.png",
+    "sha256": "042b7c9f45fa50a7253bc055a85f2247703b6af4d572e777831b69353c061a3c",
+    "outputSha256": "b18db998185c0ca6d50f29ba20546481cd017bd4d27be5c6688d9482e4040f29",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 225,
+      "right": 1460,
+      "top": 82,
+      "bottom": 826
+    },
+    "visible": {
+      "left": 210,
+      "right": 1462,
+      "top": 80,
+      "bottom": 834
+    },
+    "opaqueIoU": 0.9729061360249839,
+    "review": "outline_candidate",
+    "bytes": 218698,
+    "filledOutlineIoU": 0.9905282844330042,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 0,
+      "top": -1,
+      "bottom": 0
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 80
+  },
+  {
+    "auditVersion": 2,
+    "id": "09",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-09.webp",
+    "source": "references/sequence-18/carmine-09.png",
+    "sha256": "ae8f7a112560e3e365d86311afebc4365fa779470170ac55bf0558a832b24355",
+    "outputSha256": "75c0ebff6bfa951d936cb42046e343edba0aa7afd2c6817ca7bcce00f0c74dac",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 329,
+      "right": 1375,
+      "top": 95,
+      "bottom": 823
+    },
+    "visible": {
+      "left": 304,
+      "right": 1383,
+      "top": 93,
+      "bottom": 828
+    },
+    "opaqueIoU": 0.9892853733812721,
+    "review": "outline_candidate",
+    "bytes": 192798,
+    "filledOutlineIoU": 0.9899992856632617,
+    "solidBoundsDelta": {
+      "left": -3,
+      "right": 5,
+      "top": 1,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 5,
+    "outsideLowAlphaPixels": 191
+  },
+  {
+    "auditVersion": 2,
+    "id": "10",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-10.webp",
+    "source": "references/sequence-18/carmine-10.png",
+    "sha256": "33bb38769aec194bdc7971b03eb7523cacec573fbc8f56d4d9c7bafbc8114e96",
+    "outputSha256": "99cfe2cbf0d0a4b78411134dff8f2e8e56d7c5d1a1d73971b385f1a26a2763a7",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 210,
+      "right": 1432,
+      "top": 78,
+      "bottom": 829
+    },
+    "visible": {
+      "left": 198,
+      "right": 1455,
+      "top": 76,
+      "bottom": 840
+    },
+    "opaqueIoU": 0.9888232833145363,
+    "review": "outline_candidate",
+    "bytes": 232346,
+    "filledOutlineIoU": 0.9821320534021699,
+    "solidBoundsDelta": {
+      "left": -7,
+      "right": 4,
+      "top": -2,
+      "bottom": 0
+    },
+    "maximumBoundsDelta": 7,
+    "outsideLowAlphaPixels": 562
+  },
+  {
+    "auditVersion": 2,
+    "id": "10b",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-10b.webp",
+    "source": "references/sequence-18/carmine-10b.png",
+    "sha256": "e981c0a0b56fb4ba6d160c5c49625e99e5d3053960efcbb0d34d0790b4a4221c",
+    "outputSha256": "b8004e1e6142148baed11ad9bd20a0a910951679931c432f44fcb3c53e51c9e5",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 99,
+      "right": 1575,
+      "top": 115,
+      "bottom": 825
+    },
+    "visible": {
+      "left": 98,
+      "right": 1587,
+      "top": 113,
+      "bottom": 828
+    },
+    "opaqueIoU": 0.9761325447395671,
+    "review": "outline_candidate",
+    "bytes": 252378,
+    "filledOutlineIoU": 0.9924693889282772,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 0,
+      "top": -1,
+      "bottom": 4
+    },
+    "maximumBoundsDelta": 4,
+    "outsideLowAlphaPixels": 254
+  },
+  {
+    "auditVersion": 2,
+    "id": "11",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-11.webp",
+    "source": "references/sequence-18/carmine-11.png",
+    "sha256": "0fcd2ee86070cdd5df88392267e28560e2e3768af38faffb9d28ad8368615b62",
+    "outputSha256": "576c05df3d6d03c2e7df0946461dc0801f8e5fa36cda2a4109b373f6008b7291",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 98,
+      "right": 1538,
+      "top": 114,
+      "bottom": 827
+    },
+    "visible": {
+      "left": 96,
+      "right": 1559,
+      "top": 112,
+      "bottom": 829
+    },
+    "opaqueIoU": 0.970284273911217,
+    "review": "outline_candidate",
+    "bytes": 246350,
+    "filledOutlineIoU": 0.9887758213278451,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 1,
+      "top": -1,
+      "bottom": 0
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 15
+  },
+  {
+    "auditVersion": 2,
+    "id": "11b",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-11b.webp",
+    "source": "references/sequence-18/carmine-11b.png",
+    "sha256": "2a0b8c6b6443cecb6e591f86c4c1137b29011b9ad3d64e7fa219b07b6629cefa",
+    "outputSha256": "fd017205502e62d9c5c31d6a2271434ca74934a77d9d57f0cff52179e680f5d0",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 58,
+      "right": 1607,
+      "top": 122,
+      "bottom": 817
+    },
+    "visible": {
+      "left": 56,
+      "right": 1611,
+      "top": 120,
+      "bottom": 826
+    },
+    "opaqueIoU": 0.9943421760610458,
+    "review": "outline_candidate",
+    "bytes": 253820,
+    "filledOutlineIoU": 0.9932493588776588,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 0,
+      "top": -2,
+      "bottom": 0
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 127
+  },
+  {
+    "auditVersion": 2,
+    "id": "12",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-12.webp",
+    "source": "references/sequence-18/carmine-12.png",
+    "sha256": "faabdc23094aa431f0d05b83846aa7c83c6d7c5c60d0dca35550c271bdb9fc8c",
+    "outputSha256": "74350619919354e1bc420b4a3b38a667e71fc453d32a2ea5bc457b6395ea15a4",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 46,
+      "right": 1614,
+      "top": 124,
+      "bottom": 828
+    },
+    "visible": {
+      "left": 44,
+      "right": 1616,
+      "top": 122,
+      "bottom": 836
+    },
+    "opaqueIoU": 0.9825728844319319,
+    "review": "outline_candidate",
+    "bytes": 265160,
+    "filledOutlineIoU": 0.9802671918839072,
+    "solidBoundsDelta": {
+      "left": 1,
+      "right": 3,
+      "top": -5,
+      "bottom": 4
+    },
+    "maximumBoundsDelta": 5,
+    "outsideLowAlphaPixels": 878
+  },
+  {
+    "auditVersion": 2,
+    "id": "14",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-14.webp",
+    "source": "references/sequence-18/carmine-14.png",
+    "sha256": "71e0ca1c6f6e928f5a33ebc59c33d3903ab3b2d7bbcb9919776e11e1b20c1e55",
+    "outputSha256": "cd5972a4e7964a20db60ebe94ed4fdf66a89ce1ea82ddaa4bb947e57de585fb5",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 28,
+      "right": 1642,
+      "top": 207,
+      "bottom": 790
+    },
+    "visible": {
+      "left": 26,
+      "right": 1643,
+      "top": 205,
+      "bottom": 795
+    },
+    "opaqueIoU": 0.9403276729858216,
+    "review": "outline_candidate",
+    "bytes": 244274,
+    "filledOutlineIoU": 0.9832554260758882,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": -2,
+      "bottom": 3
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 7089
+  },
+  {
+    "auditVersion": 2,
+    "id": "08",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-08.webp",
+    "source": "references/sequence-18/oak-green-08.png",
+    "sha256": "3a9fa4a6d0aed146473ec0f4711aeeb316e2994e0196ef42d67557fdf29dadb4",
+    "outputSha256": "fd3dee9273bc5cb79a7e53db9564f14146c950508f56aad5f8b12c8d394c753b",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 250,
+      "right": 1429,
+      "top": 79,
+      "bottom": 830
+    },
+    "visible": {
+      "left": 215,
+      "right": 1446,
+      "top": 77,
+      "bottom": 842
+    },
+    "opaqueIoU": 0.9558779107533809,
+    "review": "outline_candidate",
+    "bytes": 226334,
+    "filledOutlineIoU": 0.9862697372526993,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 1,
+      "top": -2,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 953
+  },
+  {
+    "auditVersion": 2,
+    "id": "09",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-09.webp",
+    "source": "references/sequence-18/oak-green-09.png",
+    "sha256": "e2c4e571dd8302f5a0cb3823f762dc5162b8d6c68b3e96eadd6646899ee908dd",
+    "outputSha256": "6fa95a832ab5d8323296ef5b7c98cab36b698c076bc4865a1e5b4b27e41f292d",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 332,
+      "right": 1375,
+      "top": 94,
+      "bottom": 824
+    },
+    "visible": {
+      "left": 304,
+      "right": 1383,
+      "top": 92,
+      "bottom": 831
+    },
+    "opaqueIoU": 0.9882633060340172,
+    "review": "outline_candidate",
+    "bytes": 199348,
+    "filledOutlineIoU": 0.9864042255856368,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 5,
+      "top": 0,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 5,
+    "outsideLowAlphaPixels": 107
+  },
+  {
+    "auditVersion": 2,
+    "id": "10",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-10.webp",
+    "source": "references/sequence-18/oak-green-10.png",
+    "sha256": "7ce8ea84d6df825249fcb46a5039f98e47ad6c462ce8c2b845e9767433235654",
+    "outputSha256": "54c7c67eb5a7a1cd6dd351d8944ce1d566cf8bd53a77fbdcd2a28f1bc3099876",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 214,
+      "right": 1429,
+      "top": 77,
+      "bottom": 831
+    },
+    "visible": {
+      "left": 202,
+      "right": 1445,
+      "top": 76,
+      "bottom": 840
+    },
+    "opaqueIoU": 0.9931196274682402,
+    "review": "outline_candidate",
+    "bytes": 219790,
+    "filledOutlineIoU": 0.9916271110477316,
+    "solidBoundsDelta": {
+      "left": -3,
+      "right": 1,
+      "top": -3,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 222
+  },
+  {
+    "auditVersion": 2,
+    "id": "10b",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-10b.webp",
+    "source": "references/sequence-18/oak-green-10b.png",
+    "sha256": "a4aeacd9578feaac6c6e3168b300dae17b7ef9e72e7c1de3134b282f31986324",
+    "outputSha256": "72647158330daccc6dcadc9728f230b7aec40f8c4bcac78d578ef6506830bfff",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 98,
+      "right": 1576,
+      "top": 115,
+      "bottom": 823
+    },
+    "visible": {
+      "left": 96,
+      "right": 1588,
+      "top": 113,
+      "bottom": 827
+    },
+    "opaqueIoU": 0.9375169220937295,
+    "review": "outline_candidate",
+    "bytes": 265498,
+    "filledOutlineIoU": 0.9842225175621796,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 1,
+      "top": -1,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 92
+  },
+  {
+    "auditVersion": 2,
+    "id": "11",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-11.webp",
+    "source": "references/sequence-18/oak-green-11.png",
+    "sha256": "77d7a4983cb3c921d554da70d170eeb35b7bf122b7b39c22d266f4b6c8ffde60",
+    "outputSha256": "05cde64b4836bfbaef859429d0af25fa20607855d52eaeb7a6d5b90c9ef0dfdd",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 98,
+      "right": 1538,
+      "top": 115,
+      "bottom": 824
+    },
+    "visible": {
+      "left": 97,
+      "right": 1553,
+      "top": 113,
+      "bottom": 828
+    },
+    "opaqueIoU": 0.9842092504304477,
+    "review": "outline_candidate",
+    "bytes": 268028,
+    "filledOutlineIoU": 0.9894636198489339,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 1,
+      "top": 0,
+      "bottom": -3
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 148
+  },
+  {
+    "auditVersion": 2,
+    "id": "12",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-12.webp",
+    "source": "references/sequence-18/oak-green-12.png",
+    "sha256": "f2bdbaacfeb920dcb9704e9c9e86452120716eb68d13e363a8bd29bac1ea2624",
+    "outputSha256": "ab8ff362c3ef38d2b3641505efcdf1357a571fea50beb71f5cc6f07160b2299c",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 44,
+      "right": 1613,
+      "top": 128,
+      "bottom": 822
+    },
+    "visible": {
+      "left": 43,
+      "right": 1615,
+      "top": 126,
+      "bottom": 828
+    },
+    "opaqueIoU": 0.9856232788736283,
+    "review": "outline_candidate",
+    "bytes": 293836,
+    "filledOutlineIoU": 0.9933588284674937,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": -1,
+      "bottom": -2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 897
+  },
+  {
+    "auditVersion": 2,
+    "id": "13",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-13.webp",
+    "source": "references/sequence-18/carmine-13.png",
+    "sha256": "5286602b7db4e73be7ac2e4bc2847918cd286487fd1b8e605721d2d8c2741a9b",
+    "outputSha256": "ba4e1cbb29651cb8c35a78c954e764815424d21b3f8ec47acfa8b7b17de61ca0",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 67,
+      "right": 1610,
+      "top": 157,
+      "bottom": 825
+    },
+    "visible": {
+      "left": 65,
+      "right": 1611,
+      "top": 155,
+      "bottom": 827
+    },
+    "opaqueIoU": 0.9637849574165532,
+    "review": "outline_candidate",
+    "bytes": 252456,
+    "filledOutlineIoU": 0.9885179714426391,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 2,
+      "top": -1,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 979
+  },
+  {
+    "auditVersion": 2,
+    "id": "15",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-15.webp",
+    "source": "references/sequence-18/carmine-15.png",
+    "sha256": "bd8392543c7ac9a1077c9b5dc86dba8968c3f61536437ed0a27a604634144108",
+    "outputSha256": "fdaed1be6be93b4a6e9375ee2b1d15ccc0b3bd692b46005f126cfacb64873f8a",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 23,
+      "right": 1653,
+      "top": 209,
+      "bottom": 767
+    },
+    "visible": {
+      "left": 22,
+      "right": 1654,
+      "top": 207,
+      "bottom": 769
+    },
+    "opaqueIoU": 0.9848595687242487,
+    "review": "outline_candidate",
+    "bytes": 234294,
+    "filledOutlineIoU": 0.970455267466582,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 2,
+      "top": -3,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 13
+  },
+  {
+    "auditVersion": 2,
+    "id": "16",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-16.webp",
+    "source": "references/sequence-18/carmine-16.png",
+    "sha256": "5a40e9dae449980fa97317b89aa0f830c00e87668060c1cc2fb39aa10a2bd071",
+    "outputSha256": "faf85054da93c0156678277940a355af63a8f92a9ac90e066a7477f79ddf8e34",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 32,
+      "right": 1645,
+      "top": 211,
+      "bottom": 790
+    },
+    "visible": {
+      "left": 30,
+      "right": 1647,
+      "top": 209,
+      "bottom": 792
+    },
+    "opaqueIoU": 0.9899354323172359,
+    "review": "outline_candidate",
+    "bytes": 243656,
+    "filledOutlineIoU": 0.9913254212719695,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 1,
+      "top": -1,
+      "bottom": 3
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 163
+  },
+  {
+    "auditVersion": 2,
+    "id": "17",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-17.webp",
+    "source": "references/sequence-18/carmine-17.png",
+    "sha256": "6718a368b37c7dbcae7bb578fe876b18f27190526ed2956c3e857a1998e4f8e2",
+    "outputSha256": "45f90e661461e6b76e6e72233ef25515d17c7e05d7074ce39a4320331e10b2ff",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 53,
+      "right": 1619,
+      "top": 203,
+      "bottom": 810
+    },
+    "visible": {
+      "left": 52,
+      "right": 1621,
+      "top": 201,
+      "bottom": 812
+    },
+    "opaqueIoU": 0.9933560303322272,
+    "review": "needs_visual_geometry_review",
+    "bytes": 254584,
+    "filledOutlineIoU": 0.9483816050810835,
+    "solidBoundsDelta": {
+      "left": 3,
+      "right": -1,
+      "top": -1,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 1850
+  },
+  {
+    "auditVersion": 2,
+    "id": "17b",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-17b.webp",
+    "source": "references/sequence-18/carmine-17b.png",
+    "sha256": "b84041b81cc02374f8fa6984b236ee7a44a2867d1f1b6e2e03ffdd1459cc0aeb",
+    "outputSha256": "3fc54192f529caca969b9f399153cb210de099b193436372429d2a3fbefde23d",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 77,
+      "right": 1600,
+      "top": 202,
+      "bottom": 813
+    },
+    "visible": {
+      "left": 75,
+      "right": 1601,
+      "top": 201,
+      "bottom": 817
+    },
+    "opaqueIoU": 0.9901575180829224,
+    "review": "needs_visual_geometry_review",
+    "bytes": 244864,
+    "filledOutlineIoU": 0.9485403816606917,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 2,
+      "top": -2,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 663
+  },
+  {
+    "auditVersion": 2,
+    "id": "18",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-18.webp",
+    "source": "references/sequence-18/carmine-18.png",
+    "sha256": "0877bd687bdd782ce786f8e2f44aac2d527fb1577052053d997faaf421d4aec4",
+    "outputSha256": "5b3dee516f2fee472a5bf80fb993c6b6150989ce69ab4ffee8e619afe352e1e5",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 82,
+      "right": 1632,
+      "top": 124,
+      "bottom": 812
+    },
+    "visible": {
+      "left": 80,
+      "right": 1634,
+      "top": 122,
+      "bottom": 815
+    },
+    "opaqueIoU": 0.9848801229611802,
+    "review": "outline_candidate",
+    "bytes": 261086,
+    "filledOutlineIoU": 0.9821789808303631,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 3,
+      "top": -1,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 191
+  },
+  {
+    "auditVersion": 2,
+    "id": "18b",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-18b.webp",
+    "source": "references/sequence-18/carmine-18b.png",
+    "sha256": "aa5c8b92b1217bdfb12b4e1263a155a1edc1b41dd6af7262d0bab6c1d1fb0e90",
+    "outputSha256": "b1c48bc0ef95ed57fabc933a280336500f4ba33840e610554c8e9ea4b78d4bd5",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 90,
+      "right": 1597,
+      "top": 138,
+      "bottom": 828
+    },
+    "visible": {
+      "left": 88,
+      "right": 1599,
+      "top": 136,
+      "bottom": 832
+    },
+    "opaqueIoU": 0.9898320469775194,
+    "review": "outline_candidate",
+    "bytes": 259162,
+    "filledOutlineIoU": 0.9917442845046571,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": -1,
+      "top": -1,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 46
+  },
+  {
+    "auditVersion": 2,
+    "id": "19",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-19.webp",
+    "source": "references/sequence-18/carmine-19.png",
+    "sha256": "2ab1fa79e8b2d1b853bdcfc684839cd191f839a723bf0f6a885c1526fec69094",
+    "outputSha256": "47e1f8485a3dee13c0e6f498ed1b63678d2674557bd14a4c8a7a38a25eb36c75",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 157,
+      "right": 1497,
+      "top": 100,
+      "bottom": 841
+    },
+    "visible": {
+      "left": 138,
+      "right": 1507,
+      "top": 98,
+      "bottom": 850
+    },
+    "opaqueIoU": 0.9854911788369076,
+    "review": "outline_candidate",
+    "bytes": 234664,
+    "filledOutlineIoU": 0.9854291183249345,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 2,
+      "top": -2,
+      "bottom": 6
+    },
+    "maximumBoundsDelta": 6,
+    "outsideLowAlphaPixels": 165
+  },
+  {
+    "auditVersion": 2,
+    "id": "20",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-20.webp",
+    "source": "references/sequence-18/carmine-20.png",
+    "sha256": "4acb6862b81a04ff713a6a340a86bc717f2bf892f539d1bed3b94a78abdee5df",
+    "outputSha256": "6e5aca480e7d81f2ef8a38365d8764345a5eee9b5d6c613c738d5b891185c474",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 270,
+      "right": 1389,
+      "top": 111,
+      "bottom": 842
+    },
+    "visible": {
+      "left": 231,
+      "right": 1406,
+      "top": 109,
+      "bottom": 852
+    },
+    "opaqueIoU": 0.9663247126110689,
+    "review": "outline_candidate",
+    "bytes": 203754,
+    "filledOutlineIoU": 0.9919501083639258,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": -2,
+      "bottom": -1
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 721
+  },
+  {
+    "auditVersion": 2,
+    "id": "21",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-21.webp",
+    "source": "references/sequence-18/carmine-21.png",
+    "sha256": "bb09a4b2251a492e5f331e90377cf1346b3d9d156e95ec86df6d31245a4127f1",
+    "outputSha256": "657145bb603bcf9aedbf8f5d0f488c9ca4485fdc6f579933b17598f0b3a7939b",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 338,
+      "right": 1333,
+      "top": 141,
+      "bottom": 826
+    },
+    "visible": {
+      "left": 321,
+      "right": 1351,
+      "top": 139,
+      "bottom": 830
+    },
+    "opaqueIoU": 0.9823941870787872,
+    "review": "outline_candidate",
+    "bytes": 174612,
+    "filledOutlineIoU": 0.990650067715387,
+    "solidBoundsDelta": {
+      "left": -3,
+      "right": 1,
+      "top": -4,
+      "bottom": -2
+    },
+    "maximumBoundsDelta": 4,
+    "outsideLowAlphaPixels": 212
+  },
+  {
+    "auditVersion": 2,
+    "id": "21b",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-21b.webp",
+    "source": "references/sequence-18/carmine-21b.png",
+    "sha256": "4617a4c4860b318a1a65b58c080386e162121127d54a909ff1467e0969d8052f",
+    "outputSha256": "5e09da33c12e6eca1c081e84c0c481ebd72d1f12b4d0e333de40583808755f10",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 316,
+      "right": 1346,
+      "top": 146,
+      "bottom": 832
+    },
+    "visible": {
+      "left": 290,
+      "right": 1398,
+      "top": 145,
+      "bottom": 843
+    },
+    "opaqueIoU": 0.9611738429283032,
+    "review": "outline_candidate",
+    "bytes": 191546,
+    "filledOutlineIoU": 0.9815600039443841,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": -1,
+      "bottom": -2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 679
+  },
+  {
+    "auditVersion": 2,
+    "id": "22",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-22.webp",
+    "source": "references/sequence-18/carmine-22.png",
+    "sha256": "208a2372452d72d61e857eddcf4dad863b2f8f20ced51adb8a9f8e24f7ed7e0c",
+    "outputSha256": "f6dc881775d793d0a0ad068764ade7c01ca62fce327c4ce83dd3d9c75611a832",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 211,
+      "right": 1458,
+      "top": 134,
+      "bottom": 846
+    },
+    "visible": {
+      "left": 203,
+      "right": 1494,
+      "top": 132,
+      "bottom": 857
+    },
+    "opaqueIoU": 0.9800680173130034,
+    "review": "outline_candidate",
+    "bytes": 229282,
+    "filledOutlineIoU": 0.9928929157748176,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 2,
+      "top": -1,
+      "bottom": 4
+    },
+    "maximumBoundsDelta": 4,
+    "outsideLowAlphaPixels": 270
+  },
+  {
+    "auditVersion": 2,
+    "id": "23",
+    "preset": "carmine",
+    "file": "assets/presets/carmine/frame-23.webp",
+    "source": "references/sequence-18/carmine-23.png",
+    "sha256": "2e56b3315728cb70d22554d70ad55046c86185b0aaaf38025475d3121e9b9fc9",
+    "outputSha256": "51d52cf466f1b83923c8d59d490b69822733635c75186d7a599fb0d03bb00abe",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 134,
+      "right": 1557,
+      "top": 122,
+      "bottom": 830
+    },
+    "visible": {
+      "left": 133,
+      "right": 1574,
+      "top": 121,
+      "bottom": 837
+    },
+    "opaqueIoU": 0.9872395064264712,
+    "review": "outline_candidate",
+    "bytes": 260516,
+    "filledOutlineIoU": 0.9912569591468674,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 3,
+      "top": 1,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 40
+  },
+  {
+    "auditVersion": 2,
+    "id": "11b",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-11b.webp",
+    "source": "references/sequence-18/oak-green-11b.png",
+    "sha256": "c4b0dac239adcccec2e6eb41af9f70fdce6952e77be8ff351ac39acfddf96dc8",
+    "outputSha256": "6c892fcd878c3418501d384c461ef995eea9e9c04a6b1540022da67f8a9f99fa",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 59,
+      "right": 1608,
+      "top": 125,
+      "bottom": 818
+    },
+    "visible": {
+      "left": 58,
+      "right": 1614,
+      "top": 123,
+      "bottom": 825
+    },
+    "opaqueIoU": 0.9947143914587175,
+    "review": "outline_candidate",
+    "bytes": 280146,
+    "filledOutlineIoU": 0.9905999135192044,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 1,
+      "top": 1,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 24
+  },
+  {
+    "auditVersion": 2,
+    "id": "13",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-13.webp",
+    "source": "references/sequence-18/oak-green-13.png",
+    "sha256": "5bd34ef6967fdfc72531fd6946d229151211bb6f8399ebf18eb7674d6320d2d5",
+    "outputSha256": "f2e15463b18995dbfa1a53bd15e7cbeccbfd4c2a91c20074c027468cfd1f4924",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 67,
+      "right": 1608,
+      "top": 157,
+      "bottom": 824
+    },
+    "visible": {
+      "left": 65,
+      "right": 1610,
+      "top": 155,
+      "bottom": 826
+    },
+    "opaqueIoU": 0.9934401412892645,
+    "review": "outline_candidate",
+    "bytes": 287704,
+    "filledOutlineIoU": 0.9926730522365952,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 0,
+      "top": -1,
+      "bottom": 0
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 116
+  },
+  {
+    "auditVersion": 2,
+    "id": "14",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-14.webp",
+    "source": "references/sequence-18/oak-green-14.png",
+    "sha256": "19623aaf50fab36863db40d1fa9702d72a750d266da578b68776913fbb1cf71d",
+    "outputSha256": "f3844dbc29b6440a42e05b09473360ebbd06465d28393edf1a0d29ce2468e6c0",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 28,
+      "right": 1642,
+      "top": 211,
+      "bottom": 788
+    },
+    "visible": {
+      "left": 26,
+      "right": 1644,
+      "top": 209,
+      "bottom": 792
+    },
+    "opaqueIoU": 0.971179616921975,
+    "review": "outline_candidate",
+    "bytes": 279238,
+    "filledOutlineIoU": 0.9895715709066755,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": 2,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 10465
+  },
+  {
+    "auditVersion": 2,
+    "id": "15",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-15.webp",
+    "source": "references/sequence-18/oak-green-15.png",
+    "sha256": "6662b011f72c7b8b0a9ecaedf20fc692ed18868c9a52a7c703664385d4c84f75",
+    "outputSha256": "53a3b113e76fafcbbe0154dde71636ad28b1fd96927a40e856334d357c856008",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 24,
+      "right": 1652,
+      "top": 212,
+      "bottom": 766
+    },
+    "visible": {
+      "left": 23,
+      "right": 1653,
+      "top": 210,
+      "bottom": 768
+    },
+    "opaqueIoU": 0.9905004589914849,
+    "review": "outline_candidate",
+    "bytes": 235220,
+    "filledOutlineIoU": 0.9838429895425485,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 1,
+      "top": 0,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 196
+  },
+  {
+    "auditVersion": 2,
+    "id": "16",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-16.webp",
+    "source": "references/sequence-18/oak-green-16.png",
+    "sha256": "46a0e3b0a1e30bf343ca4ae7c7e00b9356e0a87c8fa9d28769b2d499a00466f8",
+    "outputSha256": "1eced7af57d6d0a60ec6d0ee10f5ef357fd9bf4e1705db0f89d5c345dfa1650c",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 32,
+      "right": 1645,
+      "top": 210,
+      "bottom": 789
+    },
+    "visible": {
+      "left": 30,
+      "right": 1647,
+      "top": 208,
+      "bottom": 790
+    },
+    "opaqueIoU": 0.9910201796559647,
+    "review": "outline_candidate",
+    "bytes": 253288,
+    "filledOutlineIoU": 0.9806801137254024,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 1,
+      "top": -2,
+      "bottom": 2
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 402
+  },
+  {
+    "auditVersion": 2,
+    "id": "17",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-17.webp",
+    "source": "references/sequence-18/oak-green-17.png",
+    "sha256": "7b7ced563a5fc616b958b4c345ffa186ae8ad3d6aa501fc3a6c8f8401e29eec7",
+    "outputSha256": "712f2fe6353bcce40f90e3b84677ebeb1c9e7ca80cb177cf5e46b630da64be5b",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 50,
+      "right": 1622,
+      "top": 202,
+      "bottom": 810
+    },
+    "visible": {
+      "left": 48,
+      "right": 1624,
+      "top": 200,
+      "bottom": 813
+    },
+    "opaqueIoU": 0.9891295646107572,
+    "review": "needs_visual_geometry_review",
+    "bytes": 251634,
+    "filledOutlineIoU": 0.9452468344808114,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 2,
+      "top": -2,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 2,
+    "outsideLowAlphaPixels": 9
+  },
+  {
+    "auditVersion": 2,
+    "id": "17b",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-17b.webp",
+    "source": "references/sequence-18/oak-green-17b.png",
+    "sha256": "9f68e98235299c71f946d0bcb3044f1ebbe1f5f72324eda179359816999cf88a",
+    "outputSha256": "ee7e74e377f4320aff85f89dd3bb4c4b4503b414c6b1c1853f8748aa35ed6977",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 77,
+      "right": 1601,
+      "top": 202,
+      "bottom": 811
+    },
+    "visible": {
+      "left": 75,
+      "right": 1605,
+      "top": 200,
+      "bottom": 815
+    },
+    "opaqueIoU": 0.9783609719442583,
+    "review": "needs_visual_geometry_review",
+    "bytes": 258244,
+    "filledOutlineIoU": 0.9538309972683713,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 3,
+      "top": -2,
+      "bottom": 0
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 908
+  },
+  {
+    "auditVersion": 2,
+    "id": "18",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-18.webp",
+    "source": "references/sequence-18/oak-green-18.png",
+    "sha256": "44e51d5d4bece0d851a1798a6763fbb50d522bfe217eba76341bf8ba6dd6823b",
+    "outputSha256": "f025a2107f845e51010f1c8cd084c14c4aa990e94d6b35358a2a5de43fe7cd4b",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 82,
+      "right": 1632,
+      "top": 124,
+      "bottom": 812
+    },
+    "visible": {
+      "left": 70,
+      "right": 1634,
+      "top": 122,
+      "bottom": 815
+    },
+    "opaqueIoU": 0.9856527233010752,
+    "review": "outline_candidate",
+    "bytes": 275750,
+    "filledOutlineIoU": 0.9884796177853125,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 3,
+      "top": -1,
+      "bottom": 1
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 8
+  },
+  {
+    "auditVersion": 2,
+    "id": "18b",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-18b.webp",
+    "source": "references/sequence-18/oak-green-18b.png",
+    "sha256": "478246690856ca1c9074b169dfad98ac2218bbb955911d932bcfa729c0ac25f2",
+    "outputSha256": "9ffccad85ee3bc43fd7d82c6b8624c2d896ed199db5f42ad5d3c9bf136c8e72d",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 91,
+      "right": 1599,
+      "top": 138,
+      "bottom": 826
+    },
+    "visible": {
+      "left": 89,
+      "right": 1601,
+      "top": 137,
+      "bottom": 829
+    },
+    "opaqueIoU": 0.9706953724942655,
+    "review": "outline_candidate",
+    "bytes": 257182,
+    "filledOutlineIoU": 0.9938769615865987,
+    "solidBoundsDelta": {
+      "left": 0,
+      "right": 1,
+      "top": -1,
+      "bottom": -1
+    },
+    "maximumBoundsDelta": 1,
+    "outsideLowAlphaPixels": 12
+  },
+  {
+    "auditVersion": 2,
+    "id": "19",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-19.webp",
+    "source": "references/sequence-18/oak-green-19.png",
+    "sha256": "9266f2a5317b0f468c17badcac3b472b885dbb43ef36769be0e8709ec9f52c09",
+    "outputSha256": "7aee06d299fdf51c913f3285c6e4fd1c08a114faecd282d2790cce9e80838c75",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 157,
+      "right": 1497,
+      "top": 98,
+      "bottom": 840
+    },
+    "visible": {
+      "left": 141,
+      "right": 1506,
+      "top": 97,
+      "bottom": 844
+    },
+    "opaqueIoU": 0.9855668198508186,
+    "review": "outline_candidate",
+    "bytes": 239582,
+    "filledOutlineIoU": 0.9881313774261149,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 2,
+      "top": -4,
+      "bottom": 5
+    },
+    "maximumBoundsDelta": 5,
+    "outsideLowAlphaPixels": 62
+  },
+  {
+    "auditVersion": 2,
+    "id": "20",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-20.webp",
+    "source": "references/sequence-18/oak-green-20.png",
+    "sha256": "c7257565ff65d13d10d7cd315e8d1d2b76f98c158fd5a8acb74219fa2213ae11",
+    "outputSha256": "d527e2ea2119120d75f4beecfd6b2b2dfc66451d326453542f5abfd28a1b19cb",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 270,
+      "right": 1391,
+      "top": 111,
+      "bottom": 843
+    },
+    "visible": {
+      "left": 220,
+      "right": 1434,
+      "top": 109,
+      "bottom": 848
+    },
+    "opaqueIoU": 0.9678663712501558,
+    "review": "outline_candidate",
+    "bytes": 211030,
+    "filledOutlineIoU": 0.9897057202689298,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 4,
+      "top": -2,
+      "bottom": 0
+    },
+    "maximumBoundsDelta": 4,
+    "outsideLowAlphaPixels": 1041
+  },
+  {
+    "auditVersion": 2,
+    "id": "21",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-21.webp",
+    "source": "references/sequence-18/oak-green-21.png",
+    "sha256": "aea1672f439fd431d67e0774073c1dccdc84d6cf291bd00722e16a2dc982f2b3",
+    "outputSha256": "dab33d46496b6e10494460554cf14ed5f67139e5788f45104bccd33751cde0e6",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 338,
+      "right": 1334,
+      "top": 141,
+      "bottom": 821
+    },
+    "visible": {
+      "left": 320,
+      "right": 1352,
+      "top": 138,
+      "bottom": 830
+    },
+    "opaqueIoU": 0.9405749667127987,
+    "review": "outline_candidate",
+    "bytes": 178806,
+    "filledOutlineIoU": 0.9850567530979902
+  },
+  {
+    "auditVersion": 2,
+    "id": "21b",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-21b.webp",
+    "source": "references/sequence-18/oak-green-21b.png",
+    "sha256": "7e53cb9294a2e2ed5de467ffc94f38e5c72252cdac198a6f754a87698d9c6104",
+    "outputSha256": "08a4fd065c816128dba577a427f8ab5e561523f7525fa0b04f4faf473d8981df",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 316,
+      "right": 1346,
+      "top": 147,
+      "bottom": 837
+    },
+    "visible": {
+      "left": 306,
+      "right": 1386,
+      "top": 146,
+      "bottom": 846
+    },
+    "opaqueIoU": 0.983449227599114,
+    "review": "outline_candidate",
+    "bytes": 210164,
+    "filledOutlineIoU": 0.9901430371303639,
+    "solidBoundsDelta": {
+      "left": -1,
+      "right": 2,
+      "top": 0,
+      "bottom": 3
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 316
+  },
+  {
+    "auditVersion": 2,
+    "id": "22",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-22.webp",
+    "source": "references/sequence-18/oak-green-22.png",
+    "sha256": "4f868f8d01bafaaee839d5d2594b1e4a5180544b82d4ac03fa70a1a32e1177b9",
+    "outputSha256": "0ca67a66f634cacaed7352983103e9733d75dec84417cc866cbeb4ca642a3d18",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 209,
+      "right": 1459,
+      "top": 133,
+      "bottom": 839
+    },
+    "visible": {
+      "left": 204,
+      "right": 1495,
+      "top": 132,
+      "bottom": 853
+    },
+    "opaqueIoU": 0.9806048327321243,
+    "review": "outline_candidate",
+    "bytes": 234020,
+    "filledOutlineIoU": 0.9848393469897058,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 3,
+      "top": -2,
+      "bottom": -3
+    },
+    "maximumBoundsDelta": 3,
+    "outsideLowAlphaPixels": 83
+  },
+  {
+    "auditVersion": 2,
+    "id": "23",
+    "preset": "oak-green",
+    "file": "assets/presets/oak-green/frame-23.webp",
+    "source": "references/sequence-18/oak-green-23.png",
+    "sha256": "039a93e24ce33bab42548d7ea1012149ec2d8f550da691b0e566aabfa538c23e",
+    "outputSha256": "c60fe889968d5e01472d0b468c1fc5d45ee2fc1f87597e34e734f7ab8ec28843",
+    "width": 1672,
+    "height": 941,
+    "solid": {
+      "left": 134,
+      "right": 1556,
+      "top": 122,
+      "bottom": 832
+    },
+    "visible": {
+      "left": 132,
+      "right": 1570,
+      "top": 120,
+      "bottom": 840
+    },
+    "opaqueIoU": 0.9877626100274765,
+    "review": "outline_candidate",
+    "bytes": 266274,
+    "filledOutlineIoU": 0.9888780105737224,
+    "solidBoundsDelta": {
+      "left": -2,
+      "right": 2,
+      "top": 1,
+      "bottom": 4
+    },
+    "maximumBoundsDelta": 4,
+    "outsideLowAlphaPixels": 68
+  }
+]
