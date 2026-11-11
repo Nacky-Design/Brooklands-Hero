@@ -1,0 +1,51 @@
+[
+  {
+    "width": 320,
+    "lines": 4,
+    "noOverflow": true,
+    "inside": true,
+    "ctaGap": 24
+  },
+  {
+    "width": 390,
+    "lines": 3,
+    "noOverflow": true,
+    "inside": true,
+    "ctaGap": 24
+  },
+  {
+    "width": 440,
+    "lines": 3,
+    "noOverflow": true,
+    "inside": true,
+    "ctaGap": 24
+  },
+  {
+    "width": 768,
+    "lines": 2,
+    "noOverflow": true,
+    "inside": true,
+    "ctaGap": 24
+  },
+  {
+    "width": 900,
+    "lines": 2,
+    "noOverflow": true,
+    "inside": true,
+    "ctaGap": 40
+  },
+  {
+    "width": 1440,
+    "lines": 2,
+    "noOverflow": true,
+    "inside": true,
+    "ctaGap": 40
+  },
+  {
+    "width": 1920,
+    "lines": 2,
+    "noOverflow": true,
+    "inside": true,
+    "ctaGap": 40
+  }
+]
