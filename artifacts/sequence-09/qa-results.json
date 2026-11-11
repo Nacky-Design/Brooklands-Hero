@@ -1,0 +1,107 @@
+{
+  "url": "http://127.0.0.1:4209/Brooklands-Hero/",
+  "results": [
+    {
+      "viewport": [
+        320,
+        812
+      ],
+      "frames": 33,
+      "uniformScale": true,
+      "visible": true,
+      "groundStable": true,
+      "arcStatic": true,
+      "fontsLoaded": true,
+      "presetsKeyboard": true,
+      "arrowCentred": true,
+      "mobileMenu": true,
+      "noErrors": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "frames": 33,
+      "uniformScale": true,
+      "visible": true,
+      "groundStable": true,
+      "arcStatic": true,
+      "fontsLoaded": true,
+      "presetsKeyboard": true,
+      "arrowCentred": true,
+      "mobileMenu": true,
+      "noErrors": true
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "frames": 33,
+      "uniformScale": true,
+      "visible": true,
+      "groundStable": true,
+      "arcStatic": true,
+      "fontsLoaded": true,
+      "presetsKeyboard": true,
+      "arrowCentred": true,
+      "mobileMenu": true,
+      "noErrors": true
+    },
+    {
+      "viewport": [
+        900,
+        760
+      ],
+      "frames": 33,
+      "uniformScale": true,
+      "visible": true,
+      "groundStable": true,
+      "arcStatic": true,
+      "fontsLoaded": true,
+      "presetsKeyboard": true,
+      "arrowCentred": true,
+      "mobileMenu": false,
+      "noErrors": true
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "frames": 33,
+      "uniformScale": true,
+      "visible": true,
+      "groundStable": true,
+      "arcStatic": true,
+      "fontsLoaded": true,
+      "presetsKeyboard": true,
+      "arrowCentred": true,
+      "mobileMenu": false,
+      "noErrors": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "frames": 33,
+      "uniformScale": true,
+      "visible": true,
+      "groundStable": true,
+      "arcStatic": true,
+      "fontsLoaded": true,
+      "presetsKeyboard": true,
+      "arrowCentred": true,
+      "mobileMenu": false,
+      "noErrors": true
+    },
+    {
+      "presentationReviewNoToolbar": true,
+      "hoverVerified": true,
+      "reducedMotion": true,
+      "touch": true
+    }
+  ]
+}

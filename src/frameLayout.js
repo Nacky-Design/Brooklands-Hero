@@ -6,14 +6,16 @@ const PLATE_RATIO = 1672 / 941;
 export function getFrameStyle(index, legacy = false, legacyRoof = false) {
   const frame = calibration.frames[index];
   const { scale, dx, dy } = legacy && frame.id === '01b' ? previousMidpoint : legacyRoof && previousRoof[frame.id] ? previousRoof[frame.id] : frame;
-  return { transformOrigin: '0 0', transform: `translate(${dx * 100}%, ${dy * 100}%) scale(${scale})` };
+  const pitch = { '05': { angle:-3.5, x:895/1672, y:817/941 }, '05b': { angle:-2.2, x:875/1672, y:810/941 } }[frame.id];
+  const correction = pitch ? ` translate(${pitch.x*100}%, ${pitch.y*100}%) rotate(${pitch.angle}deg) translate(${-pitch.x*100}%, ${-pitch.y*100}%)` : '';
+  return { transformOrigin: '0 0', transform: `translate(${dx * 100}%, ${dy * 100}%) scale(${scale})${correction}` };
 }
 
 export function getSequenceLayout(width, height) {
   if (width < 900) {
     // Fit the widest corrected silhouette once for the entire sequence.
     // Fitting each angle independently would reintroduce the shrinking side view.
-    const carWidth = width * calibration.mobileCanvasWidthRatio;
+    const carWidth = width * calibration.mobileCanvasWidthRatio * .9;
     const carHeight = carWidth / PLATE_RATIO;
     return { width: carWidth, height: carHeight, left: width / 2 - carWidth * calibration.anchorX, top: height * .84 - carHeight * calibration.anchorY };
   }
@@ -26,8 +28,8 @@ export function getSequenceLayout(width, height) {
   // Reserve the preset column (matching the 900/1100px CSS breakpoints).
   // Fit and centre the whole sequence once, never the currently selected angle.
   const leftLimit = width * .03;
-  const rightLimit = width <= 1100 ? width * .98 - 156 - 20 : width * .97 - 184 - 20;
-  const carWidth = Math.min(originalWidth, (rightLimit - leftLimit) / (2 * calibration.maxVisibleRadius));
+  const rightLimit = width <= 1200 ? width * .98 - 186 - 24 : width * .97 - 250 - 24;
+  const carWidth = Math.min(originalWidth, (rightLimit - leftLimit) / (2 * calibration.maxVisibleRadius)) * .9;
   const radius = carWidth * calibration.maxVisibleRadius;
   const anchorX = Math.max(leftLimit + radius, Math.min(originalAnchorX, rightLimit - radius));
   const carHeight = carWidth / PLATE_RATIO;

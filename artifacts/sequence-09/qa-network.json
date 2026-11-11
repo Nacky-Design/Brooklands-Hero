@@ -1,0 +1,22 @@
+{
+  "url": "http://127.0.0.1:4209/Brooklands-Hero/",
+  "results": [
+    {
+      "delayedFrame": "04b",
+      "retainsPrevious": true,
+      "staleResponseCannotOverwriteSelection": true
+    },
+    {
+      "id": "04b",
+      "failureAndRetry": true
+    },
+    {
+      "id": "18b",
+      "failureAndRetry": true
+    },
+    {
+      "firstFrameRetry": true,
+      "loaded": 33
+    }
+  ]
+}

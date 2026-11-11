@@ -1,0 +1,275 @@
+{
+  "schema": "DEC-001/v1",
+  "project": "Brooklands-Hero",
+  "stage_id": "refinement-09",
+  "mode": "LOCAL_PATCH; new frame assets APPROVED_PATTERN_TRANSFER",
+  "baseline": "bd521cce504918645428cda8a986bc0291c21c60",
+  "dis_revision": "02ba8a8bc21d4be0d0ef50aedea1d51b96c0963b",
+  "user_baseline_scope": "Existing hero direction accepted qualitatively; listed defects and new UI requests remain editable. No final art approval inferred.",
+  "source_inventory": [
+    {
+      "id": "S00",
+      "path": "references/sequence-09/USER_REQUEST.md",
+      "sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8"
+    },
+    {
+      "id": "S01",
+      "path": "CODEX_PROMPT.md",
+      "sha256": "e4311590dfdeebffecf01c1565dce207bd0ffb538efa1f1cb0da36bb1a850e48",
+      "version": "bd521cce504918645428cda8a986bc0291c21c60",
+      "immutable_source": "git:bd521cce504918645428cda8a986bc0291c21c60:CODEX_PROMPT.md"
+    },
+    {
+      "id": "S02",
+      "path": "src/main.jsx",
+      "sha256": "5f99560069ea864f39d70c0f9af8dd0d4f903fabee6ddfa744e1b052720948c0",
+      "version": "bd521cce504918645428cda8a986bc0291c21c60",
+      "immutable_source": "git:bd521cce504918645428cda8a986bc0291c21c60:src/main.jsx"
+    },
+    {
+      "id": "S03",
+      "path": "src/style.css",
+      "sha256": "96e4e74aa62d756d3c30e8070bdfc07fe9a1bf24a5732079452c410d919a7b0f",
+      "version": "bd521cce504918645428cda8a986bc0291c21c60",
+      "immutable_source": "git:bd521cce504918645428cda8a986bc0291c21c60:src/style.css"
+    },
+    {
+      "id": "S04",
+      "path": "src/frameLayout.js",
+      "sha256": "d3ba0c000b6417ab4bd4016b597257f6587f443181799b344e7704736bc1190c",
+      "version": "bd521cce504918645428cda8a986bc0291c21c60",
+      "immutable_source": "git:bd521cce504918645428cda8a986bc0291c21c60:src/frameLayout.js"
+    },
+    {
+      "id": "S05",
+      "path": "src/sequenceManifest.json",
+      "sha256": "09aa4f197cfccd1d568dd6a826101a36742c17aaef256a8fff6b87ecd25a32ae",
+      "version": "bd521cce504918645428cda8a986bc0291c21c60",
+      "immutable_source": "git:bd521cce504918645428cda8a986bc0291c21c60:src/sequenceManifest.json"
+    },
+    {
+      "id": "S06",
+      "path": "references/hero-approved.png",
+      "sha256": "57708739f30b346b5f855550a5932dd465cc2e9431d59a23e94bbc5b395c84e7",
+      "version": "bd521cce504918645428cda8a986bc0291c21c60",
+      "immutable_source": "git:bd521cce504918645428cda8a986bc0291c21c60:references/hero-approved.png"
+    },
+    {
+      "id": "S07",
+      "path": "/workspace/DIS/methodology/typography-google-fonts.md",
+      "sha256": "37f2b4fff983660f2c85e5cfbc7b8b593dcf2911bebd19966ae164440d6699ae"
+    },
+    {
+      "id": "S08",
+      "path": "/workspace/DIS/methodology/document-to-execution-contract.md",
+      "sha256": "306fe8d7a1c363f307350782f54f4b2b104eb583e755ddffadc29d0032b0cddf"
+    },
+    {
+      "id": "S09",
+      "path": "/workspace/DIS/methodology/approved-baseline-production-gate.md",
+      "sha256": "5578763f1dcc44a2aff0df4a70fdbe0372d9cac97ebc66eae7f7d5132ab7f4ff"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "B09-01",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "LOCKED",
+      "criterion": "Copy/palette/architecture",
+      "implementation_plan": "Keep H1, lead, CTA and background, source image bytes and car grade; no backend/new sections.",
+      "verification_kind": "DOM text, source SHA and screenshots",
+      "severity": "critical",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-02",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "02/03/03b yaw",
+      "implementation_plan": "Inspect poses, reorder only where visually monotonic, retire inconsistent duplicate if necessary; keep originals.",
+      "verification_kind": "Pose-strip visual review, manifest order",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-03",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "04/05/06 pitch",
+      "implementation_plan": "Measure wheel contact pairs; per-frame reversible rigid rotation around reference tyre, no stretch.",
+      "verification_kind": "Contact angle audit and transition screenshots",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-04",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "Shadows02/03",
+      "implementation_plan": "Add aligned shared contact layer under car, stronger only affected views, no image overwrite.",
+      "verification_kind": "Same-view before/after screenshots",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-05",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "LOCKED",
+      "criterion": "Oval wheels",
+      "implementation_plan": "No local wheel deformation or nonuniform car scale.",
+      "verification_kind": "Source asset SHA and CSS uniform scale",
+      "severity": "critical",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-06",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "OPEN",
+      "criterion": "Car size",
+      "implementation_plan": "Trial .90 uniform desktop scale around unchanged ground; mobile preserve visibility.",
+      "verification_kind": "DOM geometry and before/after render",
+      "severity": "major",
+      "approval_state": "proposed_for_review",
+      "status": "pending"
+    },
+    {
+      "id": "B09-07",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "Two new frames",
+      "implementation_plan": "New 04b/18b from current neighbours, fixed light and low roof. Pattern-transfer assets only.",
+      "verification_kind": "Native PNG visual review, tyre calibration and decode",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-08",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "Official logo",
+      "implementation_plan": "Fetch actual brook-auto.ru logo; retain current wordmark until verified SVG is available; never invent official mark.",
+      "verification_kind": "Source identity; BLOCKED_PROXY_403",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "blocked"
+    },
+    {
+      "id": "B09-09",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "Preset cards",
+      "implementation_plan": "Local car-detail crop, three tones, selectable pressed state, explicit UI-only notice; no fake material change.",
+      "verification_kind": "Mouse/keyboard selection + screenshot",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-10",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "Floor arc",
+      "implementation_plan": "Fixed fine perspective ellipse on floor, does not rotate with car.",
+      "verification_kind": "Visual and DOM check",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-11",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "Arrow/buttons",
+      "implementation_plan": "Consistent 48px controls, SVG centred arrows, translucent hover, focus, reduced-motion.",
+      "verification_kind": "Computed boxes, hover and keyboard",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-12",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "OPEN",
+      "criterion": "Typography",
+      "implementation_plan": "Proposed Exo2 italic heading and Manrope UI from official Google Fonts source; OFL and actual Cyrillic coverage checked, self-host.",
+      "verification_kind": "Font metadata/license, document.fonts, 320/430/1920",
+      "severity": "major",
+      "approval_state": "proposed_for_review",
+      "status": "pending"
+    },
+    {
+      "id": "B09-13",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "Menu",
+      "implementation_plan": "Keep four brief-backed categories; accessible mobile navigation; no invented services or pages.",
+      "verification_kind": "DOM, keyboard, mobile",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-14",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "Comparison panel",
+      "implementation_plan": "Presentation has no technical toolbar; audit only explicit query.",
+      "verification_kind": "Root and review.html without toolbar",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    },
+    {
+      "id": "B09-15",
+      "source_id": "S00",
+      "source_sha256": "d6b9570684cf8b281119cf95f2cb7185873ced82c9fb09920d51712b960746a8",
+      "lock": "GUIDED",
+      "criterion": "DIS review",
+      "implementation_plan": "Independent compliance and artistic assessment; never assert human approval.",
+      "verification_kind": "Actual tested version hashes and decision journal",
+      "severity": "major",
+      "approval_state": "requested_by_user",
+      "status": "pending"
+    }
+  ],
+  "pre_execution": {
+    "status": "PASS",
+    "scope": "Unblocked bounded refinements only; official logo excluded until source available",
+    "method": "Manual extraction/hash/mapping check, not independent enforcement gateway"
+  },
+  "artifact_audit": {
+    "functional_evidence": [
+      "artifacts/sequence-09/qa-results.json",
+      "artifacts/sequence-09/qa-network.json",
+      "artifacts/sequence-09/source-integrity.json",
+      "artifacts/sequence-09/pitch-audit.json"
+    ],
+    "status": "TESTED_CANDIDATE",
+    "brand_status": "INCOMPLETE: official logo source file and verified contacts pending",
+    "art_review_status": "user review pending; no human approval inferred",
+    "contact_source": "https://brooklandsdetailing.ru/",
+    "contact_access": "CONNECT 403; configuration draft save unconfirmed"
+  },
+  "impeccable": "not_connected",
+  "playwriter": "not_connected; Playwright fallback"
+}

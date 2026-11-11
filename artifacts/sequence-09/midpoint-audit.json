@@ -1,0 +1,88 @@
+{
+  "method": "Manual near-tyre calibration; alpha bounds for horizontal registration. Angles are not measured.",
+  "uncertaintyPixels": 6,
+  "frames": [
+    {
+      "id": "04b",
+      "file": "assets/turntable-v8/midpoint-04b.webp",
+      "scale": 1.0714285714285714,
+      "dx": -0.04536910457963095,
+      "dy": -0.08160012145134343,
+      "source": "references/sequence-09/midpoint-04b.png",
+      "sourceWidth": 1672,
+      "sourceHeight": 940,
+      "width": 1672,
+      "height": 941,
+      "calibratedHeight": 666.4285714285714,
+      "tyreTop": 473,
+      "groundY": 823,
+      "solid": {
+        "left": 52,
+        "right": 1638,
+        "top": 201,
+        "bottom": 825
+      },
+      "visible": {
+        "left": 51,
+        "right": 1640,
+        "top": 199,
+        "bottom": 829
+      },
+      "correctedSolid": {
+        "left": -0.01204716336295289,
+        "right": 1.0042720437457278,
+        "top": 0.14725975406102942,
+        "bottom": 0.8577501138606346
+      },
+      "correctedVisible": {
+        "left": -0.012687969924812081,
+        "right": 1.0055536568694463,
+        "top": 0.144982541369364,
+        "bottom": 0.8623045392439654
+      },
+      "bytes": 206982,
+      "sha256": "24ba16b44b9729c12ff1dbc008e7a4fb951c42dfe76af985b470908205304730"
+    },
+    {
+      "id": "18b",
+      "file": "assets/turntable-v8/midpoint-18b.webp",
+      "scale": 0.9894459102902374,
+      "dx": -0.0036405928469530613,
+      "dy": -0.010949447480505414,
+      "source": "references/sequence-09/midpoint-18b.png",
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "width": 1672,
+      "height": 941,
+      "calibratedHeight": 677.7704485488126,
+      "tyreTop": 445,
+      "groundY": 824,
+      "solid": {
+        "left": 91,
+        "right": 1598,
+        "top": 139,
+        "bottom": 827
+      },
+      "visible": {
+        "left": 85,
+        "right": 1600,
+        "top": 137,
+        "bottom": 833
+      },
+      "correctedSolid": {
+        "left": 0.050210829304010815,
+        "right": 0.9420140510787642,
+        "top": 0.13520674968245208,
+        "bottom": 0.8586273514674503
+      },
+      "correctedVisible": {
+        "left": 0.046660186085265946,
+        "right": 0.9431975988183459,
+        "top": 0.13310378281679802,
+        "bottom": 0.8649362520644125
+      },
+      "bytes": 205320,
+      "sha256": "864b81c5695ae1f64f64a065ab0bf33c54ae66d6a05e57598e79c33e1d3320b3"
+    }
+  ]
+}

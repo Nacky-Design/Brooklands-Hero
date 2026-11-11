@@ -9,11 +9,11 @@ import previousRoof from './legacyRoofFrames.json';
 import './style.css';
 
 const frameIndex = id => manifest.frames.findIndex(frame => frame.id === id);
-const TRANSITIONS = { '01b': ['01', '01b', '02'], '03b': ['03', '03b', '04'], '10b': ['10', '10b', '11'], '21b': ['21', '21b', '22'], '05b': ['05','05b','06'], '11b': ['11','11b','12'], '17b': ['17','17b','18'] };
+const TRANSITIONS = { '01b': ['01', '01b', '02'], '03b': ['03', '03b', '04'], '10b': ['10', '10b', '11'], '21b': ['21', '21b', '22'], '05b': ['05','05b','06'], '11b': ['11','11b','12'], '17b': ['17','17b','18'], '04b':['04','04b','05'], '18b':['18','18b','19'] };
 
 const ROOF_SWEEPS = {
   roof: ['19','20','21','21b','22','23','22','21b','21','20'],
-  leftRoof: ['02','03','03b','04','05','05b','06','05b','05','04','03b','03'],
+  leftRoof: ['03','02','03b','04','04b','05','05b','06','05b','05','04b','04','03b','02'],
   rightRoof: ['14','15','16','17','17b','18','17b','17','16','15'],
 };
 
@@ -50,6 +50,12 @@ function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null
     if (sequence.frame) onDisplayedFrame?.(sequence.frame.index);
   }, [sequence.frame?.index, onDisplayedFrame]);
   const [message, setMessage] = useState('');
+  const [preset, setPreset] = useState('Original');
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuToggle = useRef(null);
+  const groundX = carLayout.left + carLayout.width * manifest.anchorX;
+  const groundY = carLayout.top + carLayout.height * manifest.anchorY;
+  const orbit = {left:groundX-carLayout.width*.66, top:groundY-carLayout.height*.11, width:carLayout.width*1.32, height:carLayout.height*.23};
   const demo = () => setMessage('Демонстрационный прототип — форма заявки не подключена.');
   const choose = index => { target.current = wrapFrame(index); sequence.select(target.current); };
   const rotate = delta => choose(target.current + delta);
@@ -74,17 +80,19 @@ function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null
   }
   const status = sequence.frame ? 'ready' : sequence.error ? 'unavailable' : 'loading';
   return <main className="hero"><ColorGrade/>
-    <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><strong>BROOKLANDS</strong><span>DETAILING</span></a><nav aria-label="Основная навигация">{['Услуги','Наши работы','О компании','Контакты'].map(text=><button key={text} onClick={demo}>{text}</button>)}</nav><button className="booking" onClick={demo}>Записаться</button></header>
+    <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><strong>BROOKLANDS</strong><span>DETAILING</span></a><button ref={menuToggle} className="menu-toggle" aria-label={menuOpen?'Закрыть меню':'Открыть меню'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={()=>setMenuOpen(v=>!v)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d={menuOpen?'M6 6l12 12M18 6L6 18':'M4 8h16M4 16h16'}/></svg></button><nav id="main-nav" data-open={menuOpen} aria-label="Основная навигация" onKeyDown={e=>{if(e.key==='Escape'){setMenuOpen(false);menuToggle.current?.focus();}}}>{['Услуги','Наши работы','О компании','Контакты'].map(text=><button key={text} onClick={()=>{setMenuOpen(false);demo();}}>{text}</button>)}</nav><button className="booking" onClick={demo}>Записаться</button></header>
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>Детейлинг, защита и персонализация<br className="desktop-break"/> автомобилей премиального класса.</p><button className="cta" onClick={demo}>Обсудить проект <span aria-hidden="true">→</span></button></section>
     <section ref={stage} className="stage" data-roof-version={legacyRoof ? 'previous' : 'refined'} data-midpoint-version={legacyMidpoint ? 'previous' : 'refined'} data-grade={gradeMode} data-frame-id={sequence.frame ? manifest.frames[sequence.frame.index].id : ''} aria-label="Покадровый обзор Porsche на 360 градусов" tabIndex={0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
       <img className="stage-background" src={BACKGROUND} alt="" fetchPriority="high" decoding="async"/>
+      <svg className="floor-orbit" style={orbit} viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="500" cy="60" rx="495" ry="56"/></svg>
+      <div className="ground-contact" aria-hidden="true" style={{left:groundX,top:groundY,width:carLayout.width*.94,height:carLayout.height*.075}}/>
       {sequence.frame && <div className="sequence" style={carLayout}><img className="sequence-image" style={getFrameStyle(sequence.frame.index, legacyMidpoint, legacyRoof)} src={legacyMidpoint && manifest.frames[sequence.frame.index].id === '01b' ? `${import.meta.env.BASE_URL}${previousMidpoint.file}` : legacyRoof && previousRoof[manifest.frames[sequence.frame.index].id] ? `${import.meta.env.BASE_URL}${previousRoof[manifest.frames[sequence.frame.index].id].file}` : sequence.frame.url} alt="Porsche 911 Turbo S" draggable="false"/></div>}
       {!sequence.frame && !sequence.error && <p className="status" role="status">Загрузка автомобиля…</p>}
       {sequence.frame && sequence.buffering && <p className="frame-loading" role="status">Загрузка ракурса…</p>}
       {sequence.error && <div className={sequence.frame ? 'frame-warning' : 'fallback'} role="status"><p>{sequence.frame ? 'Этот ракурс пока недоступен.' : 'Не удалось загрузить автомобиль.'}</p><button onClick={sequence.retry}>Повторить загрузку</button></div>}
     </section>
-    <aside className="presets" aria-label="Визуальный макет пресетов"><div className="preset original"><i/><span>Original</span></div><div className="preset satin"><i/><span>Satin</span></div><div className="preset bespoke"><i/><span>Bespoke</span></div><p>Предпросмотр интерфейса — смена материалов не подключена</p></aside>
-    <div className="rotation"><div className="rotation-buttons"><button disabled={!sequence.frame} aria-label="Повернуть влево" onClick={()=>rotate(-1)}>←</button><span className="line"/><span>360°</span><span className="line"/><button disabled={!sequence.frame} aria-label="Повернуть вправо" onClick={()=>rotate(1)}>→</button></div><p>Перетащите автомобиль для вращения</p></div>
+    <aside className="presets" aria-label="Предпросмотр пресетов"><div className="preset-options" role="group" aria-label="Выбрать пресет">{['Original','Satin','Bespoke'].map(name=><button key={name} className={`preset ${name.toLowerCase()}`} aria-pressed={preset===name} onClick={()=>setPreset(name)}><img className="preset-preview" src={`${import.meta.env.BASE_URL}assets/turntable-v1/frame-00.webp`} alt=""/><span className="preset-copy"><i aria-hidden="true"/><span>{name}</span></span><span className="preset-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3 8 3 3 7-7"/></svg></span></button>)}</div><p>Предпросмотр интерфейса — смена материалов не подключена</p></aside>
+    <div className="rotation"><div className="rotation-buttons"><button disabled={!sequence.frame} aria-label="Повернуть влево" onClick={()=>rotate(-1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button><span className="line"/><span>360°</span><span className="line"/><button disabled={!sequence.frame} aria-label="Повернуть вправо" onClick={()=>rotate(1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div><p>Перетащите автомобиль для вращения</p></div>
     {message && <div className="demo-message" role="status">{message}<button aria-label="Закрыть сообщение" onClick={()=>setMessage('')}>×</button></div>}
   </main>;
 }
@@ -119,10 +127,10 @@ function ReviewPage() {
     <p>Новая партия: 05b, 11b, 17b. У 02 слегка снижена крыша. Сравните новые переходы в обе стороны; прежние правки сохранены. Переходы и цветкор доступны ниже. Доработанный 01b сохранён; мелкие детали и угловой шаг ещё требуют оценки.</p>
     <div role="group" aria-label="Цветокоррекция">{[['none','Исходный'],['background','Только фон'],['both','Фон + автомобиль']].map(([value,label])=><button key={value} aria-pressed={grade===value} onClick={()=>setGrade(value)}>{label}</button>)}</div>
     <div role="group" aria-label="Версия промежуточного кадра"><button disabled={!legacyReady} aria-pressed={legacy} onClick={()=>compareMidpoint(true)}>01b: до правки</button><button aria-pressed={!legacy} onClick={()=>compareMidpoint(false)}>01b: после правки</button></div>
-    <div role="group" aria-label="Опорные ракурсы">{[[0,'Старт 00'],[1,'Ракурс 01'],[2,'Новый 01b'],[3,'Боковой 02'],[frameIndex('09'),'Задний 09']].map(([index,label])=><button key={index} onClick={()=>show(index)}>{label}</button>)}<button aria-pressed={loop&&transition==='01b'} onClick={()=>{setTransition('01b');setLoop(value=>transition==='01b'?!value:true);}}>{loop&&transition==='01b'?'Остановить переход':'Повторять 01 → 01b → 02'}</button></div>
-    <div role="group" aria-label="Новые переходы">{['03b','05b','10b','11b','17b','21b'].map(id => <React.Fragment key={id}><button onClick={()=>show(frameIndex(id))}>Ракурс {id}</button><button aria-pressed={loop&&transition===id} onClick={()=>{setTransition(id);setLoop(value=>transition===id?!value:true);}}>{loop&&transition===id?'Остановить '+id:'Повторять '+TRANSITIONS[id].join(' → ')}</button></React.Fragment>)}</div>
+    <div role="group" aria-label="Опорные ракурсы">{[[0,'Старт 00'],[1,'Ракурс 01'],[2,'Новый 01b'],[frameIndex('02'),'Боковой 02'],[frameIndex('09'),'Задний 09']].map(([index,label])=><button key={index} onClick={()=>show(index)}>{label}</button>)}<button aria-pressed={loop&&transition==='01b'} onClick={()=>{setTransition('01b');setLoop(value=>transition==='01b'?!value:true);}}>{loop&&transition==='01b'?'Остановить переход':'Повторять 01 → 01b → 02'}</button></div>
+    <div role="group" aria-label="Новые переходы">{['03b','04b','05b','10b','11b','17b','18b','21b'].map(id => <React.Fragment key={id}><button onClick={()=>show(frameIndex(id))}>Ракурс {id}</button><button aria-pressed={loop&&transition===id} onClick={()=>{setTransition(id);setLoop(value=>transition===id?!value:true);}}>{loop&&transition===id?'Остановить '+id:'Повторять '+TRANSITIONS[id].join(' → ')}</button></React.Fragment>)}</div>
     <div role="group" aria-label="Коррекция крыши"><button aria-pressed={loop&&transition==='roof'} onClick={()=>{setTransition('roof');setLoop(value=>transition==='roof'?!value:true);}}>{loop&&transition==='roof'?'Остановить передние ракурсы':'Повторять передние ракурсы'}</button><button aria-pressed={legacyRoof} onClick={()=>setLegacyRoof(true)}>Крыша: до правки</button><button aria-pressed={!legacyRoof} onClick={()=>setLegacyRoof(false)}>Крыша: после правки</button>{[['leftRoof','02–06'],['rightRoof','14–18']].map(([key,label])=><button key={key} aria-pressed={loop&&transition===key} onClick={()=>{setTransition(key);setLoop(value=>transition===key?!value:true);}}>{loop&&transition===key?'Остановить '+label:'Повторять '+label}</button>)}{['02','03','03b','04','05','06','14','15','16','17','18','19','20','21','21b','22','23','00'].map(id=><button key={id} onClick={()=>show(frameIndex(id))}>Проверить {id}</button>)}</div>
     <p aria-live="polite">На экране: {manifest.frames[displayed].id}. <a href="./">Открыть HERO</a></p>
   </div><App gradeMode={grade} reviewRequest={request} onDisplayedFrame={setDisplayed} legacyMidpoint={legacy} legacyRoof={legacyRoof}/></>;
 }
-createRoot(document.getElementById('root')).render(document.documentElement.dataset.review ? <ReviewPage/> : <App/>);
+createRoot(document.getElementById('root')).render(document.documentElement.dataset.review && new URLSearchParams(location.search).get('audit') === '1' ? <ReviewPage/> : <App/>);

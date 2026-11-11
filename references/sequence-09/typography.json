@@ -1,0 +1,32 @@
+{
+  "fonts": [
+    {
+      "family": "Exo 2",
+      "role": "H1 italic 400",
+      "official_url": "https://fonts.google.com/specimen/Exo+2",
+      "retrieval": "official google/fonts GitHub repository",
+      "file": "public/assets/fonts/Exo2-Italic.ttf",
+      "sha256": "bad568cea9ed23d6ae4aea41ad3f7747752952aabdd85d7f01474af392a21b32",
+      "license": "SIL OFL1.1",
+      "license_file": "public/assets/fonts/Exo2-OFL.txt",
+      "cyrillic_real_text_check": "PASS including Ёё, digits and ₽",
+      "status": "proposed; no final brand approval",
+      "loading": "local variable TTF; font-display swap; generic fallback only"
+    },
+    {
+      "family": "Manrope",
+      "role": "body/UI 400; wordmark fallback 600",
+      "official_url": "https://fonts.google.com/specimen/Manrope",
+      "retrieval": "official google/fonts GitHub repository",
+      "file": "public/assets/fonts/Manrope.ttf",
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+      "license": "SIL OFL1.1",
+      "license_file": "public/assets/fonts/Manrope-OFL.txt",
+      "cyrillic_real_text_check": "PASS including Ёё, digits and ₽",
+      "status": "proposed; no final brand approval",
+      "loading": "local variable TTF; font-display swap; generic fallback only"
+    }
+  ],
+  "google_api_status": "proxy403; official catalog source and OFL read from Google Fonts repository",
+  "woff2": "not produced: helper Brotli encoder unavailable; original verified TTF used"
+}

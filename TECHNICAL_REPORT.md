@@ -1,3 +1,5 @@
+> Iteration 09: 33 frames, revised motion and responsive UI. Current evidence and remaining logo/contact blockers: [review](references/sequence-09/REVIEW_RU.md). Presentation: `/` or `/review.html`; technical panel: `/review.html?audit=1`.
+
 # Текущая итерация — Sequence 04 / локальная доработка 01b
 
 Отчёт: references/sequence-04/REVIEW_RU.md. Исправлены открытая петля спойлера и чрезмерно высокий верхний контур крыши промежуточного кадра 01b. Два прохода image_gen по текущему кадру с исходными 01/02 как ориентирами. PNG обоих проходов сохранены; итоговая веб-копия — public/assets/turntable-v3/midpoint-01b.webp (200818 байт). Исходные 24 кадра и старый 01b сохранены. Общий цветкор не изменён.

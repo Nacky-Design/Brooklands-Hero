@@ -1,0 +1,73 @@
+{
+  "method": "Manual approximate two-tyre contact landmarks + rigid CSS rotation; not physical camera reconstruction",
+  "frames": [
+    {
+      "id": "04",
+      "manual_native_contacts": [
+        [
+          240,
+          766
+        ],
+        [
+          1030,
+          802
+        ]
+      ],
+      "uncertaintyPixels": 6,
+      "before_angle_deg": 2.6091418739813426,
+      "rigid_rotation_deg": 0,
+      "after_angle_deg": 2.6091418739813426
+    },
+    {
+      "id": "05",
+      "manual_native_contacts": [
+        [
+          210,
+          710
+        ],
+        [
+          895,
+          817
+        ]
+      ],
+      "uncertaintyPixels": 6,
+      "before_angle_deg": 8.878107568267954,
+      "rigid_rotation_deg": -3.5,
+      "after_angle_deg": 5.3781075682679536
+    },
+    {
+      "id": "05b",
+      "manual_native_contacts": [
+        [
+          210,
+          710
+        ],
+        [
+          875,
+          810
+        ]
+      ],
+      "uncertaintyPixels": 6,
+      "before_angle_deg": 8.551830233820057,
+      "rigid_rotation_deg": -2.2,
+      "after_angle_deg": 6.351830233820057
+    },
+    {
+      "id": "06",
+      "manual_native_contacts": [
+        [
+          195,
+          735
+        ],
+        [
+          735,
+          818
+        ]
+      ],
+      "uncertaintyPixels": 6,
+      "before_angle_deg": 8.738189011909059,
+      "rigid_rotation_deg": 0,
+      "after_angle_deg": 8.738189011909059
+    }
+  ]
+}

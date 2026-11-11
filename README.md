@@ -1,3 +1,5 @@
+> Iteration 09: 33 frames, revised motion and responsive UI. Current evidence and remaining logo/contact blockers: [review](references/sequence-09/REVIEW_RU.md). Presentation: `/` or `/review.html`; technical panel: `/review.html?audit=1`.
+
 # BROOKLANDS — HERO / покадровый прототип
 
 [Опубликованный HERO](https://nacky-design.github.io/Brooklands-Hero/).
