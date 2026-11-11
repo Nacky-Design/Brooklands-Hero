@@ -1,0 +1,22 @@
+[
+  {
+    "id": "carmine",
+    "opaqueSilhouetteIoU": 0.9921441516346322,
+    "solid": {
+      "left": 64,
+      "right": 1597,
+      "top": 130,
+      "bottom": 808
+    }
+  },
+  {
+    "id": "oak-green",
+    "opaqueSilhouetteIoU": 0.9935544128531902,
+    "solid": {
+      "left": 65,
+      "right": 1597,
+      "top": 129,
+      "bottom": 807
+    }
+  }
+]

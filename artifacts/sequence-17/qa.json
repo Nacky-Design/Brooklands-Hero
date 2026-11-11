@@ -1,0 +1,61 @@
+{
+  "evidence": [
+    {
+      "width": 320,
+      "threePresets": true,
+      "stableFrame": true,
+      "stableBounds": true,
+      "labelsInside": true,
+      "keyboard": true,
+      "noErrors": true
+    },
+    {
+      "width": 390,
+      "threePresets": true,
+      "stableFrame": true,
+      "stableBounds": true,
+      "labelsInside": true,
+      "keyboard": true,
+      "noErrors": true
+    },
+    {
+      "width": 440,
+      "threePresets": true,
+      "stableFrame": true,
+      "stableBounds": true,
+      "labelsInside": true,
+      "keyboard": true,
+      "noErrors": true
+    },
+    {
+      "width": 768,
+      "threePresets": true,
+      "stableFrame": true,
+      "stableBounds": true,
+      "labelsInside": true,
+      "keyboard": true,
+      "noErrors": true
+    },
+    {
+      "width": 1440,
+      "threePresets": true,
+      "stableFrame": true,
+      "stableBounds": true,
+      "labelsInside": true,
+      "keyboard": true,
+      "noErrors": true
+    },
+    {
+      "width": 1920,
+      "threePresets": true,
+      "stableFrame": true,
+      "stableBounds": true,
+      "labelsInside": true,
+      "keyboard": true,
+      "noErrors": true
+    }
+  ],
+  "raceProtection": true,
+  "retry": true,
+  "productionHeroRetained": true
+}

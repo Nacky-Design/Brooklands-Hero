@@ -1,0 +1,29 @@
+{
+  "baseline": "2cd08ccccfd1cd142342394a664399d9ecce63a4",
+  "mode": "LOCAL_PATCH / material candidates on frame00 only",
+  "editable": [
+    "body paint",
+    "mirror caps",
+    "wheel finish",
+    "rear wing finish",
+    "isolated review URL for three frame00 previews"
+  ],
+  "locked": [
+    "camera",
+    "silhouette",
+    "tyre ground contact",
+    "wheel design",
+    "red calipers",
+    "glass",
+    "headlights",
+    "existing production sequence and grade",
+    "hero copy and layout"
+  ],
+  "presets": {
+    "silver": "original",
+    "carmine": "deep red body, gloss black mirrors and wing, satin graphite wheels",
+    "oak-green": "dark forest metallic body including mirrors and wing, muted bronze wheels"
+  },
+  "source_sha256": "4d149a063e7894a851ab380ae895a6bec1cfad84a8bae32dc9e624d12599068c",
+  "approval": "candidate only; full 33 frame recolor deferred until shades reviewed"
+}
