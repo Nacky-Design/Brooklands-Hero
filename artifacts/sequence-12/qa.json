@@ -1,0 +1,92 @@
+[
+  {
+    "width": 320,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": true
+  },
+  {
+    "width": 390,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": true
+  },
+  {
+    "width": 440,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": true
+  },
+  {
+    "width": 768,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": true
+  },
+  {
+    "width": 900,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": false
+  },
+  {
+    "width": 1100,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": false
+  },
+  {
+    "width": 1200,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": false
+  },
+  {
+    "width": 1350,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": false
+  },
+  {
+    "width": 1440,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": false
+  },
+  {
+    "width": 1920,
+    "axis": 0,
+    "overflow": false,
+    "overlap": false,
+    "phone": "tel:+74951545265",
+    "rotationButtons": true,
+    "mobileMenu": false
+  }
+]
