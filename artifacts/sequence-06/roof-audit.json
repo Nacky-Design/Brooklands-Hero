@@ -1,0 +1,184 @@
+{
+  "method": "Local image_gen canopy edit; retain previous tyre scale, horizontal registration and ground. Alpha bounds measured before/after; landmarks manually verified.",
+  "frames": [
+    {
+      "index": 20,
+      "scale": 0.9398496240601504,
+      "dx": 0.03068720745064879,
+      "dy": 0.014502249246921783,
+      "id": "20",
+      "file": "assets/turntable-v5/frame-20.webp",
+      "source": "references/sequence-06/roof-20.png",
+      "sourceWidth": 1670,
+      "transparentRightPadding": 2,
+      "lowerBodySilhouetteIoU": 0.9588386958976002,
+      "lowerBodyMeanAbsoluteRGB": 7.637486939595963,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": 442,
+      "groundY": 842,
+      "solid": {
+        "left": 271,
+        "right": 1387,
+        "top": 113,
+        "bottom": 843
+      },
+      "visible": {
+        "left": 248,
+        "right": 1415,
+        "top": 111,
+        "bottom": 851
+      },
+      "correctedSolid": {
+        "left": 0.18301929364700092,
+        "right": 0.8103351910460008,
+        "top": 0.12736410633384737,
+        "bottom": 0.8564716786653137
+      },
+      "correctedVisible": {
+        "left": 0.1700907402059821,
+        "right": 0.8260742995828932,
+        "top": 0.12536655134115843,
+        "bottom": 0.8644618986360695
+      },
+      "beforeHeight": 708.6466165413534,
+      "afterHeight": 685.1503759398496,
+      "sha256": "62f20405a73bc62c6c75806373be727031860079ca46cee9f6c6becbe9d7c52f",
+      "bytes": 162748
+    },
+    {
+      "index": 21,
+      "scale": 1.008923407419648,
+      "dx": -0.007745479312919024,
+      "dy": -0.031221740633420647,
+      "id": "21",
+      "file": "assets/turntable-v5/frame-21.webp",
+      "source": "references/sequence-06/roof-21.png",
+      "sourceWidth": 1672,
+      "transparentRightPadding": 0,
+      "lowerBodySilhouetteIoU": 0.9211422481860977,
+      "lowerBodyMeanAbsoluteRGB": 11.153117346581764,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": null,
+      "groundY": 827,
+      "solid": {
+        "left": 341,
+        "right": 1332,
+        "top": 145,
+        "bottom": 828
+      },
+      "visible": {
+        "left": 323,
+        "right": 1351,
+        "top": 143,
+        "bottom": 830
+      },
+      "correctedSolid": {
+        "left": 0.1980217945687197,
+        "right": 0.7960140773156522,
+        "top": 0.12424467177449539,
+        "bottom": 0.8565450833235067
+      },
+      "correctedVisible": {
+        "left": 0.1871601789386039,
+        "right": 0.80747911603633,
+        "top": 0.12210030746542067,
+        "bottom": 0.8586894476325814
+      },
+      "beforeHeight": 706.2463851937537,
+      "afterHeight": 688.0857638601999,
+      "sha256": "98518a4154d2c0a4c736601644c9838ff7053190c579d680452217b72b59c2a4",
+      "bytes": 127806
+    },
+    {
+      "id": "21b",
+      "file": "assets/turntable-v5/frame-21b.webp",
+      "scale": 0.9973404255319149,
+      "dx": 0.001617695714140277,
+      "dy": -0.02634137517805868,
+      "source": "references/sequence-06/roof-21b.png",
+      "sourceWidth": 1672,
+      "transparentRightPadding": 0,
+      "lowerBodySilhouetteIoU": 0.9560671188742846,
+      "lowerBodyMeanAbsoluteRGB": 10.060267621881582,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": 454,
+      "groundY": 832,
+      "solid": {
+        "left": 317,
+        "right": 1344,
+        "top": 147,
+        "bottom": 834
+      },
+      "visible": {
+        "left": 285,
+        "right": 1415,
+        "top": 146,
+        "bottom": 847
+      },
+      "correctedSolid": {
+        "left": 0.19070675964572942,
+        "right": 0.803307607146493,
+        "top": 0.1294599452822936,
+        "bottom": 0.8575926470255727
+      },
+      "correctedVisible": {
+        "left": 0.17161890461162577,
+        "right": 0.8456587855034103,
+        "top": 0.12840007235399187,
+        "bottom": 0.8713709950934949
+      },
+      "beforeHeight": 722.0744680851064,
+      "afterHeight": 683.1781914893618,
+      "sha256": "d7bea95f8e3ab1fee132842ea0a8ceb926a3e2356973780882287741f32d0f27",
+      "bytes": 149668
+    },
+    {
+      "index": 22,
+      "scale": 0.9615384615384616,
+      "dx": 0.016781776839180196,
+      "dy": -0.003882939589634593,
+      "id": "22",
+      "file": "assets/turntable-v5/frame-22.webp",
+      "source": "references/sequence-06/roof-22.png",
+      "sourceWidth": 1670,
+      "transparentRightPadding": 2,
+      "lowerBodySilhouetteIoU": 0.967994661142432,
+      "lowerBodyMeanAbsoluteRGB": 9.091697367507619,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": 448,
+      "groundY": 841,
+      "solid": {
+        "left": 211,
+        "right": 1456,
+        "top": 135,
+        "bottom": 842
+      },
+      "visible": {
+        "left": 203,
+        "right": 1493,
+        "top": 134,
+        "bottom": 857
+      },
+      "correctedSolid": {
+        "left": 0.13812425015533775,
+        "right": 0.8541023510018597,
+        "top": 0.1340635984631734,
+        "bottom": 0.8564947273767678
+      },
+      "correctedVisible": {
+        "left": 0.13352358765993838,
+        "right": 0.8753804150430815,
+        "top": 0.1330417722553748,
+        "bottom": 0.8718221204937464
+      },
+      "beforeHeight": 703.8461538461538,
+      "afterHeight": 678.8461538461538,
+      "sha256": "50a9fe51fd3ae44142de9165d3267a5aada9bc48e29d29f9a5e13bea0c46ffe6",
+      "bytes": 181880
+    }
+  ]
+}

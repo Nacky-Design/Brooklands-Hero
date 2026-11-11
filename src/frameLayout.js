@@ -1,10 +1,11 @@
 import calibration from './sequenceManifest.json';
 import previousMidpoint from './legacyMidpoint.json';
+import previousRoof from './legacyRoofFrames.json';
 
 const PLATE_RATIO = 1672 / 941;
-export function getFrameStyle(index, legacy = false) {
+export function getFrameStyle(index, legacy = false, legacyRoof = false) {
   const frame = calibration.frames[index];
-  const { scale, dx, dy } = legacy && frame.id === '01b' ? previousMidpoint : frame;
+  const { scale, dx, dy } = legacy && frame.id === '01b' ? previousMidpoint : legacyRoof && previousRoof[frame.id] ? previousRoof[frame.id] : frame;
   return { transformOrigin: '0 0', transform: `translate(${dx * 100}%, ${dy * 100}%) scale(${scale})` };
 }
 

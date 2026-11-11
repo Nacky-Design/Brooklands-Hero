@@ -1,0 +1,172 @@
+{
+  "frames": [
+    {
+      "id": "00",
+      "height": 676,
+      "changed": false
+    },
+    {
+      "id": "01",
+      "height": 683.6376404494382,
+      "changed": false
+    },
+    {
+      "id": "01b",
+      "height": 688.1067961165048,
+      "changed": false
+    },
+    {
+      "id": "02",
+      "height": 688.75,
+      "changed": false
+    },
+    {
+      "id": "03",
+      "height": 695.5236486486486,
+      "changed": false
+    },
+    {
+      "id": "03b",
+      "height": 704.6979865771812,
+      "changed": false
+    },
+    {
+      "id": "04",
+      "height": 670.9337349397591,
+      "changed": false
+    },
+    {
+      "id": "05",
+      "height": 698.5714285714286,
+      "changed": false
+    },
+    {
+      "id": "06",
+      "height": 681.547619047619,
+      "changed": false
+    },
+    {
+      "id": "07",
+      "height": 677.007299270073,
+      "changed": false
+    },
+    {
+      "id": "08",
+      "height": 675.7246376811595,
+      "changed": false
+    },
+    {
+      "id": "09",
+      "height": 679.1031947529884,
+      "changed": false
+    },
+    {
+      "id": "10",
+      "height": 682.4817518248175,
+      "changed": false
+    },
+    {
+      "id": "10b",
+      "height": 668.3544303797468,
+      "changed": false
+    },
+    {
+      "id": "11",
+      "height": 673.2954545454546,
+      "changed": false
+    },
+    {
+      "id": "12",
+      "height": 686.6754617414248,
+      "changed": false
+    },
+    {
+      "id": "13",
+      "height": 668.5656836461126,
+      "changed": false
+    },
+    {
+      "id": "14",
+      "height": 678.0660377358491,
+      "changed": false
+    },
+    {
+      "id": "15",
+      "height": 676.4705882352941,
+      "changed": false
+    },
+    {
+      "id": "16",
+      "height": 693.0379746835443,
+      "changed": false
+    },
+    {
+      "id": "17",
+      "height": 693.5240963855422,
+      "changed": false
+    },
+    {
+      "id": "18",
+      "height": 675.9868421052631,
+      "changed": false
+    },
+    {
+      "id": "19",
+      "height": 693.1818181818182,
+      "changed": false
+    },
+    {
+      "id": "20",
+      "height": 685.1503759398496,
+      "changed": true
+    },
+    {
+      "id": "21",
+      "height": 688.0857638601999,
+      "changed": true
+    },
+    {
+      "id": "21b",
+      "height": 683.1781914893618,
+      "changed": true
+    },
+    {
+      "id": "22",
+      "height": 678.8461538461538,
+      "changed": true
+    },
+    {
+      "id": "23",
+      "height": 684.1085271317829,
+      "changed": false
+    }
+  ],
+  "frontJumps": [
+    {
+      "from": "19",
+      "to": "20",
+      "delta": -8.031442241968648
+    },
+    {
+      "from": "20",
+      "to": "21",
+      "delta": 2.9353879203503084
+    },
+    {
+      "from": "21",
+      "to": "21b",
+      "delta": -4.907572370838125
+    },
+    {
+      "from": "21b",
+      "to": "22",
+      "delta": -4.332037643207968
+    },
+    {
+      "from": "22",
+      "to": "23",
+      "delta": 5.26237328562911
+    }
+  ],
+  "maxAbsoluteFrontJump": 8.031442241968648
+}

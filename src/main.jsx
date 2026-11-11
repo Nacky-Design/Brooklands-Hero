@@ -5,6 +5,7 @@ import { getFrameStyle, getSequenceLayout } from './frameLayout.js';
 import { ColorGrade } from './ColorGrade.jsx';
 import manifest from './sequenceManifest.json';
 import previousMidpoint from './legacyMidpoint.json';
+import previousRoof from './legacyRoofFrames.json';
 import './style.css';
 
 const frameIndex = id => manifest.frames.findIndex(frame => frame.id === id);
@@ -28,7 +29,7 @@ function useCarLayout(stage) {
   return getSequenceLayout(size.width, size.height);
 }
 
-function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null, legacyMidpoint = false }) {
+function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null, legacyMidpoint = false, legacyRoof = false }) {
   const stage = useRef(null);
   const target = useRef(0);
   const gesture = useRef(null);
@@ -69,9 +70,9 @@ function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null
   return <main className="hero"><ColorGrade/>
     <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><strong>BROOKLANDS</strong><span>DETAILING</span></a><nav aria-label="Основная навигация">{['Услуги','Наши работы','О компании','Контакты'].map(text=><button key={text} onClick={demo}>{text}</button>)}</nav><button className="booking" onClick={demo}>Записаться</button></header>
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>Детейлинг, защита и персонализация<br className="desktop-break"/> автомобилей премиального класса.</p><button className="cta" onClick={demo}>Обсудить проект <span aria-hidden="true">→</span></button></section>
-    <section ref={stage} className="stage" data-midpoint-version={legacyMidpoint ? 'previous' : 'refined'} data-grade={gradeMode} data-frame-id={sequence.frame ? manifest.frames[sequence.frame.index].id : ''} aria-label="Покадровый обзор Porsche на 360 градусов" tabIndex={0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
+    <section ref={stage} className="stage" data-roof-version={legacyRoof ? 'previous' : 'refined'} data-midpoint-version={legacyMidpoint ? 'previous' : 'refined'} data-grade={gradeMode} data-frame-id={sequence.frame ? manifest.frames[sequence.frame.index].id : ''} aria-label="Покадровый обзор Porsche на 360 градусов" tabIndex={0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
       <img className="stage-background" src={BACKGROUND} alt="" fetchPriority="high" decoding="async"/>
-      {sequence.frame && <div className="sequence" style={carLayout}><img className="sequence-image" style={getFrameStyle(sequence.frame.index, legacyMidpoint)} src={legacyMidpoint && manifest.frames[sequence.frame.index].id === '01b' ? `${import.meta.env.BASE_URL}${previousMidpoint.file}` : sequence.frame.url} alt="Porsche 911 Turbo S" draggable="false"/></div>}
+      {sequence.frame && <div className="sequence" style={carLayout}><img className="sequence-image" style={getFrameStyle(sequence.frame.index, legacyMidpoint, legacyRoof)} src={legacyMidpoint && manifest.frames[sequence.frame.index].id === '01b' ? `${import.meta.env.BASE_URL}${previousMidpoint.file}` : legacyRoof && previousRoof[manifest.frames[sequence.frame.index].id] ? `${import.meta.env.BASE_URL}${previousRoof[manifest.frames[sequence.frame.index].id].file}` : sequence.frame.url} alt="Porsche 911 Turbo S" draggable="false"/></div>}
       {!sequence.frame && !sequence.error && <p className="status" role="status">Загрузка автомобиля…</p>}
       {sequence.frame && sequence.buffering && <p className="frame-loading" role="status">Загрузка ракурса…</p>}
       {sequence.error && <div className={sequence.frame ? 'frame-warning' : 'fallback'} role="status"><p>{sequence.frame ? 'Этот ракурс пока недоступен.' : 'Не удалось загрузить автомобиль.'}</p><button onClick={sequence.retry}>Повторить загрузку</button></div>}
@@ -88,6 +89,7 @@ function ReviewPage() {
   const [loop, setLoop] = useState(false);
   const [transition, setTransition] = useState('01b');
   const [legacy, setLegacy] = useState(false);
+  const [legacyRoof, setLegacyRoof] = useState(false);
   const [legacyReady, setLegacyReady] = useState(false);
   useEffect(() => {
     let mounted = true;
@@ -99,8 +101,8 @@ function ReviewPage() {
   const compareMidpoint = old => { setLegacy(old); if (!loop) setRequest({ index: 2 }); };
   useEffect(() => {
     if (!loop) return;
-    const [a, mid, b] = TRANSITIONS[transition].map(frameIndex);
-    const frames = [a, mid, b, mid]; let step = 0;
+    const ids = transition === 'roof' ? ['19','20','21','21b','22','23','22','21b','21','20'] : [...TRANSITIONS[transition], TRANSITIONS[transition][1]];
+    const frames = ids.map(frameIndex); let step = 0;
     setRequest({ index: frames[step] });
     const timer = setInterval(() => { step = (step + 1) % frames.length; setRequest({ index: frames[step] }); }, 1200);
     return () => clearInterval(timer);
@@ -108,12 +110,13 @@ function ReviewPage() {
   const show = index => { setLoop(false); setRequest({ index }); };
   return <><div className="review-tools">
     <h1>BROOKLANDS · цвет и промежуточные ракурсы</h1>
-    <p>Добавлены 03b, 10b и 21b. Выберите переход и сравните его в обе стороны. Доработанный 01b и общий цветкор сохранены; мелкие детали и угловой шаг ещё требуют оценки.</p>
+    <p>Проверка крыши 20 / 21 / 21b / 22: сравните до и после при одном масштабе, рядом с 19 и 23. Переходы и цветкор доступны ниже. Доработанный 01b сохранён; мелкие детали и угловой шаг ещё требуют оценки.</p>
     <div role="group" aria-label="Цветокоррекция">{[['none','Исходный'],['background','Только фон'],['both','Фон + автомобиль']].map(([value,label])=><button key={value} aria-pressed={grade===value} onClick={()=>setGrade(value)}>{label}</button>)}</div>
     <div role="group" aria-label="Версия промежуточного кадра"><button disabled={!legacyReady} aria-pressed={legacy} onClick={()=>compareMidpoint(true)}>01b: до правки</button><button aria-pressed={!legacy} onClick={()=>compareMidpoint(false)}>01b: после правки</button></div>
     <div role="group" aria-label="Опорные ракурсы">{[[0,'Старт 00'],[1,'Ракурс 01'],[2,'Новый 01b'],[3,'Боковой 02'],[frameIndex('09'),'Задний 09']].map(([index,label])=><button key={index} onClick={()=>show(index)}>{label}</button>)}<button aria-pressed={loop&&transition==='01b'} onClick={()=>{setTransition('01b');setLoop(value=>transition==='01b'?!value:true);}}>{loop&&transition==='01b'?'Остановить переход':'Повторять 01 → 01b → 02'}</button></div>
     <div role="group" aria-label="Новые переходы">{['03b','10b','21b'].map(id => <React.Fragment key={id}><button onClick={()=>show(frameIndex(id))}>Ракурс {id}</button><button aria-pressed={loop&&transition===id} onClick={()=>{setTransition(id);setLoop(value=>transition===id?!value:true);}}>{loop&&transition===id?'Остановить '+id:'Повторять '+TRANSITIONS[id].join(' → ')}</button></React.Fragment>)}</div>
+    <div role="group" aria-label="Коррекция крыши"><button aria-pressed={loop&&transition==='roof'} onClick={()=>{setTransition('roof');setLoop(value=>transition==='roof'?!value:true);}}>{loop&&transition==='roof'?'Остановить передние ракурсы':'Повторять передние ракурсы'}</button><button aria-pressed={legacyRoof} onClick={()=>setLegacyRoof(true)}>Крыша: до правки</button><button aria-pressed={!legacyRoof} onClick={()=>setLegacyRoof(false)}>Крыша: после правки</button>{['19','20','21','21b','22','23','00'].map(id=><button key={id} onClick={()=>show(frameIndex(id))}>Проверить {id}</button>)}</div>
     <p aria-live="polite">На экране: {manifest.frames[displayed].id}. <a href="./">Открыть HERO</a></p>
-  </div><App gradeMode={grade} reviewRequest={request} onDisplayedFrame={setDisplayed} legacyMidpoint={legacy}/></>;
+  </div><App gradeMode={grade} reviewRequest={request} onDisplayedFrame={setDisplayed} legacyMidpoint={legacy} legacyRoof={legacyRoof}/></>;
 }
 createRoot(document.getElementById('root')).render(document.documentElement.dataset.review ? <ReviewPage/> : <App/>);
