@@ -1,0 +1,77 @@
+{
+  "evidence": [
+    {
+      "width": 320,
+      "captionRemoved": true,
+      "hover": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgba(0, 0, 0, 0)",
+        "line": "1"
+      },
+      "keyboardFocus": true,
+      "noLayoutShift": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "captionRemoved": true,
+      "hover": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgba(0, 0, 0, 0)",
+        "line": "1"
+      },
+      "keyboardFocus": true,
+      "noLayoutShift": true,
+      "noOverflow": true
+    },
+    {
+      "width": 440,
+      "captionRemoved": true,
+      "hover": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgba(0, 0, 0, 0)",
+        "line": "1"
+      },
+      "keyboardFocus": true,
+      "noLayoutShift": true,
+      "noOverflow": true
+    },
+    {
+      "width": 768,
+      "captionRemoved": true,
+      "hover": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgba(0, 0, 0, 0)",
+        "line": "1"
+      },
+      "keyboardFocus": true,
+      "noLayoutShift": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "captionRemoved": true,
+      "hover": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgba(0, 0, 0, 0)",
+        "line": "1"
+      },
+      "keyboardFocus": true,
+      "noLayoutShift": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1920,
+      "captionRemoved": true,
+      "hover": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgba(0, 0, 0, 0)",
+        "line": "1"
+      },
+      "keyboardFocus": true,
+      "noLayoutShift": true,
+      "noOverflow": true
+    }
+  ],
+  "reducedMotion": true
+}
