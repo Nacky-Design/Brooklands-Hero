@@ -1,0 +1,129 @@
+{
+  "method": "Manual near-tyre calibration; alpha bounds for horizontal registration. Angles are not measured.",
+  "uncertaintyPixels": 6,
+  "frames": [
+    {
+      "id": "05b",
+      "file": "assets/turntable-v7/midpoint-05b.webp",
+      "scale": 1.0932944606413995,
+      "dx": -0.05576586410367301,
+      "dy": -0.085620098958059,
+      "source": "references/sequence-08/midpoint-05b.png",
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "width": 1672,
+      "height": 941,
+      "calibratedHeight": 685.4956268221574,
+      "tyreTop": 467,
+      "groundY": 810,
+      "solid": {
+        "left": 59,
+        "right": 1629,
+        "top": 183,
+        "bottom": 811
+      },
+      "visible": {
+        "left": 58,
+        "right": 1630,
+        "top": 181,
+        "bottom": 816
+      },
+      "correctedSolid": {
+        "left": -0.017186693542762387,
+        "right": 1.0094115739255374,
+        "top": 0.12699720847804738,
+        "bottom": 0.8566347443790026
+      },
+      "correctedVisible": {
+        "left": -0.017840577789557478,
+        "right": 1.0100654581723325,
+        "top": 0.12467352205798066,
+        "bottom": 0.8624439604291695
+      },
+      "bytes": 217872,
+      "sha256": "c6b89d0e88d4793802e2289fe573fbf99b5cec2c852688d6014f5e6b2e7dd172"
+    },
+    {
+      "id": "11b",
+      "file": "assets/turntable-v7/midpoint-11b.webp",
+      "scale": 0.984251968503937,
+      "dx": 0.005458124552612742,
+      "dy": 0.0019664120093383364,
+      "source": "references/sequence-08/midpoint-11b.png",
+      "sourceWidth": 1672,
+      "sourceHeight": 940,
+      "width": 1672,
+      "height": 941,
+      "calibratedHeight": 681.1023622047244,
+      "tyreTop": 435,
+      "groundY": 816,
+      "solid": {
+        "left": 60,
+        "right": 1607,
+        "top": 124,
+        "bottom": 817
+      },
+      "visible": {
+        "left": 58,
+        "right": 1610,
+        "top": 122,
+        "bottom": 827
+      },
+      "correctedSolid": {
+        "left": 0.0407781712692612,
+        "right": 0.9514467091135139,
+        "top": 0.13166592751889006,
+        "bottom": 0.8565188650037235
+      },
+      "correctedVisible": {
+        "left": 0.039600836378706254,
+        "right": 0.9532127114493463,
+        "top": 0.1295739998493812,
+        "bottom": 0.8669785033512681
+      },
+      "bytes": 223810,
+      "sha256": "98901a6b83448d6e46459e65d0b7885bf555cc7d5039c7ce9658580e69bf35e6"
+    },
+    {
+      "id": "17b",
+      "file": "assets/turntable-v7/midpoint-17b.webp",
+      "scale": 1.1160714285714286,
+      "dx": -0.06292453434723178,
+      "dy": -0.10522620312737208,
+      "source": "references/sequence-08/midpoint-17b.png",
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "width": 1672,
+      "height": 941,
+      "calibratedHeight": 676.3392857142858,
+      "tyreTop": 474,
+      "groundY": 810,
+      "solid": {
+        "left": 77,
+        "right": 1598,
+        "top": 204,
+        "bottom": 811
+      },
+      "visible": {
+        "left": 75,
+        "right": 1600,
+        "top": 202,
+        "bottom": 816
+      },
+      "correctedSolid": {
+        "left": -0.011526508031442305,
+        "right": 1.0037513884142173,
+        "top": 0.13672764536207685,
+        "bottom": 0.8566589494458783
+      },
+      "correctedVisible": {
+        "left": -0.012861521701982286,
+        "right": 1.0050864020847574,
+        "top": 0.13435554880825873,
+        "bottom": 0.8625891908304236
+      },
+      "bytes": 217174,
+      "sha256": "27bff94fbfdddccb4c31aacf281829826f571e8a58faf595a1da2bb0374cc7df"
+    }
+  ]
+}

@@ -2,6 +2,16 @@
 
 [Опубликованный HERO](https://nacky-design.github.io/Brooklands-Hero/).
 
+Текущая доработка **Sequence 08** (сборка отправлена в `gh-pages`, `2059136`): слегка снижена крыша 02 и добавлена следующая небольшая партия **05b / 11b / 17b**. Всего **31 кадр**. В `review.html` доступны новые переходы в обе стороны и сравнение 02 до/после. Прежние исправления, общий цветкор и масштаб сцены сохранены. [Отчёт](references/sequence-08/REVIEW_RU.md).
+
+```sh
+QA_URL=http://127.0.0.1:4205/Brooklands-Hero/ node scripts/qa-sequence08.mjs
+QA_URL=http://127.0.0.1:4205/Brooklands-Hero/ node scripts/qa-sequence08-network.mjs
+```
+
+Команды рассчитаны на локальную production-сборку под /Brooklands-Hero/; для обычного `npm run preview -- --port 4205` задайте QA_URL=http://127.0.0.1:4205/. Результаты — artifacts/sequence-08. Ниже — история предыдущих итераций.
+
+
 Текущая доработка **Sequence 07** (сборка отправлена в `gh-pages`, `f387c2b`): проверены и снижены завышенные крыши 03 / 03b / 16, а также соседних 05 / 17. В `review.html` доступны сравнение крыш до/после и повторы участков **02–06** и **14–18** в обе стороны. Ранее исправленные передние ракурсы, доработанный 01b и общий цветкор сохранены. [Измерения и ограничения](references/sequence-07/REVIEW_RU.md). Проверка production-сборки: `QA_URL=http://127.0.0.1:4205/Brooklands-Hero/ node scripts/qa-sequence07.mjs` (для обычного Vite preview без префикса — QA_URL=http://127.0.0.1:4205/).
 
 Ниже — история Sequence 06 и предыдущих итераций.

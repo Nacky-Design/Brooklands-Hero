@@ -68,5 +68,13 @@
     "dy": -0.10719818700946182,
     "id": "17",
     "file": "assets/turntable-v1/frame-17.webp"
+  },
+  "02": {
+    "index": 2,
+    "scale": 1.25,
+    "dx": -0.13711616543398641,
+    "dy": -0.16206163655685435,
+    "id": "02",
+    "file": "assets/turntable-v1/frame-02.webp"
   }
 }

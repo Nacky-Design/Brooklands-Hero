@@ -1,0 +1,303 @@
+{
+  "count": 31,
+  "frames": [
+    {
+      "id": "00",
+      "height": 676,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "01",
+      "height": 683.6376404494382,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "01b",
+      "height": 688.1067961165048,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "02",
+      "height": 675,
+      "changed": true,
+      "added": false
+    },
+    {
+      "id": "03",
+      "height": 677.7871621621622,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "03b",
+      "height": 675.7550335570469,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "04",
+      "height": 670.9337349397591,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "05",
+      "height": 676.0714285714286,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "05b",
+      "height": 685.4956268221574,
+      "changed": false,
+      "added": true
+    },
+    {
+      "id": "06",
+      "height": 681.547619047619,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "07",
+      "height": 677.007299270073,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "08",
+      "height": 675.7246376811595,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "09",
+      "height": 679.1031947529884,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "10",
+      "height": 682.4817518248175,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "10b",
+      "height": 668.3544303797468,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "11",
+      "height": 673.2954545454546,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "11b",
+      "height": 681.1023622047244,
+      "changed": false,
+      "added": true
+    },
+    {
+      "id": "12",
+      "height": 686.6754617414248,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "13",
+      "height": 668.5656836461126,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "14",
+      "height": 678.0660377358491,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "15",
+      "height": 676.4705882352941,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "16",
+      "height": 681.1708860759494,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "17",
+      "height": 678.8403614457832,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "17b",
+      "height": 676.3392857142858,
+      "changed": false,
+      "added": true
+    },
+    {
+      "id": "18",
+      "height": 675.9868421052631,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "19",
+      "height": 693.1818181818182,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "20",
+      "height": 685.1503759398496,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "21",
+      "height": 688.0857638601999,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "21b",
+      "height": 683.1781914893618,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "22",
+      "height": 678.8461538461538,
+      "changed": false,
+      "added": false
+    },
+    {
+      "id": "23",
+      "height": 684.1085271317829,
+      "changed": false,
+      "added": false
+    }
+  ],
+  "transitions": [
+    {
+      "ids": [
+        "05",
+        "05b",
+        "06"
+      ],
+      "heights": [
+        676.0714285714286,
+        685.4956268221574,
+        681.547619047619
+      ],
+      "maxHeightStep": 9.424198250728864
+    },
+    {
+      "ids": [
+        "11",
+        "11b",
+        "12"
+      ],
+      "heights": [
+        673.2954545454546,
+        681.1023622047244,
+        686.6754617414248
+      ],
+      "maxHeightStep": 7.806907659269768
+    },
+    {
+      "ids": [
+        "17",
+        "17b",
+        "18"
+      ],
+      "heights": [
+        678.8403614457832,
+        676.3392857142858,
+        675.9868421052631
+      ],
+      "maxHeightStep": 2.5010757314973944
+    }
+  ],
+  "remainingLabelledSlots": [
+    {
+      "after": "00",
+      "before": "01"
+    },
+    {
+      "after": "02",
+      "before": "03"
+    },
+    {
+      "after": "04",
+      "before": "05"
+    },
+    {
+      "after": "06",
+      "before": "07"
+    },
+    {
+      "after": "07",
+      "before": "08"
+    },
+    {
+      "after": "08",
+      "before": "09"
+    },
+    {
+      "after": "09",
+      "before": "10"
+    },
+    {
+      "after": "12",
+      "before": "13"
+    },
+    {
+      "after": "13",
+      "before": "14"
+    },
+    {
+      "after": "14",
+      "before": "15"
+    },
+    {
+      "after": "15",
+      "before": "16"
+    },
+    {
+      "after": "16",
+      "before": "17"
+    },
+    {
+      "after": "18",
+      "before": "19"
+    },
+    {
+      "after": "19",
+      "before": "20"
+    },
+    {
+      "after": "20",
+      "before": "21"
+    },
+    {
+      "after": "22",
+      "before": "23"
+    },
+    {
+      "after": "23",
+      "before": "00"
+    }
+  ],
+  "angularSpacingMeasured": false
+}

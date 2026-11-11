@@ -31,9 +31,9 @@
       "index": 2,
       "scale": 1.25,
       "dx": -0.13711616543398641,
-      "dy": -0.16206163655685435,
+      "dy": -0.16471838469713052,
       "id": "02",
-      "file": "assets/turntable-v1/frame-02.webp"
+      "file": "assets/turntable-v7/frame-02.webp"
     },
     {
       "index": 3,
@@ -65,6 +65,13 @@
       "dy": -0.07476848337634723,
       "id": "05",
       "file": "assets/turntable-v6/frame-05.webp"
+    },
+    {
+      "id": "05b",
+      "file": "assets/turntable-v7/midpoint-05b.webp",
+      "scale": 1.0932944606413995,
+      "dx": -0.05576586410367301,
+      "dy": -0.085620098958059
     },
     {
       "index": 6,
@@ -122,6 +129,13 @@
       "file": "assets/turntable-v1/frame-11.webp"
     },
     {
+      "id": "11b",
+      "file": "assets/turntable-v7/midpoint-11b.webp",
+      "scale": 0.984251968503937,
+      "dx": 0.005458124552612742,
+      "dy": 0.0019664120093383364
+    },
+    {
       "index": 12,
       "scale": 0.9894459102902374,
       "dx": 0.005830445146314811,
@@ -168,6 +182,13 @@
       "dy": -0.11079920105501717,
       "id": "17",
       "file": "assets/turntable-v6/frame-17.webp"
+    },
+    {
+      "id": "17b",
+      "file": "assets/turntable-v7/midpoint-17b.webp",
+      "scale": 1.1160714285714286,
+      "dx": -0.06292453434723178,
+      "dy": -0.10522620312737208
     },
     {
       "index": 18,

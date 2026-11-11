@@ -1,0 +1,9 @@
+{
+  "previousPublishedCommit": "f387c2bbbf17cc459306b23832b281ae82173db3",
+  "publishedCommit": "20591365077b6c722fb004fbf0cfed391be6263a",
+  "checks": [
+    "artifacts/sequence-08/qa-results.json",
+    "artifacts/sequence-08/qa-network.json"
+  ],
+  "externalHttpValidation": "Blocked: fresh CONNECT request to nacky-design.github.io returned proxy 403"
+}

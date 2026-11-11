@@ -9,12 +9,12 @@ import previousRoof from './legacyRoofFrames.json';
 import './style.css';
 
 const frameIndex = id => manifest.frames.findIndex(frame => frame.id === id);
-const TRANSITIONS = { '01b': ['01', '01b', '02'], '03b': ['03', '03b', '04'], '10b': ['10', '10b', '11'], '21b': ['21', '21b', '22'] };
+const TRANSITIONS = { '01b': ['01', '01b', '02'], '03b': ['03', '03b', '04'], '10b': ['10', '10b', '11'], '21b': ['21', '21b', '22'], '05b': ['05','05b','06'], '11b': ['11','11b','12'], '17b': ['17','17b','18'] };
 
 const ROOF_SWEEPS = {
   roof: ['19','20','21','21b','22','23','22','21b','21','20'],
-  leftRoof: ['02','03','03b','04','05','06','05','04','03b','03'],
-  rightRoof: ['14','15','16','17','18','17','16','15'],
+  leftRoof: ['02','03','03b','04','05','05b','06','05b','05','04','03b','03'],
+  rightRoof: ['14','15','16','17','17b','18','17b','17','16','15'],
 };
 
 const BACKGROUND = `${import.meta.env.BASE_URL}assets/atelier-background.webp`;
@@ -116,11 +116,11 @@ function ReviewPage() {
   const show = index => { setLoop(false); setRequest({ index }); };
   return <><div className="review-tools">
     <h1>BROOKLANDS · цвет и промежуточные ракурсы</h1>
-    <p>Проверка крыши: 03 / 03b / 05 / 16 / 17 и ранее доработанные 20 / 21 / 21b / 22. Сравните до и после рядом с соседними кадрами. Переходы и цветкор доступны ниже. Доработанный 01b сохранён; мелкие детали и угловой шаг ещё требуют оценки.</p>
+    <p>Новая партия: 05b, 11b, 17b. У 02 слегка снижена крыша. Сравните новые переходы в обе стороны; прежние правки сохранены. Переходы и цветкор доступны ниже. Доработанный 01b сохранён; мелкие детали и угловой шаг ещё требуют оценки.</p>
     <div role="group" aria-label="Цветокоррекция">{[['none','Исходный'],['background','Только фон'],['both','Фон + автомобиль']].map(([value,label])=><button key={value} aria-pressed={grade===value} onClick={()=>setGrade(value)}>{label}</button>)}</div>
     <div role="group" aria-label="Версия промежуточного кадра"><button disabled={!legacyReady} aria-pressed={legacy} onClick={()=>compareMidpoint(true)}>01b: до правки</button><button aria-pressed={!legacy} onClick={()=>compareMidpoint(false)}>01b: после правки</button></div>
     <div role="group" aria-label="Опорные ракурсы">{[[0,'Старт 00'],[1,'Ракурс 01'],[2,'Новый 01b'],[3,'Боковой 02'],[frameIndex('09'),'Задний 09']].map(([index,label])=><button key={index} onClick={()=>show(index)}>{label}</button>)}<button aria-pressed={loop&&transition==='01b'} onClick={()=>{setTransition('01b');setLoop(value=>transition==='01b'?!value:true);}}>{loop&&transition==='01b'?'Остановить переход':'Повторять 01 → 01b → 02'}</button></div>
-    <div role="group" aria-label="Новые переходы">{['03b','10b','21b'].map(id => <React.Fragment key={id}><button onClick={()=>show(frameIndex(id))}>Ракурс {id}</button><button aria-pressed={loop&&transition===id} onClick={()=>{setTransition(id);setLoop(value=>transition===id?!value:true);}}>{loop&&transition===id?'Остановить '+id:'Повторять '+TRANSITIONS[id].join(' → ')}</button></React.Fragment>)}</div>
+    <div role="group" aria-label="Новые переходы">{['03b','05b','10b','11b','17b','21b'].map(id => <React.Fragment key={id}><button onClick={()=>show(frameIndex(id))}>Ракурс {id}</button><button aria-pressed={loop&&transition===id} onClick={()=>{setTransition(id);setLoop(value=>transition===id?!value:true);}}>{loop&&transition===id?'Остановить '+id:'Повторять '+TRANSITIONS[id].join(' → ')}</button></React.Fragment>)}</div>
     <div role="group" aria-label="Коррекция крыши"><button aria-pressed={loop&&transition==='roof'} onClick={()=>{setTransition('roof');setLoop(value=>transition==='roof'?!value:true);}}>{loop&&transition==='roof'?'Остановить передние ракурсы':'Повторять передние ракурсы'}</button><button aria-pressed={legacyRoof} onClick={()=>setLegacyRoof(true)}>Крыша: до правки</button><button aria-pressed={!legacyRoof} onClick={()=>setLegacyRoof(false)}>Крыша: после правки</button>{[['leftRoof','02–06'],['rightRoof','14–18']].map(([key,label])=><button key={key} aria-pressed={loop&&transition===key} onClick={()=>{setTransition(key);setLoop(value=>transition===key?!value:true);}}>{loop&&transition===key?'Остановить '+label:'Повторять '+label}</button>)}{['02','03','03b','04','05','06','14','15','16','17','18','19','20','21','21b','22','23','00'].map(id=><button key={id} onClick={()=>show(frameIndex(id))}>Проверить {id}</button>)}</div>
     <p aria-live="polite">На экране: {manifest.frames[displayed].id}. <a href="./">Открыть HERO</a></p>
   </div><App gradeMode={grade} reviewRequest={request} onDisplayedFrame={setDisplayed} legacyMidpoint={legacy} legacyRoof={legacyRoof}/></>;

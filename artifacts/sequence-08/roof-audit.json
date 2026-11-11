@@ -1,0 +1,51 @@
+{
+  "method": "Local image_gen canopy edit; retain previous tyre scale, horizontal registration and ground. Alpha bounds measured before/after; landmarks manually verified.",
+  "frames": [
+    {
+      "index": 2,
+      "scale": 1.25,
+      "dx": -0.13711616543398641,
+      "dy": -0.16471838469713052,
+      "id": "02",
+      "file": "assets/turntable-v7/frame-02.webp",
+      "source": "references/sequence-08/roof-02.png",
+      "sourceWidth": 1672,
+      "lowerCutoff": 385,
+      "transparentRightPadding": 0,
+      "lowerBodySilhouetteIoU": 0.9892717771576172,
+      "lowerBodyMeanAbsoluteRGB": 8.911876724233464,
+      "width": 1672,
+      "height": 941,
+      "tyreTop": 466,
+      "groundY": 768,
+      "solid": {
+        "left": 37,
+        "right": 1655,
+        "top": 228,
+        "bottom": 769
+      },
+      "visible": {
+        "left": 35,
+        "right": 1656,
+        "top": 226,
+        "bottom": 773
+      },
+      "correctedSolid": {
+        "left": -0.10945468218039789,
+        "right": 1.100174504422473,
+        "top": 0.1381509032943679,
+        "bottom": 0.8568012752391077
+      },
+      "correctedVisible": {
+        "left": -0.11094989749140269,
+        "right": 1.100922112077975,
+        "top": 0.13549415515409158,
+        "bottom": 0.8621147715196602
+      },
+      "beforeHeight": 688.75,
+      "afterHeight": 675,
+      "sha256": "21194cdcf976bfc7dc1ade73bc86ca6a321b020cf3e868008ef4f2da680f7a0c",
+      "bytes": 196778
+    }
+  ]
+}

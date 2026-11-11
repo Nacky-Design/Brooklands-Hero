@@ -1,0 +1,68 @@
+{
+  "url": "http://127.0.0.1:4205/Brooklands-Hero/",
+  "results": [
+    {
+      "viewport": "320x812",
+      "frames": 31,
+      "allVisible": true,
+      "groundStable": true,
+      "wrapAndKeyboard": true,
+      "mouse": true,
+      "noErrors": true
+    },
+    {
+      "viewport": "430x932",
+      "frames": 31,
+      "allVisible": true,
+      "groundStable": true,
+      "wrapAndKeyboard": true,
+      "mouse": true,
+      "noErrors": true
+    },
+    {
+      "viewport": "900x760",
+      "frames": 31,
+      "allVisible": true,
+      "groundStable": true,
+      "wrapAndKeyboard": true,
+      "mouse": true,
+      "noErrors": true
+    },
+    {
+      "viewport": "1440x900",
+      "frames": 31,
+      "allVisible": true,
+      "groundStable": true,
+      "wrapAndKeyboard": true,
+      "mouse": true,
+      "noErrors": true
+    },
+    {
+      "viewport": "1920x1080",
+      "frames": 31,
+      "allVisible": true,
+      "groundStable": true,
+      "wrapAndKeyboard": true,
+      "mouse": true,
+      "noErrors": true
+    },
+    {
+      "gradeComparison": true,
+      "reviewThreeFrameLoop": true,
+      "newTransitionLoops": [
+        "03b",
+        "05b",
+        "10b",
+        "11b",
+        "17b",
+        "21b"
+      ],
+      "roofBeforeAfter": [
+        "02"
+      ],
+      "sideSweepsBothWays": true,
+      "frontSweepBothWays": true,
+      "touch": true
+    }
+  ]
+}
