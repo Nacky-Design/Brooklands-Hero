@@ -5,6 +5,7 @@ import { getFrameStyle, getSequenceLayout } from './frameLayout.js';
 import { ColorGrade } from './ColorGrade.jsx';
 import manifest from './sequenceManifest.json';
 import { PRESETS } from './presets.js';
+import { CitySelector, CITIES, savedCity, saveCity } from './CitySelector.jsx';
 import previousMidpoint from './legacyMidpoint.json';
 import previousRoof from './legacyRoofFrames.json';
 import './style.css';
@@ -70,6 +71,10 @@ function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null
     }catch{if(request===sampleRequest.current)setMessage('Не удалось загрузить пресет. Попробуйте выбрать его ещё раз.');}
     finally{if(request===sampleRequest.current)setSampleLoading(false);}
   }
+  const [city, setCity] = useState(savedCity);
+  const [cityOpen, setCityOpen] = useState(false);
+  const contact = CITIES.find(option=>option.id===city);
+  const changeCity = id => { setCity(id); saveCity(id); };
   const [menuOpen, setMenuOpen] = useState(false);
   const menuToggle = useRef(null);
   const groundX = carLayout.left + carLayout.width * manifest.anchorX;
@@ -98,8 +103,8 @@ function App({ gradeMode = 'both', reviewRequest = null, onDisplayedFrame = null
     if (event.key === 'Home') choose(0); else rotate(event.key === 'ArrowRight' ? 1 : -1);
   }
   const status = sequence.frame ? 'ready' : sequence.error ? 'unavailable' : 'loading';
-  return <main className="hero" data-preset-preview={presetPreview} data-preset={presetId}><ColorGrade/>
-    <header><a href="#hero" className="brand" aria-label="Brooklands Detailing"><img className="brand-logo" src={`${import.meta.env.BASE_URL}assets/brooklands-logo.svg`} width="5283" height="672" alt="Brooklands" /></a><button ref={menuToggle} className="menu-toggle" aria-label={menuOpen?'Закрыть меню':'Открыть меню'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={()=>setMenuOpen(v=>!v)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d={menuOpen?'M6 6l12 12M18 6L6 18':'M4 8h16M4 16h16'}/></svg></button><nav id="main-nav" data-open={menuOpen} aria-label="Основная навигация" onKeyDown={e=>{if(e.key==='Escape'){setMenuOpen(false);menuToggle.current?.focus();}}}>{['Услуги','Наши работы','О компании','Контакты'].map(text=><button key={text} onClick={()=>{setMenuOpen(false);demo();}}>{text}</button>)}</nav><div className="header-contact"><a className="header-phone" href="tel:+74951545265">+7 (495) 154-52-65</a><button className="booking" onClick={demo}>Записаться</button></div></header>
+  return <main className="hero" data-preset-preview={presetPreview} data-preset={presetId} data-city={city}><ColorGrade/>
+    <header><div className="header-brand-group"><a href="#hero" className="brand" aria-label="Brooklands Detailing"><img className="brand-logo" src={`${import.meta.env.BASE_URL}assets/brooklands-logo.svg`} width="5283" height="672" alt="Brooklands" /></a><CitySelector city={city} onChange={changeCity} open={cityOpen} onOpenChange={setCityOpen} onOpen={()=>setMenuOpen(false)}/></div><button ref={menuToggle} className="menu-toggle" aria-label={menuOpen?'Закрыть меню':'Открыть меню'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={()=>{setCityOpen(false);setMenuOpen(v=>!v);}}><svg viewBox="0 0 24 24" aria-hidden="true"><path d={menuOpen?'M6 6l12 12M18 6L6 18':'M4 8h16M4 16h16'}/></svg></button><nav id="main-nav" data-open={menuOpen} aria-label="Основная навигация" onKeyDown={e=>{if(e.key==='Escape'){setMenuOpen(false);menuToggle.current?.focus();}}}>{['Услуги','Наши работы','О компании','Контакты'].map(text=><button key={text} onClick={()=>{setMenuOpen(false);demo();}}>{text}</button>)}</nav><div className="header-contact"><a className="header-phone" href={`tel:${contact.tel}`}>{contact.phone}</a><button className="booking" onClick={demo}>Записаться</button></div></header>
     <section className="intro" id="hero"><h1>Ваш автомобиль.<br/>Ваша версия.</h1><p>С 2014 года защищаем, преображаем и персонализируем автомобили премиального класса.</p><button className="cta" onClick={demo}>Выбрать услугу <svg className="cta-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button></section>
     <section ref={stage} className="stage" data-roof-version={legacyRoof ? 'previous' : 'refined'} data-midpoint-version={legacyMidpoint ? 'previous' : 'refined'} data-grade={gradeMode} data-frame-id={sequence.frame ? manifest.frames[sequence.frame.index].id : ''} aria-label={presetPreview ? "Предпросмотр отделки Porsche" : "Покадровый обзор Porsche на 360 градусов"} tabIndex={presetPreview ? -1 : 0} data-status={status} data-frame={sequence.frame?.index ?? ''} data-preset={sequence.frame?.preset || "silver"} data-requested-preset={sequence.requestedPreset} data-requested-frame={sequence.requested} data-loaded={sequence.loaded} data-buffering={sequence.buffering} onKeyDown={key} onPointerDown={down} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
       <img className="stage-background" src={BACKGROUND} alt="" fetchPriority="high" decoding="async"/>

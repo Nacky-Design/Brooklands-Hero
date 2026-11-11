@@ -1,0 +1,18 @@
+{
+  "baseline": "3f700a400d93b96c989ff3afe07c8675e9823c80",
+  "mode": "LOCAL_PATCH",
+  "editable": [
+    "city selector",
+    "branch phone",
+    "responsive header"
+  ],
+  "locked_verified": [
+    "preset loader",
+    "preset definitions",
+    "frame manifest",
+    "layout calibration",
+    "color grade"
+  ],
+  "contact_source": "explicit user messages",
+  "art_review": "not inferred"
+}
