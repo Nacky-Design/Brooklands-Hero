@@ -74,3 +74,8 @@ body{font-family:Manrope,sans-serif}button{transition:background-color .18s,bord
 @media(min-width:900px) and (max-width:1100px){.menu-toggle{display:grid;place-items:center;width:40px;height:40px;flex-shrink:0;padding:0;background:transparent;border:1px solid var(--ui-border);border-radius:var(--ui-radius)}nav{display:none;position:absolute;top:calc(100% - 4px);left:5%;right:var(--right-gutter);padding:16px 20px;background:#242a26f5;border:1px solid #eeeeec44;border-radius:12px;box-shadow:0 16px 36px #0005}nav[data-open="true"]{display:flex;flex-direction:column;gap:8px}nav button{text-align:left;font-size:17px;padding:12px 0}}
 @media(max-width:899px){.header-brand-group{display:contents}.city-selector{position:absolute;left:6%;bottom:4px}.city-menu{left:0;top:calc(100% + 4px)}}
 @media(prefers-reduced-motion:reduce){.city-chevron{transition:none}}
+
+/* Reserve identical space for either branch; city/phone text cannot move nav. */
+.city-selector{width:110px;flex-shrink:0}.city-toggle{width:110px}.header-phone{display:inline-block;width:148px;text-align:right;font-variant-numeric:tabular-nums}
+.intro h1{font-weight:500;line-height:1.04;letter-spacing:-1.4px}
+@media(max-width:899px){.intro h1{line-height:1.08;letter-spacing:-.5px}}

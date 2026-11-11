@@ -1,0 +1,110 @@
+[
+  {
+    "width": 320,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 390,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 440,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 768,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 900,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 1100,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 1101,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 1200,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 1350,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 1351,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 1440,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  },
+  {
+    "width": 1920,
+    "headerIdenticalBetweenCities": true,
+    "heading": {
+      "weight": "500",
+      "lines": 2,
+      "inside": true
+    }
+  }
+]
