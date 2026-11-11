@@ -15,9 +15,9 @@ export function getSequenceLayout(width, height) {
   if (width < 900) {
     // Fit the widest corrected silhouette once for the entire sequence.
     // Fitting each angle independently would reintroduce the shrinking side view.
-    const carWidth = width * calibration.mobileCanvasWidthRatio * .9;
+    const carWidth = width * calibration.mobileCanvasWidthRatio * 1.02;
     const carHeight = carWidth / PLATE_RATIO;
-    return { width: carWidth, height: carHeight, left: width / 2 - carWidth * calibration.anchorX, top: height * .84 - carHeight * calibration.anchorY };
+    return { width: carWidth, height: carHeight, left: width / 2 - carWidth * calibration.anchorX, top: height * .83 - carHeight * calibration.anchorY };
   }
   // Prefer frame 00 scale and placement; share the background's cover transform.
   const coverWidth = Math.max(width, height * PLATE_RATIO);

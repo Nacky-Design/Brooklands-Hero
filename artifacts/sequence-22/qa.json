@@ -1,0 +1,927 @@
+{
+  "baseline": "0ff24cb",
+  "mode": "LOCAL_PATCH",
+  "locked": "desktop composition, copy, imagery, material colors and interactions",
+  "editable": "mobile layout below 900px; shared image calibration only within mobile stage",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 740,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 104,
+        "b": 104
+      },
+      "intro": {
+        "x": 16,
+        "y": 120,
+        "w": 288,
+        "h": 215.875,
+        "b": 335.875
+      },
+      "stage": {
+        "x": 0,
+        "y": 335.875,
+        "w": 320,
+        "h": 234.125,
+        "b": 570
+      },
+      "presets": {
+        "x": 16,
+        "y": 570,
+        "w": 288,
+        "h": 82,
+        "b": 652
+      },
+      "rotation": {
+        "x": 66,
+        "y": 668,
+        "w": 188,
+        "h": 52,
+        "b": 720
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 50.390625
+        },
+        {
+          "label": "Silver",
+          "height": 82
+        },
+        {
+          "label": "Carmine",
+          "height": 82
+        },
+        {
+          "label": "Oak Green",
+          "height": 82
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 44
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 44
+        }
+      ],
+      "interactions": "menu, booking, city/phone, 3 materials, arrows, Chromium touch swipe, keyboard Escape",
+      "errors": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 104,
+        "b": 104
+      },
+      "intro": {
+        "x": 20,
+        "y": 126,
+        "w": 320,
+        "h": 222.5625,
+        "b": 348.5625
+      },
+      "stage": {
+        "x": 0,
+        "y": 348.5625,
+        "w": 360,
+        "h": 281.4375,
+        "b": 630
+      },
+      "presets": {
+        "x": 20,
+        "y": 630,
+        "w": 320,
+        "h": 82,
+        "b": 712
+      },
+      "rotation": {
+        "x": 86,
+        "y": 728,
+        "w": 188,
+        "h": 52,
+        "b": 780
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 50.390625
+        },
+        {
+          "label": "Silver",
+          "height": 82
+        },
+        {
+          "label": "Carmine",
+          "height": 82
+        },
+        {
+          "label": "Oak Green",
+          "height": 82
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 44
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 44
+        }
+      ],
+      "interactions": "menu, booking, city/phone, 3 materials, arrows, Chromium touch swipe, keyboard Escape",
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 104,
+        "b": 104
+      },
+      "intro": {
+        "x": 20,
+        "y": 126,
+        "w": 350,
+        "h": 227.75,
+        "b": 353.75
+      },
+      "stage": {
+        "x": 0,
+        "y": 353.75,
+        "w": 390,
+        "h": 320.25,
+        "b": 674
+      },
+      "presets": {
+        "x": 20,
+        "y": 674,
+        "w": 350,
+        "h": 82,
+        "b": 756
+      },
+      "rotation": {
+        "x": 101,
+        "y": 772,
+        "w": 188,
+        "h": 52,
+        "b": 824
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 50.390625
+        },
+        {
+          "label": "Silver",
+          "height": 82
+        },
+        {
+          "label": "Carmine",
+          "height": 82
+        },
+        {
+          "label": "Oak Green",
+          "height": 82
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 44
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 44
+        }
+      ],
+      "interactions": "menu, booking, city/phone, 3 materials, arrows, Chromium touch swipe, keyboard Escape",
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 667,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 104,
+        "b": 104
+      },
+      "intro": {
+        "x": 20,
+        "y": 126,
+        "w": 350,
+        "h": 227.75,
+        "b": 353.75
+      },
+      "stage": {
+        "x": 0,
+        "y": 353.75,
+        "w": 390,
+        "h": 241.796875,
+        "b": 595.546875
+      },
+      "presets": {
+        "x": 20,
+        "y": 595.546875,
+        "w": 350,
+        "h": 82,
+        "b": 677.546875
+      },
+      "rotation": {
+        "x": 101,
+        "y": 693.546875,
+        "w": 188,
+        "h": 52,
+        "b": 745.546875
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 50.390625
+        },
+        {
+          "label": "Silver",
+          "height": 82
+        },
+        {
+          "label": "Carmine",
+          "height": 82
+        },
+        {
+          "label": "Oak Green",
+          "height": 82
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 44
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 44
+        }
+      ],
+      "interactions": "menu, booking, city/phone, 3 materials, arrows, Chromium touch swipe, keyboard Escape",
+      "errors": []
+    },
+    {
+      "width": 440,
+      "height": 956,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 440,
+        "h": 104,
+        "b": 104
+      },
+      "intro": {
+        "x": 20,
+        "y": 126,
+        "w": 400,
+        "h": 236.3125,
+        "b": 362.3125
+      },
+      "stage": {
+        "x": 0,
+        "y": 362.3125,
+        "w": 440,
+        "h": 420,
+        "b": 782.3125
+      },
+      "presets": {
+        "x": 20,
+        "y": 782.3125,
+        "w": 400,
+        "h": 82,
+        "b": 864.3125
+      },
+      "rotation": {
+        "x": 126,
+        "y": 880.3125,
+        "w": 188,
+        "h": 52,
+        "b": 932.3125
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 50.390625
+        },
+        {
+          "label": "Silver",
+          "height": 82
+        },
+        {
+          "label": "Carmine",
+          "height": 82
+        },
+        {
+          "label": "Oak Green",
+          "height": 82
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 44
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 44
+        }
+      ],
+      "interactions": "menu, booking, city/phone, 3 materials, arrows, Chromium touch swipe, keyboard Escape",
+      "errors": []
+    },
+    {
+      "width": 600,
+      "height": 960,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 104,
+        "b": 104
+      },
+      "intro": {
+        "x": 40,
+        "y": 136,
+        "w": 520,
+        "h": 245.171875,
+        "b": 381.171875
+      },
+      "stage": {
+        "x": 0,
+        "y": 381.171875,
+        "w": 600,
+        "h": 398.828125,
+        "b": 780
+      },
+      "presets": {
+        "x": 40,
+        "y": 780,
+        "w": 520,
+        "h": 88,
+        "b": 868
+      },
+      "rotation": {
+        "x": 206,
+        "y": 888,
+        "w": 188,
+        "h": 52,
+        "b": 940
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 50.390625
+        },
+        {
+          "label": "Silver",
+          "height": 88
+        },
+        {
+          "label": "Carmine",
+          "height": 88
+        },
+        {
+          "label": "Oak Green",
+          "height": 88
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 44
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 44
+        }
+      ],
+      "interactions": "menu, booking, city/phone, 3 materials, arrows, Chromium touch swipe, keyboard Escape",
+      "errors": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 768,
+        "h": 104,
+        "b": 104
+      },
+      "intro": {
+        "x": 40,
+        "y": 136,
+        "w": 688,
+        "h": 274.015625,
+        "b": 410.015625
+      },
+      "stage": {
+        "x": 0,
+        "y": 410.015625,
+        "w": 768,
+        "h": 420,
+        "b": 830.015625
+      },
+      "presets": {
+        "x": 40,
+        "y": 830.015625,
+        "w": 688,
+        "h": 88,
+        "b": 918.015625
+      },
+      "rotation": {
+        "x": 290,
+        "y": 938.015625,
+        "w": 188,
+        "h": 52,
+        "b": 990.015625
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 50.390625
+        },
+        {
+          "label": "Silver",
+          "height": 88
+        },
+        {
+          "label": "Carmine",
+          "height": 88
+        },
+        {
+          "label": "Oak Green",
+          "height": 88
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 44
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 44
+        }
+      ],
+      "interactions": "menu, booking, city/phone, 3 materials, arrows, Chromium touch swipe, keyboard Escape",
+      "errors": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 844,
+        "h": 104,
+        "b": 104
+      },
+      "intro": {
+        "x": 40,
+        "y": 136,
+        "w": 764,
+        "h": 282.078125,
+        "b": 418.078125
+      },
+      "stage": {
+        "x": 0,
+        "y": 418.078125,
+        "w": 844,
+        "h": 388.234375,
+        "b": 806.3125
+      },
+      "presets": {
+        "x": 40,
+        "y": 806.3125,
+        "w": 764,
+        "h": 88,
+        "b": 894.3125
+      },
+      "rotation": {
+        "x": 328,
+        "y": 914.3125,
+        "w": 188,
+        "h": 52,
+        "b": 966.3125
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 50.390625
+        },
+        {
+          "label": "Silver",
+          "height": 88
+        },
+        {
+          "label": "Carmine",
+          "height": 88
+        },
+        {
+          "label": "Oak Green",
+          "height": 88
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 44
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 44
+        }
+      ],
+      "interactions": "menu, booking, city/phone, 3 materials, arrows, Chromium touch swipe, keyboard Escape",
+      "errors": []
+    },
+    {
+      "width": 899,
+      "height": 1000,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 899,
+        "h": 104,
+        "b": 104
+      },
+      "intro": {
+        "x": 40,
+        "y": 136,
+        "w": 819,
+        "h": 282.078125,
+        "b": 418.078125
+      },
+      "stage": {
+        "x": 0,
+        "y": 418.078125,
+        "w": 899,
+        "h": 413.53125,
+        "b": 831.609375
+      },
+      "presets": {
+        "x": 40,
+        "y": 831.609375,
+        "w": 819,
+        "h": 88,
+        "b": 919.609375
+      },
+      "rotation": {
+        "x": 355.5,
+        "y": 939.609375,
+        "w": 188,
+        "h": 52,
+        "b": 991.609375
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 50.390625
+        },
+        {
+          "label": "Silver",
+          "height": 88
+        },
+        {
+          "label": "Carmine",
+          "height": 88
+        },
+        {
+          "label": "Oak Green",
+          "height": 88
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 44
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 44
+        }
+      ],
+      "interactions": "menu, booking, city/phone, 3 materials, arrows, Chromium touch swipe, keyboard Escape",
+      "errors": []
+    },
+    {
+      "width": 900,
+      "height": 900,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 900,
+        "h": 134,
+        "b": 134
+      },
+      "intro": {
+        "x": 45,
+        "y": 186,
+        "w": 560,
+        "h": 273.890625,
+        "b": 459.890625
+      },
+      "stage": {
+        "x": 0,
+        "y": 0,
+        "w": 900,
+        "h": 900,
+        "b": 900
+      },
+      "presets": {
+        "x": 696,
+        "y": 261,
+        "w": 186,
+        "h": 316,
+        "b": 577
+      },
+      "rotation": {
+        "x": 345,
+        "y": 814,
+        "w": 210,
+        "h": 62,
+        "b": 876
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Открыть меню",
+          "height": 40
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 56.390625
+        },
+        {
+          "label": "Silver",
+          "height": 100
+        },
+        {
+          "label": "Carmine",
+          "height": 100
+        },
+        {
+          "label": "Oak Green",
+          "height": 100
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 48
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 48
+        }
+      ],
+      "interactions": "desktop render",
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 106,
+        "b": 106
+      },
+      "intro": {
+        "x": 72,
+        "y": 158,
+        "w": 560,
+        "h": 308.171875,
+        "b": 466.171875
+      },
+      "stage": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 1000,
+        "b": 1000
+      },
+      "presets": {
+        "x": 1146.8125,
+        "y": 290,
+        "w": 250,
+        "h": 352,
+        "b": 642
+      },
+      "rotation": {
+        "x": 615,
+        "y": 914,
+        "w": 210,
+        "h": 62,
+        "b": 976
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 56.390625
+        },
+        {
+          "label": "Silver",
+          "height": 112
+        },
+        {
+          "label": "Carmine",
+          "height": 112
+        },
+        {
+          "label": "Oak Green",
+          "height": 112
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 48
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 48
+        }
+      ],
+      "interactions": "desktop render",
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "overflow": false,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 106,
+        "b": 106
+      },
+      "intro": {
+        "x": 96,
+        "y": 158,
+        "w": 685.703125,
+        "h": 348.109375,
+        "b": 506.109375
+      },
+      "stage": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "b": 1080
+      },
+      "presets": {
+        "x": 1612.40625,
+        "y": 313.1875,
+        "w": 250,
+        "h": 352,
+        "b": 665.1875
+      },
+      "rotation": {
+        "x": 855,
+        "y": 994,
+        "w": 210,
+        "h": 62,
+        "b": 1056
+      },
+      "headline": "ВАШ АВТОМОБИЛЬ.\nВАША ВЕРСИЯ.",
+      "buttons": [
+        {
+          "label": "Город: Москва",
+          "height": 44
+        },
+        {
+          "label": "Выбрать услугу",
+          "height": 56.390625
+        },
+        {
+          "label": "Silver",
+          "height": 112
+        },
+        {
+          "label": "Carmine",
+          "height": 112
+        },
+        {
+          "label": "Oak Green",
+          "height": 112
+        },
+        {
+          "label": "Повернуть влево",
+          "height": 48
+        },
+        {
+          "label": "Повернуть вправо",
+          "height": 48
+        }
+      ],
+      "interactions": "desktop render",
+      "errors": []
+    }
+  ],
+  "desktopPixelIdentical": true,
+  "impeccable": "not_connected",
+  "playwriter": "not_connected"
+}

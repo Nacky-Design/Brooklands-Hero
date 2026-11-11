@@ -1,0 +1,60 @@
+/* Mobile composition: one scene, one reading order, comfortable touch controls.
+   The approved desktop composition and material system remain in style.css. */
+.mobile-booking{display:none}
+@media(max-width:899px){
+  .hero{--mobile-gutter:20px;display:flex;flex-direction:column;min-height:100svh;background:#242824;isolation:isolate;padding-bottom:max(20px,env(safe-area-inset-bottom))}
+  .hero::before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(180deg,#202420f2 0%,#202420cf 36%,#20242030 65%,#202420d9 100%),url('../public/assets/atelier-background.webp') 62% center/cover no-repeat;filter:url(#scene-grade)}
+  header{flex:none;padding:14px var(--mobile-gutter) 46px;min-height:104px;gap:12px;z-index:5}
+  .brand{width:164px;min-height:44px;margin-right:auto}
+  .menu-toggle{width:44px;height:44px;border-color:#eeece54d;background:#eeece508}
+  .header-contact{display:contents}
+  .header-contact .booking{display:none}
+  .header-phone{right:var(--mobile-gutter);bottom:8px;width:148px;line-height:44px;font-size:14px}
+  .city-selector{left:var(--mobile-gutter);bottom:8px}
+  .city-toggle{font-size:14px;gap:6px}
+  .city-menu{top:calc(100% + 2px)}
+  nav{top:calc(100% + 4px);left:var(--mobile-gutter);right:var(--mobile-gutter);padding:12px 20px;max-height:calc(100svh - 128px);overflow:auto;background:#202621fa}
+  nav .mobile-booking{display:block;border-top:1px solid #eeece533;margin-top:4px;padding-top:18px}
+  .intro{flex:none;margin:22px var(--mobile-gutter) 0;width:auto;max-width:none}
+  .intro h1{font-size:clamp(27px,8.1vw,66px);line-height:1.06;letter-spacing:-.6px;margin:0 0 16px;font-weight:500}
+  .intro p{max-width:440px;font-size:16px;line-height:1.55;margin:0 0 20px;color:#e4e3dc}
+  .cta{min-height:50px;min-width:0;width:224px;padding:13px 18px;font-size:16px;border-color:#eeece58c;background:#eeece50d}
+  .stage{flex:1 0 auto;position:relative;inset:auto;width:100%;min-height:220px;height:62vw;max-height:420px;margin:0;background:transparent;z-index:1}
+  .stage-background{display:none}
+  .floor-orbit ellipse{stroke-opacity:.28}
+  .presets{flex:none;position:relative;inset:auto;width:auto;margin:0 var(--mobile-gutter);z-index:2}
+  .preset-options{gap:8px}
+  .preset{height:82px;padding:12px 10px;border-radius:10px;font-size:14px;background:linear-gradient(120deg,#222823df,#30382cd4);border-color:#eeece53d}
+  .preset[aria-pressed="true"]{background:linear-gradient(120deg,#414a3ddd,#29332add);border-color:#eeece5d9}
+  .preset-preview{display:none}
+  .preset::after{display:none}
+  .preset-copy{gap:12px}
+  .preset-copy>span:last-child{white-space:nowrap;line-height:1.3}
+  .preset-palette{width:54px;height:20px}
+  .preset-check{top:9px;right:7px}
+  .preset-check svg{width:12px;height:12px}
+  .rotation{flex:none;position:relative;inset:auto;transform:none;width:max-content;max-width:100%;margin:16px auto 0}
+  .rotation-buttons{gap:16px;padding:3px;background:#2025219c;border-color:#eeece538;box-shadow:none}
+  .rotation button{width:44px;height:44px;flex-basis:44px}
+  .rotation-label{font-size:16px;min-width:60px}
+  .frame-loading,.frame-warning{font-size:14px;bottom:8px;max-width:calc(100% - 32px)}
+  .fallback{font-size:16px}
+  .demo-message{left:16px;right:16px;bottom:max(16px,env(safe-area-inset-bottom));padding:16px 44px 16px 16px;font-size:14px;line-height:1.5}
+}
+@media(max-width:359px){
+  .hero{--mobile-gutter:16px}
+  .brand{width:148px}
+  .intro{margin-top:16px}
+  .intro h1{font-size:26px;letter-spacing:-.5px}
+  .preset{padding:12px 7px;font-size:14px}
+  .preset-options{gap:6px}
+  .preset-palette{width:48px}
+}
+@media(min-width:600px) and (max-width:899px){
+  .hero{--mobile-gutter:40px}
+  .intro{margin-top:32px}
+  .intro p{font-size:18px;max-width:500px}
+  .stage{height:46vw;min-height:300px}
+  .preset{height:88px;padding:16px 20px;font-size:16px}
+  .rotation{margin-top:20px}
+}
