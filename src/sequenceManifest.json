@@ -60,25 +60,25 @@
     },
     {
       "id": "04b",
-      "file": "assets/turntable-v8/midpoint-04b.webp",
-      "scale": 1.0714285714285714,
-      "dx": -0.04536910457963095,
-      "dy": -0.08160012145134343
+      "file": "assets/turntable-v9/level-04b.webp",
+      "scale": 1.1194029850746268,
+      "dx": -0.06827554809683634,
+      "dy": -0.09619807445239248
     },
     {
       "index": 5,
-      "scale": 1.0714285714285714,
-      "dx": -0.04344898581528078,
-      "dy": -0.07476848337634723,
+      "scale": 1.1194029850746268,
+      "dx": -0.0666017996143683,
+      "dy": -0.08430218725712546,
       "id": "05",
-      "file": "assets/turntable-v6/frame-05.webp"
+      "file": "assets/turntable-v9/level-05.webp"
     },
     {
       "id": "05b",
-      "file": "assets/turntable-v7/midpoint-05b.webp",
-      "scale": 1.0932944606413995,
-      "dx": -0.05576586410367301,
-      "dy": -0.085620098958059
+      "file": "assets/turntable-v9/level-05b.webp",
+      "scale": 1.1029411764705883,
+      "dx": -0.059316070925978126,
+      "dy": -0.0822029130461962
     },
     {
       "index": 6,

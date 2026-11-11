@@ -1,0 +1,77 @@
+{
+  "method": "Manual approximate two-tyre ground landmarks, uncertainty \u00b16px; contact-line slope is perspective evidence, not physical chassis pitch",
+  "frames": [
+    {
+      "id": "04",
+      "contacts": [
+        [
+          240,
+          766
+        ],
+        [
+          1030,
+          802
+        ]
+      ],
+      "approx_plane_angle_deg": 2.6091418739813426
+    },
+    {
+      "id": "04b",
+      "contacts": [
+        [
+          210,
+          758
+        ],
+        [
+          915,
+          800
+        ]
+      ],
+      "approx_plane_angle_deg": 3.4093360204901466
+    },
+    {
+      "id": "05",
+      "contacts": [
+        [
+          210,
+          736
+        ],
+        [
+          895,
+          790
+        ]
+      ],
+      "approx_plane_angle_deg": 4.507425868745476
+    },
+    {
+      "id": "05b",
+      "contacts": [
+        [
+          210,
+          737
+        ],
+        [
+          875,
+          800
+        ]
+      ],
+      "approx_plane_angle_deg": 5.4118691523170295
+    },
+    {
+      "id": "06",
+      "contacts": [
+        [
+          195,
+          735
+        ],
+        [
+          735,
+          818
+        ]
+      ],
+      "approx_plane_angle_deg": 8.738189011909059
+    }
+  ],
+  "old_05_angle_deg": 8.878,
+  "old_05b_angle_deg": 8.552
+}
