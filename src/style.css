@@ -50,3 +50,8 @@ body{font-family:Manrope,sans-serif}button{transition:background-color .18s,bord
 @media(min-width:900px) and (max-width:1350px){.header-contact{flex-direction:column;gap:8px;align-items:flex-end}nav{gap:20px}}
 @media(max-width:899px){header{padding-bottom:52px}.header-contact{gap:0}.header-phone{position:absolute;right:6%;bottom:14px;font-size:16px}.rotation{margin:24px auto 28px;bottom:auto}.rotation-buttons{gap:16px}.rotation-label{min-width:60px}}
 @media(prefers-reduced-motion:reduce){.header-phone{transition:none}}
+
+/* Uppercase display variant: same italic face and weight, calmer size. */
+.intro h1{text-transform:uppercase;font-size:clamp(44px,4vw,80px);letter-spacing:-1.8px;line-height:1.08}
+@media(min-width:900px) and (max-width:1200px){.intro h1{font-size:clamp(44px,4.4vw,56px)}}
+@media(max-width:899px){.intro h1{font-size:clamp(26px,7.8vw,60px);letter-spacing:-.7px;line-height:1.12}}
