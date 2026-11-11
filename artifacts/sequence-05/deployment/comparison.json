@@ -1,0 +1,118 @@
+{
+  "publishedCommit": "89e22da6c2d567b17872946ba69de4c6d9a81276",
+  "comparison": "Published gh-pages build served locally; public URL blocked by proxy",
+  "results": [
+    {
+      "width": 430,
+      "id": "00",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 430,
+      "id": "01b",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 430,
+      "id": "03",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 430,
+      "id": "04",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 430,
+      "id": "10",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 430,
+      "id": "11",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 430,
+      "id": "21",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 430,
+      "id": "22",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 1920,
+      "id": "00",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 1920,
+      "id": "01b",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 1920,
+      "id": "03",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 1920,
+      "id": "04",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 1920,
+      "id": "10",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 1920,
+      "id": "11",
+      "changedChannels": 80,
+      "maxDelta": 31,
+      "carUnchanged": true
+    },
+    {
+      "width": 1920,
+      "id": "21",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    },
+    {
+      "width": 1920,
+      "id": "22",
+      "changedChannels": 0,
+      "maxDelta": 0,
+      "carUnchanged": true
+    }
+  ]
+}
