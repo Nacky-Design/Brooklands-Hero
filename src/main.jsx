@@ -7,6 +7,9 @@ import manifest from './sequenceManifest.json';
 import previousMidpoint from './legacyMidpoint.json';
 import './style.css';
 
+const frameIndex = id => manifest.frames.findIndex(frame => frame.id === id);
+const TRANSITIONS = { '01b': ['01', '01b', '02'], '03b': ['03', '03b', '04'], '10b': ['10', '10b', '11'], '21b': ['21', '21b', '22'] };
+
 const BACKGROUND = `${import.meta.env.BASE_URL}assets/atelier-background.webp`;
 
 function useCarLayout(stage) {
@@ -83,6 +86,7 @@ function ReviewPage() {
   const [request, setRequest] = useState(null);
   const [displayed, setDisplayed] = useState(0);
   const [loop, setLoop] = useState(false);
+  const [transition, setTransition] = useState('01b');
   const [legacy, setLegacy] = useState(false);
   const [legacyReady, setLegacyReady] = useState(false);
   useEffect(() => {
@@ -95,18 +99,20 @@ function ReviewPage() {
   const compareMidpoint = old => { setLegacy(old); if (!loop) setRequest({ index: 2 }); };
   useEffect(() => {
     if (!loop) return;
-    const frames = [1, 2, 3, 2]; let step = 0;
+    const [a, mid, b] = TRANSITIONS[transition].map(frameIndex);
+    const frames = [a, mid, b, mid]; let step = 0;
     setRequest({ index: frames[step] });
     const timer = setInterval(() => { step = (step + 1) % frames.length; setRequest({ index: frames[step] }); }, 1200);
     return () => clearInterval(timer);
-  }, [loop]);
+  }, [loop, transition]);
   const show = index => { setLoop(false); setRequest({ index }); };
   return <><div className="review-tools">
-    <h1>BROOKLANDS · цвет и промежуточный ракурс</h1>
-    <p>Рабочее сравнение. У 01b исправлены опора спойлера и высота крыши. Сравните версии отдельно и в переходе; мелкие детали и угловой шаг ещё требуют оценки.</p>
+    <h1>BROOKLANDS · цвет и промежуточные ракурсы</h1>
+    <p>Добавлены 03b, 10b и 21b. Выберите переход и сравните его в обе стороны. Доработанный 01b и общий цветкор сохранены; мелкие детали и угловой шаг ещё требуют оценки.</p>
     <div role="group" aria-label="Цветокоррекция">{[['none','Исходный'],['background','Только фон'],['both','Фон + автомобиль']].map(([value,label])=><button key={value} aria-pressed={grade===value} onClick={()=>setGrade(value)}>{label}</button>)}</div>
     <div role="group" aria-label="Версия промежуточного кадра"><button disabled={!legacyReady} aria-pressed={legacy} onClick={()=>compareMidpoint(true)}>01b: до правки</button><button aria-pressed={!legacy} onClick={()=>compareMidpoint(false)}>01b: после правки</button></div>
-    <div role="group" aria-label="Опорные ракурсы">{[[0,'Старт 00'],[1,'Ракурс 01'],[2,'Новый 01b'],[3,'Боковой 02'],[10,'Задний 09']].map(([index,label])=><button key={index} onClick={()=>show(index)}>{label}</button>)}<button aria-pressed={loop} onClick={()=>setLoop(value=>!value)}>{loop?'Остановить переход':'Повторять 01 → 01b → 02'}</button></div>
+    <div role="group" aria-label="Опорные ракурсы">{[[0,'Старт 00'],[1,'Ракурс 01'],[2,'Новый 01b'],[3,'Боковой 02'],[frameIndex('09'),'Задний 09']].map(([index,label])=><button key={index} onClick={()=>show(index)}>{label}</button>)}<button aria-pressed={loop&&transition==='01b'} onClick={()=>{setTransition('01b');setLoop(value=>transition==='01b'?!value:true);}}>{loop&&transition==='01b'?'Остановить переход':'Повторять 01 → 01b → 02'}</button></div>
+    <div role="group" aria-label="Новые переходы">{['03b','10b','21b'].map(id => <React.Fragment key={id}><button onClick={()=>show(frameIndex(id))}>Ракурс {id}</button><button aria-pressed={loop&&transition===id} onClick={()=>{setTransition(id);setLoop(value=>transition===id?!value:true);}}>{loop&&transition===id?'Остановить '+id:'Повторять '+TRANSITIONS[id].join(' → ')}</button></React.Fragment>)}</div>
     <p aria-live="polite">На экране: {manifest.frames[displayed].id}. <a href="./">Открыть HERO</a></p>
   </div><App gradeMode={grade} reviewRequest={request} onDisplayedFrame={setDisplayed} legacyMidpoint={legacy}/></>;
 }

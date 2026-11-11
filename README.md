@@ -2,6 +2,19 @@
 
 [Опубликованный HERO](https://nacky-design.github.io/Brooklands-Hero/).
 
+Текущая доработка **Sequence 05** на основе `b673ee3`: добавлены **03b, 10b, 21b** в переходы 03→04, 10→11 и 21→22. Всего **28 кадров**. Доработанный 01b, исходные кадры, фон и общий цветкор сохранены. В `review.html` есть отдельный повтор каждого нового перехода в обе стороны. [Происхождение и ограничения](references/sequence-05/REVIEW_RU.md).
+
+```sh
+npm ci
+npm run build
+npm run preview -- --port 4205
+QA_URL=http://127.0.0.1:4205/ node scripts/qa-sequence05.mjs
+QA_URL=http://127.0.0.1:4205/ node scripts/qa-sequence05-network.mjs
+```
+
+Результаты текущей проверки: `artifacts/sequence-05/`. Ниже — история предыдущих итераций; упоминания 25 кадров относятся к Sequence 04.
+
+
 Текущая доработка **Sequence 04**: у 01b исправлены опора спойлера и завышенный контур крыши. На [странице сравнения](https://nacky-design.github.io/Brooklands-Hero/review.html) доступны версии «до / после» отдельно и в повторе перехода. Число кадров — 25; старый 01b и исходные кадры сохранены. [Отчёт о доработке и ограничениях](references/sequence-04/REVIEW_RU.md).
 
 ```sh
