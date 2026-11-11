@@ -6,9 +6,9 @@ const PLATE_RATIO = 1672 / 941;
 export function getFrameStyle(index, legacy = false, legacyRoof = false) {
   const frame = calibration.frames[index];
   const { scale, dx, dy } = legacy && frame.id === '01b' ? previousMidpoint : legacyRoof && previousRoof[frame.id] ? previousRoof[frame.id] : frame;
-  const pitch = { '05': { angle:-3.5, x:895/1672, y:817/941 }, '05b': { angle:-2.2, x:875/1672, y:810/941 } }[frame.id];
-  const correction = pitch ? ` translate(${pitch.x*100}%, ${pitch.y*100}%) rotate(${pitch.angle}deg) translate(${-pitch.x*100}%, ${-pitch.y*100}%)` : '';
-  return { transformOrigin: '0 0', transform: `translate(${dx * 100}%, ${dy * 100}%) scale(${scale})${correction}` };
+  // Keep the source camera perspective: a screen-space rotation on 05/05b
+  // rolls the entire car and makes the rear appear lifted against the floor.
+  return { transformOrigin: '0 0', transform: `translate(${dx * 100}%, ${dy * 100}%) scale(${scale})` };
 }
 
 export function getSequenceLayout(width, height) {

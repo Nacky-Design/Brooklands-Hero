@@ -1,0 +1,22 @@
+{
+  "baseline": "c3a8771",
+  "mode": "LOCAL_PATCH",
+  "frames": [
+    "05",
+    "05b"
+  ],
+  "removed_rotation_deg": [
+    -3.5,
+    -2.2
+  ],
+  "rotation_deg": [
+    0,
+    0
+  ],
+  "source_hashes_unchanged": {
+    "public/assets/turntable-v6/frame-05.webp": "5b9ef92e285b9ff273f4c399a8be9522cee01cd066fd1774297c3c15a58e2a54",
+    "public/assets/turntable-v7/midpoint-05b.webp": "8ebd618dd4824e0d1dc256398d27fd9b992f924a82f98242939f67125c2093f2"
+  },
+  "impeccable": "not_connected",
+  "art_review": "pending user review"
+}
