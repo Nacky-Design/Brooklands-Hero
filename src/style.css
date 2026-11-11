@@ -79,3 +79,8 @@ body{font-family:Manrope,sans-serif}button{transition:background-color .18s,bord
 .city-selector{width:110px;flex-shrink:0}.city-toggle{width:110px}.header-phone{display:inline-block;width:148px;text-align:right;font-variant-numeric:tabular-nums}
 .intro h1{font-weight:500;line-height:1.04;letter-spacing:-1.4px}
 @media(max-width:899px){.intro h1{line-height:1.08;letter-spacing:-.5px}}
+
+/* Material palette: a dominant paint stripe plus two narrow finish accents. */
+.preset-palette{display:flex;gap:3px;width:62px;height:24px;padding:1px 4px;flex-shrink:0}.preset-palette>span{display:block;flex:1;min-width:0;height:100%;transform:skewX(-18deg);border:1px solid #ffffff35;background:linear-gradient(135deg,#747b7c,#272c2d)}.preset-palette>span:first-child{flex:2.8;background:linear-gradient(135deg,#f2f2ed,#9ba1a1 60%,#727b7c)}.preset-palette>span:nth-child(2){background:linear-gradient(135deg,#363c3c,#101414)}
+.preset.carmine .preset-palette>span:first-child{background:linear-gradient(135deg,#bd3443,#7c1220)}.preset.oak-green .preset-palette>span:first-child{background:linear-gradient(135deg,#487a52,#173c26)}.preset.oak-green .preset-palette>span:nth-child(2){background:linear-gradient(135deg,#bb9968,#80623e)}.preset.oak-green .preset-palette>span:nth-child(3){background:linear-gradient(135deg,#363c3c,#101414)}
+@media(max-width:899px){.preset-palette{width:54px;height:22px;gap:2px}.preset-copy{gap:12px}}

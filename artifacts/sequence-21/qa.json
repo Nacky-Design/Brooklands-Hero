@@ -1,0 +1,51 @@
+[
+  {
+    "width": 320,
+    "threeStripesPerPreset": true,
+    "dominantPaint": true,
+    "inside": true,
+    "keyboardSwitch": true
+  },
+  {
+    "width": 390,
+    "threeStripesPerPreset": true,
+    "dominantPaint": true,
+    "inside": true,
+    "keyboardSwitch": true
+  },
+  {
+    "width": 440,
+    "threeStripesPerPreset": true,
+    "dominantPaint": true,
+    "inside": true,
+    "keyboardSwitch": true
+  },
+  {
+    "width": 768,
+    "threeStripesPerPreset": true,
+    "dominantPaint": true,
+    "inside": true,
+    "keyboardSwitch": true
+  },
+  {
+    "width": 900,
+    "threeStripesPerPreset": true,
+    "dominantPaint": true,
+    "inside": true,
+    "keyboardSwitch": true
+  },
+  {
+    "width": 1440,
+    "threeStripesPerPreset": true,
+    "dominantPaint": true,
+    "inside": true,
+    "keyboardSwitch": true
+  },
+  {
+    "width": 1920,
+    "threeStripesPerPreset": true,
+    "dominantPaint": true,
+    "inside": true,
+    "keyboardSwitch": true
+  }
+]
